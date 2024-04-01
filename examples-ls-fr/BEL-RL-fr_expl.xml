@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="TEI/LSexamples.rng" type="application/xml "schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+ <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="TEI/LSexamples.rng" type="application/xml "schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="fr">BEL-RL-fr : exemples issus de Frantext</title>
+        <title xml:lang="en">DBLE-LN-fr:examples extracted from Frantext</title>
+      </titleStmt>
+      <editionStmt>
+        <edition>version 3</edition>
+        <principal ref="Sandrine.Ollinger@atilf.fr">Sandrine Ollinger</principal>
+        <funder ref="https://corli.huma-num.fr/">Consortium CORLI (Corpus, Langues, Interactions)</funder>
+        <funder ref="http://lchn.fr/">CPER LCHN (Langues, Connaissances &amp; Humanités Numériques)</funder>
+        <respStmt>
+          <resp xml:lang="fr">Développeuse</resp>
+          <resp xml:lang="en">Developer</resp>
+          <name>Marine Schmitt</name>
+        </respStmt>
+        <respStmt>
+          <resp xml:lang="fr">Relectrice</resp>
+          <resp xml:lang="en">Reviser</resp>
+          <name>Camille Kuntz</name>
+        </respStmt>
+      </editionStmt>
+      <publicationStmt>
+        <distributor>ATILF (Analyse et Traitement Informatique de la Langue Française)</distributor>
+        <address>
+          <addrLine>44, avenue de la Libération</addrLine>
+          <addrLine>BP 30687</addrLine>
+          <addrLine>54063 Nancy Cedex</addrLine>
+          <addrLine>FRANCE</addrLine>
+        </address>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/deed.fr" xml:lang="fr">Ce fichier numérique est mis à disposition selon les termes de la licence Creative Commons Attribution 4.0 International.</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0" xml:lang="en">This electronic file is made available under the terms of the Creative Commons Attribution 4.0 International license.</licence>
+        </availability>
+        <date when="2023-08-11">11 08 2023</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl xml:lang="fr">Ce document est une distribution des exemples lexicographiques du <objectName ref="https://hdl.handle.net/11403/lexical-system-fr">Réseau Lexical du Français (RL-fr)</objectName>, qui sont issus de Frantext.</bibl>
+        <bibl xml:lang="en">This document is the distibution of the lexicographical examples of the <objectName ref="https://hdl.handle.net/11403/lexical-system-fr">FrenchLexical Network (fr-LN)</objectName>, which originates from Frantext.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc xml:lang="fr">
+        <p>Ce projet s'inscrit dans le cadre des travaux sur les <objectName ref="https://lexical-systems.atilf.fr/">Systèmes Lexicaux</objectName> menés au sein du laboratoire ATILF du CNRS et de l'Université de Lorraine, sous la responsabilité d'<persName ref="Alain.Polguere@univ-lorraine.fr">Alain Polguère</persName>.</p>
+        <p>Il vise à simplifier la prise en main et l'exploitation de la base d'exemples lexicographiques du RL-fr, en la diffusant sous la forme d'un corpus indépendant.</p>
+      </projectDesc>
+      <projectDesc xml:lang="en">
+        <p>This project is part of the research conducted on <objectName ref="https://lexical-systems.atilf.fr/">Lexical Systems </objectName>at the ATILF laboratory — CNRS and Université de Lorraine —, under the supervision of <persName ref="Alain.Polguere@univ-lorraine.fr">Alain Polguère</persName>. It aims to facilitate the appropriation and exploitation of the database of fr-LN's lexicographic examples by distributing it as an autonomous corpus.</p>
+      </projectDesc>
+      <tagsDecl xml:lang="fr" partial="true">
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="cit">Chaque exemple est représenté par un élément 'cit'. L'attribut 'source' de cet élément a pour valeur une URI, qui permet de retrouver l'exemple dans l'export public du RL-fr.</tagUsage>
+          <tagUsage gi="quote">Un élément 'quote' contient l'exemple lui-même.</tagUsage>
+          <tagUsage gi="bibl">Un élément 'bibl' contient sa référence bibliographique.</tagUsage>
+          <tagUsage gi="seg">À l'intérieur de l'exemple, des éléments 'seg' sont utilisés pour marquer les occurrences des entités lexicales en présence. Ils comportent un attribut 'type', qui fournit une information sur le statut lexical de l'entité lexicale et qui prend l'une des valeurs suivantes :
+<list type="gloss" xml:lang="fr">
+  <label>st00000000000000000000</label>
+  <item>aucun statut lexical</item>
+  <label>st01660000000000000000</label>
+  <item>locution forte</item>
+  <label>st01660076000000000000</label>
+  <item>locution forte et collocatif de son gouverneur syntaxique</item>
+  <label>st01660199000000000000</label>
+  <item>locution forte et collocatif de son sujet</item>
+  <label>st01660125000000000000</label>
+  <item>locution forte et collocatif de son COD</item>
+  <label>st01660302000000000000</label>
+  <item>locution forte et collocatif de son CObl</item>
+  <label>st01660232000000000000</label>
+  <item>locution forte et collocatif de son complément</item>
+  <label>st01660000016900000000</label>
+  <item>locution forte et proverbe</item>
+  <label>st01660000029500000000</label>
+  <item>locution forte et anthroponyme</item>
+  <label>st01660000029400000000</label>
+  <item>locution forte et toponyme</item>
+  <label>st01660000000001730000</label>
+  <item>locution forte et pragmatème</item>
+  <label>st01660000000000000161</label>
+  <item>locution forte et lexie inactive</item>
+  <label>st01670000000000000000</label>
+  <item>semi-locution</item>
+  <label>st01670076000000000000</label>
+  <item>semi-locution et collocatif de son gouverneur syntaxique</item>
+  <label>st01670199000000000000</label>
+  <item>semi-locution et collocatif de son sujet</item>
+  <label>st01670125000000000000</label>
+  <item>semi-locution et collocatif de son COD</item>
+  <label>st01670302000000000000</label>
+  <item>semi-locution et collocatif de son CObl</item>
+  <label>st01670232000000000000</label>
+  <item>semi-locution et collocatif de son complément</item>
+  <label>st01670000016900000000</label>
+  <item>semi-locution et proverbe</item>
+  <label>st01670000029500000000</label>
+  <item>semi-locution et anthroponyme</item>
+  <label>st01670000029400000000</label>
+  <item>semi-locution et toponyme</item>
+  <label>st01670000000001730000</label>
+  <item>semi-locution et pragmatème</item>
+  <label>st01680000000000000000</label>
+  <item>locution faible</item>
+  <label>st01680076000000000000</label>
+  <item>locution faible et collocatif de son gouverneur syntaxique</item>
+  <label>st01680199000000000000</label>
+  <item>locution faible et collocatif de son sujet</item>
+  <label>st01680125000000000000</label>
+  <item>locution faible et collocatif de son COD</item>
+  <label>st01680302000000000000</label>
+  <item>locution faible et collocatif de son CObl</item>
+  <label>st01680232000000000000</label>
+  <item>locution faible et collocatif de son complément</item>
+  <label>st01680000016900000000</label>
+  <item>locution faible et proverbe</item>
+  <label>st01680000029300000000</label>
+  <item>locution faible et pragmonyme</item>
+  <label>st01680000029400000000</label>
+  <item>locution faible et toponyme</item>
+  <label>st01680000029500000000</label>
+  <item>locution faible et anthroponyme</item>
+  <label>st01680000029800000000</label>
+  <item>locution faible et ergonyme</item>
+  <label>st01700000000000000000</label>
+  <item>cliché linguistique</item>
+  <label>st01700000016900000000</label>
+  <item>cliché linguistique et proverbe</item>
+  <label>st01700000000001730000</label>
+  <item>cliché linguistique et pragmatème</item>
+  <label>st01710000000000000000</label>
+  <item>collocation</item>
+  <label>st02810000000000000000</label>
+  <item>construction</item>
+  <label>st01720000000000000000</label>
+  <item>syntagme libre</item>
+  <label>st00000076000000000000</label>
+  <item>collocatif de son gouverneur syntaxique</item>
+  <label>st00000199000000000000</label>
+  <item>collocatif de son sujet</item>
+  <label>st00000125000000000000</label>
+  <item>collocatif de son COD</item>
+  <label>st00000302000000000000</label>
+  <item>collocatif de son CObl</item>
+  <label>st00000232000000000000</label>
+  <item>collocatif de son complément</item>
+  <label>st00000000016900000000</label>
+  <item>proverbe</item>
+  <label>st00000000029300000000</label>
+  <item>pragmonyme</item>
+  <label>st00000000029400000000</label>
+  <item>toponyme</item>
+  <label>st00000000029500000000</label>
+  <item>anthroponyme</item>
+  <label>st00000000029800000000</label>
+  <item>ergonyme</item>
+  <label>st00000000030500000000</label>
+  <item>ergonyme ou pragmonyme (emploi marginal)</item>
+  <label>st00000000030100000000</label>
+  <item>chrononyme</item>
+  <label>st00000000030300000000</label>
+  <item>prosopopéonyme</item>
+  <label>st00000000029400000161</label>
+  <item>toponyme et lexie inactive</item>
+  <label>st00000000000001730000</label>
+  <item>pragmatème</item>
+  <label>st00000000000000000161</label>
+  <item>lexie inactive</item>
+  <label>st00000000000000000180</label>
+  <item>lexie régulière</item>
+</list>
+Un attribut 'ana' fournit quant à lui la partie du discours de l'entité lexicale. Sa valeur se présente sous la forme d'une URI, qui fait référence au modèle de caractéristiques grammaticales du RL-fr. Un attribut 'fonction' permet de savoir si l'occurrence marquée a été sélectionnée pour apparaître dans l'article lexicographique de l'entité lexicale. Il prend l'une des valeurs suivantes: 
+<list type="gloss">
+  <label>active</label>
+  <item>cette occurrence a été sélectionnée;</item>
+  <label>inactive</label>
+  <item>cette occurrence n'a pas été sélectionnée.</item>
+</list>
+Enfin, un attribut 'source' permet de retrouver l'entité lexicale dans le RL-fr et de consulter son article lexicographique dans <objectName ref="https://spiderlex.atilf.fr/fr">Spiderlex</objectName>. Nous attirons votre attention sur le fait que la version du RL-fr disponible dans Spiderlex est mise à jour quotidiennement. </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <tagsDecl xml:lang="en" partial="true">
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="cit">Each example is represented by a 'cit' element. The 'source' attribute of this element has for value a URI. This URI points to the public export of the fr-LN.</tagUsage>
+          <tagUsage gi="quote">An 'quote' element contains the example itself.</tagUsage>
+          <tagUsage gi="bibl">An 'bibl' element contains its bibliographic reference.</tagUsage>
+          <tagUsage gi="seg">This element is used to indicate the presence of a lexical entity occurrence. The 'type' attribute of this element provides information about the lexical status of the lexical entity. It takes one of the following values: 
+<list type="gloss" xml:lang="fr">
+  <label>st00000000000000000000</label>
+  <item>aucun statut lexical</item>
+  <label>st01660000000000000000</label>
+  <item>locution forte</item>
+  <label>st01660076000000000000</label>
+  <item>locution forte et collocatif de son gouverneur syntaxique</item>
+  <label>st01660199000000000000</label>
+  <item>locution forte et collocatif de son sujet</item>
+  <label>st01660125000000000000</label>
+  <item>locution forte et collocatif de son COD</item>
+  <label>st01660302000000000000</label>
+  <item>locution forte et collocatif de son CObl</item>
+  <label>st01660232000000000000</label>
+  <item>locution forte et collocatif de son complément</item>
+  <label>st01660000016900000000</label>
+  <item>locution forte et proverbe</item>
+  <label>st01660000029500000000</label>
+  <item>locution forte et anthroponyme</item>
+  <label>st01660000029400000000</label>
+  <item>locution forte et toponyme</item>
+  <label>st01660000000001730000</label>
+  <item>locution forte et pragmatème</item>
+  <label>st01660000000000000161</label>
+  <item>locution forte et lexie inactive</item>
+  <label>st01670000000000000000</label>
+  <item>semi-locution</item>
+  <label>st01670076000000000000</label>
+  <item>semi-locution et collocatif de son gouverneur syntaxique</item>
+  <label>st01670199000000000000</label>
+  <item>semi-locution et collocatif de son sujet</item>
+  <label>st01670125000000000000</label>
+  <item>semi-locution et collocatif de son COD</item>
+  <label>st01670302000000000000</label>
+  <item>semi-locution et collocatif de son CObl</item>
+  <label>st01670232000000000000</label>
+  <item>semi-locution et collocatif de son complément</item>
+  <label>st01670000016900000000</label>
+  <item>semi-locution et proverbe</item>
+  <label>st01670000029500000000</label>
+  <item>semi-locution et anthroponyme</item>
+  <label>st01670000029400000000</label>
+  <item>semi-locution et toponyme</item>
+  <label>st01670000000001730000</label>
+  <item>semi-locution et pragmatème</item>
+  <label>st01680000000000000000</label>
+  <item>locution faible</item>
+  <label>st01680076000000000000</label>
+  <item>locution faible et collocatif de son gouverneur syntaxique</item>
+  <label>st01680199000000000000</label>
+  <item>locution faible et collocatif de son sujet</item>
+  <label>st01680125000000000000</label>
+  <item>locution faible et collocatif de son COD</item>
+  <label>st01680302000000000000</label>
+  <item>locution faible et collocatif de son CObl</item>
+  <label>st01680232000000000000</label>
+  <item>locution faible et collocatif de son complément</item>
+  <label>st01680000016900000000</label>
+  <item>locution faible et proverbe</item>
+  <label>st01680000029300000000</label>
+  <item>locution faible et pragmonyme</item>
+  <label>st01680000029400000000</label>
+  <item>locution faible et toponyme</item>
+  <label>st01680000029500000000</label>
+  <item>locution faible et anthroponyme</item>
+  <label>st01680000029800000000</label>
+  <item>locution faible et ergonyme</item>
+  <label>st01700000000000000000</label>
+  <item>cliché linguistique</item>
+  <label>st01700000016900000000</label>
+  <item>cliché linguistique et proverbe</item>
+  <label>st01700000000001730000</label>
+  <item>cliché linguistique et pragmatème</item>
+  <label>st01710000000000000000</label>
+  <item>collocation</item>
+  <label>st02810000000000000000</label>
+  <item>construction</item>
+  <label>st01720000000000000000</label>
+  <item>syntagme libre</item>
+  <label>st00000076000000000000</label>
+  <item>collocatif de son gouverneur syntaxique</item>
+  <label>st00000199000000000000</label>
+  <item>collocatif de son sujet</item>
+  <label>st00000125000000000000</label>
+  <item>collocatif de son COD</item>
+  <label>st00000302000000000000</label>
+  <item>collocatif de son CObl</item>
+  <label>st00000232000000000000</label>
+  <item>collocatif de son complément</item>
+  <label>st00000000016900000000</label>
+  <item>proverbe</item>
+  <label>st00000000029300000000</label>
+  <item>pragmonyme</item>
+  <label>st00000000029400000000</label>
+  <item>toponyme</item>
+  <label>st00000000029500000000</label>
+  <item>anthroponyme</item>
+  <label>st00000000029800000000</label>
+  <item>ergonyme</item>
+  <label>st00000000030500000000</label>
+  <item>ergonyme ou pragmonyme (emploi marginal)</item>
+  <label>st00000000030100000000</label>
+  <item>chrononyme</item>
+  <label>st00000000030300000000</label>
+  <item>prosopopéonyme</item>
+  <label>st00000000029400000161</label>
+  <item>toponyme et lexie inactive</item>
+  <label>st00000000000001730000</label>
+  <item>pragmatème</item>
+  <label>st00000000000000000161</label>
+  <item>lexie inactive</item>
+  <label>st00000000000000000180</label>
+  <item>lexie régulière</item>
+</list>
+The 'ana' attribute of this element provides the part of speech of the lexical entity by means of an URI, which points to the fr-LN's model of grammatical characteristics. The 'function' attribute of this element takes one of the following values: 
+<list type="gloss">
+  <label>active</label>
+  <item>This occurrence has been selected to appear in the lexicographic article of the lexical node</item>
+  <label>inactive</label>
+  <item>This occurrence has not been selected to appear in the lexicographic article of the lexical node.</item>
+</list>
+The 'source' attribute on this element provides a link to visualize the lexical entity in the fr-LN with <objectName ref="https://spiderlex.atilf.fr/fr">Spiderlex</objectName>.</tagUsage>
+        </namespace>
+      </tagsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="fr">French</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+    <text>
+        <body><cit xml:id="cit1" type="example" source="ls:fr:ex:13">
+            <quote><seg xml:id="seg1" type="st00000000000000000000" ana="ls:fr:gc:95" function="active" source="https://spiderlex.atilf.fr/fr/id/28510">Nous</seg> voulions <seg xml:id="seg3" type="st00000000000000000000" ana="ls:fr:gc:23" function="active" source="https://spiderlex.atilf.fr/fr/id/28058">kidnapper</seg> le gérant et le juger. <seg xml:id="seg2" type="st00000000000000000000" ana="ls:fr:gc:95" function="active" source="https://spiderlex.atilf.fr/fr/id/28510">Nous</seg> avions entamé une campagne de propagande contre « le gérant fasciste de Seyssinet ».</quote>
+            <bibl>
+                <title>Voyage au bout de la révolution : de Pékin à Sochaux</title>
+                <author>Brière-Blanchet, Claire</author>
+                <date when="2009">2009</date>
+                <biblScope>p. 116</biblScope>
+            </bibl>
+        </cit><cit xml:id="cit2" type="example" source="ls:fr:ex:14">
+            <quote>Son patron lui a dit qu’il était le seul de ses collaborateurs que les « chiites » ne garderaient pas plus de <seg xml:id="seg4" type="st00000000000000000000" ana="ls:fr:gc:80" function="active" source="https://spiderlex.atilf.fr/fr/id/29722">trois</seg> jours s’ils venaient à le <seg xml:id="seg5" type="st00000000000000000000" ana="ls:fr:gc:23" function="active" source="https://spiderlex.atilf.fr/fr/id/28058">kidnapper</seg> et qu’ils verseraient même une <seg xml:id="seg6" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/29099">rançon</seg> pour le rendre.</quote>
+            <bibl>
+                <title>Journal 1977-1990</title>
+                <author>Lagarce, Jean-Luc</author>
+                <date when="2007">2007</date>
+                <biblScope>p. 325</biblScope>
+            </bibl>
+        </cit><cit xml:id="cit3" type="example" source="ls:fr:ex:15">
+            <quote><seg xml:id="seg7" type="st00000000000000000000" ana="ls:fr:gc:95" function="active" source="https://spiderlex.atilf.fr/fr/id/51737">Elle</seg> <seg xml:id="seg13" type="st00000000000000000000" ana="ls:fr:gc:23" function="active" source="https://spiderlex.atilf.fr/fr/id/27137">a dit</seg> qu’<seg xml:id="seg8" type="st00000000000000000000" ana="ls:fr:gc:95" function="active" source="https://spiderlex.atilf.fr/fr/id/51737">elle</seg> t’avait cherché longtemps, que des troufions l’<seg xml:id="seg14" type="st00000000000000000000" ana="ls:fr:gc:23" function="active" source="https://spiderlex.atilf.fr/fr/id/28058">avaient kidnappée</seg> mais qu’<seg xml:id="seg9" type="st00000000000000000000" ana="ls:fr:gc:95" function="active" source="https://spiderlex.atilf.fr/fr/id/51737">elle</seg> s’était échappée, et alors <seg xml:id="seg10" type="st00000000000000000000" ana="ls:fr:gc:95" function="active" source="https://spiderlex.atilf.fr/fr/id/51737">elle</seg> est retournée <seg xml:id="seg15" type="st00000000000000000000" ana="ls:fr:gc:81" function="active" source="https://spiderlex.atilf.fr/fr/id/48295">là</seg> où vous étiez, et puis <seg xml:id="seg11" type="st00000000000000000000" ana="ls:fr:gc:95" function="active" source="https://spiderlex.atilf.fr/fr/id/51737">elle</seg> a parcouru le <seg xml:id="seg16" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/28707">pays</seg> <seg xml:id="seg17" type="st00000000000000000000" ana="ls:fr:gc:64" function="active" source="https://spiderlex.atilf.fr/fr/id/44791">dans</seg> tous les sens en demandant après toi, et <seg xml:id="seg18" type="st00000000000000000000" ana="ls:fr:gc:63" function="active" source="https://spiderlex.atilf.fr/fr/id/48365">finalement</seg>, voilà, <seg xml:id="seg12" type="st00000000000000000000" ana="ls:fr:gc:95" function="active" source="https://spiderlex.atilf.fr/fr/id/51737">elle</seg> essayait de retarder son rapatriement le plus possible dans l’espoir que <seg xml:id="seg19" type="st00000000000000000000" ana="ls:fr:gc:95" function="active" source="https://spiderlex.atilf.fr/fr/id/29736">tu</seg> <seg xml:id="seg20" type="st00000000000000000000" ana="ls:fr:gc:23" function="active" source="https://spiderlex.atilf.fr/fr/id/48244">finirais</seg> par arriver...</quote>
+            <bibl>
+                <title>Les Russkoffs</title>
+                <author>Cavanna, François</author>
+                <date when="1979">1979</date>
+                <biblScope>p. 373</biblScope>
+            </bibl>
+        </cit><cit xml:id="cit9" type="example" source="ls:fr:ex:21">
+            <quote>Et il débarquait, royal, dans le jeu de quilles quadrillé de nos amitiés, fonçant avec sa Jaguar pour <seg xml:id="seg42" type="st00000000000000000000" ana="ls:fr:gc:23" function="active" source="https://spiderlex.atilf.fr/fr/id/39110">kidnapper</seg> l’un d’entre nous et l’inviter à dîner dans un grand restaurant, ou déposant avec naturel comme offrande sur le pas de la porte où il s’imposait une caisse de mouton-rothschild qu’il avait payée quelques millions aux enchères à Drouot.</quote>
+            <bibl>
+                <title>À l’ami qui ne m’a pas sauvé la vie</title>
+                <author>Guibert, Hervé</author>
+                <date when="1990">1990</date>
+                <biblScope>p. 197</biblScope>
+            </bibl>
+        </cit>
+      </body>  
+    </text>
+</TEI>
+
+

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="TEI/LSexamples.rng" type="application/xml "schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="fr">BEL-RL-fr</title>
+        <title xml:lang="en">DBLE-LN-fr</title>
+      </titleStmt>
+      <editionStmt>
+        <edition>version 3</edition>
+        <principal ref="Sandrine.Ollinger@atilf.fr">Sandrine Ollinger</principal>
+        <funder ref="https://corli.huma-num.fr/">Consortium CORLI (Corpus, Langues, Interactions)</funder>
+        <funder ref="http://lchn.fr/">CPER LCHN (Langues, Connaissances &amp; Humanités Numériques)</funder>
+        <respStmt>
+          <resp xml:lang="fr">Développeuse</resp>
+          <resp xml:lang="en">Developer</resp>
+          <name>Marine Schmitt</name>
+        </respStmt>
+        <respStmt>
+          <resp xml:lang="fr">Relectrice</resp>
+          <resp xml:lang="en">Reviser</resp>
+          <name>Camille Kuntz</name>
+        </respStmt>
+      </editionStmt>
+      <publicationStmt>
+        <distributor>ATILF (Analyse et Traitement Informatique de la Langue Française)</distributor>
+        <address>
+          <addrLine>44, avenue de la Libération</addrLine>
+          <addrLine>BP 30687</addrLine>
+          <addrLine>54063 Nancy Cedex</addrLine>
+          <addrLine>FRANCE</addrLine>
+        </address>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/deed.fr" xml:lang="fr">Ce fichier numérique est mis à disposition selon les termes de la licence Creative Commons Attribution 4.0 International.</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0" xml:lang="en">This electronic file is made available under the terms of the Creative Commons Attribution 4.0 International license.</licence>
+        </availability>
+        <date when="2023-08-11">11 08 2023</date>
+      </publicationStmt>
+      <sourceDesc>
+        <p xml:lang="fr">Ce document est une distribution des exemples lexicographiques du <objectName ref="https://hdl.handle.net/11403/lexical-system-fr">Réseau Lexical du Français (RL-fr)</objectName>, modèle formel du lexique du français contemporain en cours de construction au laboratoire ATILF (Nancy). Chacun des exemples provient initialement de l'une des sources suivantes : <listBibl><bibl>Frantext</bibl><bibl>FrWac</bibl><bibl>L’Est Républicain</bibl><bibl>Chambers-Rostand</bibl><bibl>Hors bases : Web</bibl><bibl>Hors bases : publication</bibl><bibl>Hors bases : audiovisuel</bibl><bibl>Hors bases : conversation</bibl><bibl>Hors bases : courrier</bibl><bibl>Hors bases : fabrication</bibl><bibl>Hors bases : chanson</bibl><bibl>Orthocorpus</bibl></listBibl>
+</p><p xml:lang="en">This document is the distibution of the lexicographical examples of the <objectName ref="https://hdl.handle.net/11403/lexical-system-fr">French Lexical Network (fr-LN)</objectName>, a formal model of the lexicon of contemporary French presently under construction. Each example originates from one of the following sources: <listBibl><bibl>Frantext</bibl><bibl>FrWac</bibl><bibl>L’Est Républicain</bibl><bibl>Chambers-Rostand</bibl><bibl>Hors bases : Web</bibl><bibl>Hors bases : publication</bibl><bibl>Hors bases : audiovisuel</bibl><bibl>Hors bases : conversation</bibl><bibl>Hors bases : courrier</bibl><bibl>Hors bases : fabrication</bibl><bibl>Hors bases : chanson</bibl><bibl>Orthocorpus</bibl></listBibl>
+</p></sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc xml:lang="fr">
+        <p>Ce projet s'inscrit dans le cadre des travaux sur les <objectName ref="https://lexical-systems.atilf.fr/">Systèmes Lexicaux</objectName> menés au sein du laboratoire ATILF du CNRS et de l'Université de Lorraine, sous la responsabilité d'<persName ref="Alain.Polguere@univ-lorraine.fr">Alain Polguère</persName>.</p>
+        <p>Il vise à simplifier la prise en main et l'exploitation de la base d'exemples lexicographiques du RL-fr, en la diffusant sous la forme d'un corpus indépendant.</p>
+      </projectDesc>
+      <projectDesc xml:lang="en">
+        <p>This project is part of the research conducted on <objectName ref="https://lexical-systems.atilf.fr/">Lexical Systems </objectName>at the ATILF laboratory — CNRS and Université de Lorraine —, under the supervision of <persName ref="Alain.Polguere@univ-lorraine.fr">Alain Polguère</persName>. It aims to facilitate the appropriation and exploitation of the database of fr-LN's lexicographic examples by distributing it as an autonomous corpus.</p>
+      </projectDesc>
+      </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="fr">French</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body><div><p>Exemples lexicographiques du Réseau Lexical du français, classés par source :</p><list rend="numbered"><item n="1"><ref target="xml/BEL-RL-fr_Frt.xml">Frantext</ref></item><item n="2"><ref target="xml/BEL-RL-fr_FrW.xml">FrWac</ref></item><item n="3"><ref target="xml/BEL-RL-fr_ER.xml">L’Est Républicain</ref></item><item n="4"><ref target="xml/BEL-RL-fr_HbW.xml">Hors bases : Web</ref></item><item n="5"><ref target="xml/BEL-RL-fr_HbP.xml">Hors bases : publication</ref></item><item n="6"><ref target="xml/BEL-RL-fr_HbA.xml">Hors bases : audiovisuel</ref></item><item n="7"><ref target="xml/BEL-RL-fr_HbConv.xml">Hors bases : conversation</ref></item><item n="8"><ref target="xml/BEL-RL-fr_HbCour.xml">Hors bases : courrier</ref></item><item n="9"><ref target="xml/BEL-RL-fr_HbF.xml">Hors bases : fabrication</ref></item><item n="12"><ref target="xml/BEL-RL-fr_HbCh.xml">Hors bases : chanson</ref></item><item n="13"><ref target="xml/BEL-RL-fr_OC.xml">Orthocorpus</ref></item></list></div></body>
+  </text>
+</TEI>

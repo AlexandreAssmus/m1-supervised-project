@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="TEI/LSexamples.rng" type="application/xml "schematypens="http://relaxng.org/ns/structure/1.0"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:lang="fr">BEL-RL-fr : exemples issus de Orthocorpus</title>
+        <title xml:lang="en">DBLE-LN-fr:examples extracted from Orthocorpus</title>
+      </titleStmt>
+      <editionStmt>
+        <edition>version 3</edition>
+        <principal ref="Sandrine.Ollinger@atilf.fr">Sandrine Ollinger</principal>
+        <funder ref="https://corli.huma-num.fr/">Consortium CORLI (Corpus, Langues, Interactions)</funder>
+        <funder ref="http://lchn.fr/">CPER LCHN (Langues, Connaissances &amp; Humanités Numériques)</funder>
+        <respStmt>
+          <resp xml:lang="fr">Développeuse</resp>
+          <resp xml:lang="en">Developer</resp>
+          <name>Marine Schmitt</name>
+        </respStmt>
+        <respStmt>
+          <resp xml:lang="fr">Relectrice</resp>
+          <resp xml:lang="en">Reviser</resp>
+          <name>Camille Kuntz</name>
+        </respStmt>
+      </editionStmt>
+      <publicationStmt>
+        <distributor>ATILF (Analyse et Traitement Informatique de la Langue Française)</distributor>
+        <address>
+          <addrLine>44, avenue de la Libération</addrLine>
+          <addrLine>BP 30687</addrLine>
+          <addrLine>54063 Nancy Cedex</addrLine>
+          <addrLine>FRANCE</addrLine>
+        </address>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0/deed.fr" xml:lang="fr">Ce fichier numérique est mis à disposition selon les termes de la licence Creative Commons Attribution 4.0 International.</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0" xml:lang="en">This electronic file is made available under the terms of the Creative Commons Attribution 4.0 International license.</licence>
+        </availability>
+        <date when="2023-08-11">11 08 2023</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl xml:lang="fr">Ce document est une distribution des exemples lexicographiques du <objectName ref="https://hdl.handle.net/11403/lexical-system-fr">Réseau Lexical du Français (RL-fr)</objectName>, qui sont issus de Orthocorpus.</bibl>
+        <bibl xml:lang="en">This document is the distibution of the lexicographical examples of the <objectName ref="https://hdl.handle.net/11403/lexical-system-fr">FrenchLexical Network (fr-LN)</objectName>, which originates from Orthocorpus.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc xml:lang="fr">
+        <p>Ce projet s'inscrit dans le cadre des travaux sur les <objectName ref="https://lexical-systems.atilf.fr/">Systèmes Lexicaux</objectName> menés au sein du laboratoire ATILF du CNRS et de l'Université de Lorraine, sous la responsabilité d'<persName ref="Alain.Polguere@univ-lorraine.fr">Alain Polguère</persName>.</p>
+        <p>Il vise à simplifier la prise en main et l'exploitation de la base d'exemples lexicographiques du RL-fr, en la diffusant sous la forme d'un corpus indépendant.</p>
+      </projectDesc>
+      <projectDesc xml:lang="en">
+        <p>This project is part of the research conducted on <objectName ref="https://lexical-systems.atilf.fr/">Lexical Systems </objectName>at the ATILF laboratory — CNRS and Université de Lorraine —, under the supervision of <persName ref="Alain.Polguere@univ-lorraine.fr">Alain Polguère</persName>. It aims to facilitate the appropriation and exploitation of the database of fr-LN's lexicographic examples by distributing it as an autonomous corpus.</p>
+      </projectDesc>
+      <tagsDecl xml:lang="fr" partial="true">
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="cit">Chaque exemple est représenté par un élément 'cit'. L'attribut 'source' de cet élément a pour valeur une URI, qui permet de retrouver l'exemple dans l'export public du RL-fr.</tagUsage>
+          <tagUsage gi="quote">Un élément 'quote' contient l'exemple lui-même.</tagUsage>
+          <tagUsage gi="bibl">Un élément 'bibl' contient sa référence bibliographique.</tagUsage>
+          <tagUsage gi="seg">À l'intérieur de l'exemple, des éléments 'seg' sont utilisés pour marquer les occurrences des entités lexicales en présence. Ils comportent un attribut 'type', qui fournit une information sur le statut lexical de l'entité lexicale et qui prend l'une des valeurs suivantes :
+<list type="gloss" xml:lang="fr">
+  <label>st00000000000000000000</label>
+  <item>aucun statut lexical</item>
+  <label>st01660000000000000000</label>
+  <item>locution forte</item>
+  <label>st01660076000000000000</label>
+  <item>locution forte et collocatif de son gouverneur syntaxique</item>
+  <label>st01660199000000000000</label>
+  <item>locution forte et collocatif de son sujet</item>
+  <label>st01660125000000000000</label>
+  <item>locution forte et collocatif de son COD</item>
+  <label>st01660302000000000000</label>
+  <item>locution forte et collocatif de son CObl</item>
+  <label>st01660232000000000000</label>
+  <item>locution forte et collocatif de son complément</item>
+  <label>st01660000016900000000</label>
+  <item>locution forte et proverbe</item>
+  <label>st01660000029500000000</label>
+  <item>locution forte et anthroponyme</item>
+  <label>st01660000029400000000</label>
+  <item>locution forte et toponyme</item>
+  <label>st01660000000001730000</label>
+  <item>locution forte et pragmatème</item>
+  <label>st01660000000000000161</label>
+  <item>locution forte et lexie inactive</item>
+  <label>st01670000000000000000</label>
+  <item>semi-locution</item>
+  <label>st01670076000000000000</label>
+  <item>semi-locution et collocatif de son gouverneur syntaxique</item>
+  <label>st01670199000000000000</label>
+  <item>semi-locution et collocatif de son sujet</item>
+  <label>st01670125000000000000</label>
+  <item>semi-locution et collocatif de son COD</item>
+  <label>st01670302000000000000</label>
+  <item>semi-locution et collocatif de son CObl</item>
+  <label>st01670232000000000000</label>
+  <item>semi-locution et collocatif de son complément</item>
+  <label>st01670000016900000000</label>
+  <item>semi-locution et proverbe</item>
+  <label>st01670000029500000000</label>
+  <item>semi-locution et anthroponyme</item>
+  <label>st01670000029400000000</label>
+  <item>semi-locution et toponyme</item>
+  <label>st01670000000001730000</label>
+  <item>semi-locution et pragmatème</item>
+  <label>st01680000000000000000</label>
+  <item>locution faible</item>
+  <label>st01680076000000000000</label>
+  <item>locution faible et collocatif de son gouverneur syntaxique</item>
+  <label>st01680199000000000000</label>
+  <item>locution faible et collocatif de son sujet</item>
+  <label>st01680125000000000000</label>
+  <item>locution faible et collocatif de son COD</item>
+  <label>st01680302000000000000</label>
+  <item>locution faible et collocatif de son CObl</item>
+  <label>st01680232000000000000</label>
+  <item>locution faible et collocatif de son complément</item>
+  <label>st01680000016900000000</label>
+  <item>locution faible et proverbe</item>
+  <label>st01680000029300000000</label>
+  <item>locution faible et pragmonyme</item>
+  <label>st01680000029400000000</label>
+  <item>locution faible et toponyme</item>
+  <label>st01680000029500000000</label>
+  <item>locution faible et anthroponyme</item>
+  <label>st01680000029800000000</label>
+  <item>locution faible et ergonyme</item>
+  <label>st01700000000000000000</label>
+  <item>cliché linguistique</item>
+  <label>st01700000016900000000</label>
+  <item>cliché linguistique et proverbe</item>
+  <label>st01700000000001730000</label>
+  <item>cliché linguistique et pragmatème</item>
+  <label>st01710000000000000000</label>
+  <item>collocation</item>
+  <label>st02810000000000000000</label>
+  <item>construction</item>
+  <label>st01720000000000000000</label>
+  <item>syntagme libre</item>
+  <label>st00000076000000000000</label>
+  <item>collocatif de son gouverneur syntaxique</item>
+  <label>st00000199000000000000</label>
+  <item>collocatif de son sujet</item>
+  <label>st00000125000000000000</label>
+  <item>collocatif de son COD</item>
+  <label>st00000302000000000000</label>
+  <item>collocatif de son CObl</item>
+  <label>st00000232000000000000</label>
+  <item>collocatif de son complément</item>
+  <label>st00000000016900000000</label>
+  <item>proverbe</item>
+  <label>st00000000029300000000</label>
+  <item>pragmonyme</item>
+  <label>st00000000029400000000</label>
+  <item>toponyme</item>
+  <label>st00000000029500000000</label>
+  <item>anthroponyme</item>
+  <label>st00000000029800000000</label>
+  <item>ergonyme</item>
+  <label>st00000000030500000000</label>
+  <item>ergonyme ou pragmonyme (emploi marginal)</item>
+  <label>st00000000030100000000</label>
+  <item>chrononyme</item>
+  <label>st00000000030300000000</label>
+  <item>prosopopéonyme</item>
+  <label>st00000000029400000161</label>
+  <item>toponyme et lexie inactive</item>
+  <label>st00000000000001730000</label>
+  <item>pragmatème</item>
+  <label>st00000000000000000161</label>
+  <item>lexie inactive</item>
+  <label>st00000000000000000180</label>
+  <item>lexie régulière</item>
+</list>
+Un attribut 'ana' fournit quant à lui la partie du discours de l'entité lexicale. Sa valeur se présente sous la forme d'une URI, qui fait référence au modèle de caractéristiques grammaticales du RL-fr. Un attribut 'fonction' permet de savoir si l'occurrence marquée a été sélectionnée pour apparaître dans l'article lexicographique de l'entité lexicale. Il prend l'une des valeurs suivantes: 
+<list type="gloss">
+  <label>active</label>
+  <item>cette occurrence a été sélectionnée;</item>
+  <label>inactive</label>
+  <item>cette occurrence n'a pas été sélectionnée.</item>
+</list>
+Enfin, un attribut 'source' permet de retrouver l'entité lexicale dans le RL-fr et de consulter son article lexicographique dans <objectName ref="https://spiderlex.atilf.fr/fr">Spiderlex</objectName>. Nous attirons votre attention sur le fait que la version du RL-fr disponible dans Spiderlex est mise à jour quotidiennement. </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <tagsDecl xml:lang="en" partial="true">
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="cit">Each example is represented by a 'cit' element. The 'source' attribute of this element has for value a URI. This URI points to the public export of the fr-LN.</tagUsage>
+          <tagUsage gi="quote">An 'quote' element contains the example itself.</tagUsage>
+          <tagUsage gi="bibl">An 'bibl' element contains its bibliographic reference.</tagUsage>
+          <tagUsage gi="seg">This element is used to indicate the presence of a lexical entity occurrence. The 'type' attribute of this element provides information about the lexical status of the lexical entity. It takes one of the following values: 
+<list type="gloss" xml:lang="fr">
+  <label>st00000000000000000000</label>
+  <item>aucun statut lexical</item>
+  <label>st01660000000000000000</label>
+  <item>locution forte</item>
+  <label>st01660076000000000000</label>
+  <item>locution forte et collocatif de son gouverneur syntaxique</item>
+  <label>st01660199000000000000</label>
+  <item>locution forte et collocatif de son sujet</item>
+  <label>st01660125000000000000</label>
+  <item>locution forte et collocatif de son COD</item>
+  <label>st01660302000000000000</label>
+  <item>locution forte et collocatif de son CObl</item>
+  <label>st01660232000000000000</label>
+  <item>locution forte et collocatif de son complément</item>
+  <label>st01660000016900000000</label>
+  <item>locution forte et proverbe</item>
+  <label>st01660000029500000000</label>
+  <item>locution forte et anthroponyme</item>
+  <label>st01660000029400000000</label>
+  <item>locution forte et toponyme</item>
+  <label>st01660000000001730000</label>
+  <item>locution forte et pragmatème</item>
+  <label>st01660000000000000161</label>
+  <item>locution forte et lexie inactive</item>
+  <label>st01670000000000000000</label>
+  <item>semi-locution</item>
+  <label>st01670076000000000000</label>
+  <item>semi-locution et collocatif de son gouverneur syntaxique</item>
+  <label>st01670199000000000000</label>
+  <item>semi-locution et collocatif de son sujet</item>
+  <label>st01670125000000000000</label>
+  <item>semi-locution et collocatif de son COD</item>
+  <label>st01670302000000000000</label>
+  <item>semi-locution et collocatif de son CObl</item>
+  <label>st01670232000000000000</label>
+  <item>semi-locution et collocatif de son complément</item>
+  <label>st01670000016900000000</label>
+  <item>semi-locution et proverbe</item>
+  <label>st01670000029500000000</label>
+  <item>semi-locution et anthroponyme</item>
+  <label>st01670000029400000000</label>
+  <item>semi-locution et toponyme</item>
+  <label>st01670000000001730000</label>
+  <item>semi-locution et pragmatème</item>
+  <label>st01680000000000000000</label>
+  <item>locution faible</item>
+  <label>st01680076000000000000</label>
+  <item>locution faible et collocatif de son gouverneur syntaxique</item>
+  <label>st01680199000000000000</label>
+  <item>locution faible et collocatif de son sujet</item>
+  <label>st01680125000000000000</label>
+  <item>locution faible et collocatif de son COD</item>
+  <label>st01680302000000000000</label>
+  <item>locution faible et collocatif de son CObl</item>
+  <label>st01680232000000000000</label>
+  <item>locution faible et collocatif de son complément</item>
+  <label>st01680000016900000000</label>
+  <item>locution faible et proverbe</item>
+  <label>st01680000029300000000</label>
+  <item>locution faible et pragmonyme</item>
+  <label>st01680000029400000000</label>
+  <item>locution faible et toponyme</item>
+  <label>st01680000029500000000</label>
+  <item>locution faible et anthroponyme</item>
+  <label>st01680000029800000000</label>
+  <item>locution faible et ergonyme</item>
+  <label>st01700000000000000000</label>
+  <item>cliché linguistique</item>
+  <label>st01700000016900000000</label>
+  <item>cliché linguistique et proverbe</item>
+  <label>st01700000000001730000</label>
+  <item>cliché linguistique et pragmatème</item>
+  <label>st01710000000000000000</label>
+  <item>collocation</item>
+  <label>st02810000000000000000</label>
+  <item>construction</item>
+  <label>st01720000000000000000</label>
+  <item>syntagme libre</item>
+  <label>st00000076000000000000</label>
+  <item>collocatif de son gouverneur syntaxique</item>
+  <label>st00000199000000000000</label>
+  <item>collocatif de son sujet</item>
+  <label>st00000125000000000000</label>
+  <item>collocatif de son COD</item>
+  <label>st00000302000000000000</label>
+  <item>collocatif de son CObl</item>
+  <label>st00000232000000000000</label>
+  <item>collocatif de son complément</item>
+  <label>st00000000016900000000</label>
+  <item>proverbe</item>
+  <label>st00000000029300000000</label>
+  <item>pragmonyme</item>
+  <label>st00000000029400000000</label>
+  <item>toponyme</item>
+  <label>st00000000029500000000</label>
+  <item>anthroponyme</item>
+  <label>st00000000029800000000</label>
+  <item>ergonyme</item>
+  <label>st00000000030500000000</label>
+  <item>ergonyme ou pragmonyme (emploi marginal)</item>
+  <label>st00000000030100000000</label>
+  <item>chrononyme</item>
+  <label>st00000000030300000000</label>
+  <item>prosopopéonyme</item>
+  <label>st00000000029400000161</label>
+  <item>toponyme et lexie inactive</item>
+  <label>st00000000000001730000</label>
+  <item>pragmatème</item>
+  <label>st00000000000000000161</label>
+  <item>lexie inactive</item>
+  <label>st00000000000000000180</label>
+  <item>lexie régulière</item>
+</list>
+The 'ana' attribute of this element provides the part of speech of the lexical entity by means of an URI, which points to the fr-LN's model of grammatical characteristics. The 'function' attribute of this element takes one of the following values: 
+<list type="gloss">
+  <label>active</label>
+  <item>This occurrence has been selected to appear in the lexicographic article of the lexical node</item>
+  <label>inactive</label>
+  <item>This occurrence has not been selected to appear in the lexicographic article of the lexical node.</item>
+</list>
+The 'source' attribute on this element provides a link to visualize the lexical entity in the fr-LN with <objectName ref="https://spiderlex.atilf.fr/fr">Spiderlex</objectName>.</tagUsage>
+        </namespace>
+      </tagsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="fr">French</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body><cit xml:id="cit30496" type="example" source="ls:fr:ex:30772">
+        <quote>Le moment du <seg xml:id="seg50975" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/54539">bilan</seg> est très important, peut-être même plus que chez l’adulte, pour ce qui va s’y dire de la bouche de l’enfant d’abord, de celle des parents ensuite, et des <seg xml:id="seg50976" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/55607">interactions</seg> qui pourront y être observées.</quote>
+        <bibl>
+          <title>L’enfant, sa demande et sa motivation</title>
+          <author>Klein-Dallant, Carine</author>
+          <date when="1998-06">06 1998</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30497" type="example" source="ls:fr:ex:30773">
+        <quote>Le <seg xml:id="seg50977" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/54539">bilan</seg> <seg xml:id="seg50978" type="st00000000000000000000" ana="ls:fr:gc:19" function="active" source="https://spiderlex.atilf.fr/fr/id/54555">orthophonique</seg> n’est pas seulement destiné à mesurer la sévérité du trouble, mais également à en étudier la nature, avec les différentes caractéristiques propres à chaque patient.</quote>
+        <bibl>
+          <title>Troubles d’évocation de mots associés du bégaiement</title>
+          <author>Teitler-Brejon, Nadia</author>
+          <date when="2001-06">06 2001</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30498" type="example" source="ls:fr:ex:30774">
+        <quote>Dans ce but, nous proposons un <seg xml:id="seg50979" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/54539">bilan</seg>, certes réduit et incomplet, mais simple, rapide, facile à faire passer lors d’une consultation, et surtout capable d’orienter rapidement le clinicien vers le (ou les) facteur(s) probable(s) intervenant(s) dans l’incompétence en calcul.</quote>
+        <bibl>
+          <title>Aspects cliniques des dyscalculies chez l’enfant</title>
+          <author>Mazeau, Michèle</author>
+          <date when="1999-09">09 1999</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30508" type="example" source="ls:fr:ex:30784">
+        <quote>L’<seg xml:id="seg50989" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/54558">orthophonie</seg> n’étant pas considérée comme une science mais comme une discipline se situant au carrefour de sciences diverses, dont elle tire les connaissances théoriques nécessaires au renouvellement et à l’amélioration de sa pratique, la recherche scientifique est donc essentielle au développement du savoir théorique des orthophonistes.</quote>
+        <bibl>
+          <title>Perspectives</title>
+          <author>Lederle, Emmanuelle</author>
+          <date when="1997-12">12 1997</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30509" type="example" source="ls:fr:ex:30785">
+        <quote>La jeune maman a participé d’emblée à l’élevage de son fils « en travaillant », sous la conduite d’une <seg xml:id="seg50990" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/54557">orthophoniste</seg> très avertie des problèmes de déglutition, et alertée par la forme du visage de l’enfant, proche d’un syndrome de « Pierre Robin ».</quote>
+        <bibl>
+          <title>Éducation précoce en orthophonie et IMC</title>
+          <author>Truscelli, Danièle</author>
+          <author>Chailley, Julie</author>
+          <date when="2000-06">06 2000</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30568" type="example" source="ls:fr:ex:30845">
+        <quote>Le compte rendu de ce <seg xml:id="seg51055" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/54539">bilan</seg> est communiqué au médecin prescripteur, accompagné de toute information en possession de l’orthophoniste et de tout avis susceptible d’être utile au médecin pour l’établissement du diagnostic médical, pour éclairer sur l’aspect technique de la rééducation envisagée et lui permettre l’adaptation du traitement en fonction de l’état de santé de la personne et de son évolution.</quote>
+        <bibl>
+          <title>Réflexions pour une méthodologie de rédaction d’une présentation de cas clinique</title>
+          <author>Coquet, Françoise</author>
+          <author>Dei Cas, Paula</author>
+          <date when="2008-09">09 2008</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30738" type="example" source="ls:fr:ex:31016">
+        <quote>Les bilans d’évaluation après <seg xml:id="seg51249" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/54797">implantation</seg> cochléaire sont indispensables à l’observation de l’évolution des enfants implantés.</quote>
+        <bibl>
+          <title>Evaluation de l’enfant sourd congénital et prélingual avant et après implantation</title>
+          <author>Vieu, Adrienne</author>
+          <author>Sillon, Martine</author>
+          <author>Mondain, Michel</author>
+          <date when="2004-03">03 2004</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30766" type="example" source="ls:fr:ex:31044">
+        <quote>La stratégie thérapeutique repose donc sur l’étude de l’analyse cutanée en étroite corrélation avec l’analyse squelettique et dentaire en se basant sur l’étude des photographies, des téléradiographies avec set-up céphalométrique et des moulages dentaires mis sur <seg xml:id="seg51277" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/54674">articulateur</seg> semi-adaptable.</quote>
+        <bibl>
+          <title>La chirurgie maxillo-faciale et la prise en charge orthophonique</title>
+          <author>Loncle, Thierry</author>
+          <author>Mouton, Laurence</author>
+          <date when="2006-06">06 2006</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30789" type="example" source="ls:fr:ex:31068">
+        <quote>On peut décrire que les indices visuels apportent des informations sur les points d’<seg xml:id="seg51304" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/54691">articulation</seg> des consonnes tandis que les indices auditifs permettent d’en distinguer leur mode et la présence ou non du trait de voisement.</quote>
+        <bibl>
+          <title>Conscience phonologique et surdité</title>
+          <author>Dumont, Annie</author>
+          <date when="1999-03">03 1999</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30806" type="example" source="ls:fr:ex:31085">
+        <quote>Au moment du choix des explorations, on peut imprimer le protocole choisi qui servira de guide avant de sélectionner les tests utiles pour la pathologie à <seg xml:id="seg51331" type="st00000000000000000000" ana="ls:fr:gc:23" function="active" source="https://spiderlex.atilf.fr/fr/id/54699">bilanter</seg>.</quote>
+        <bibl>
+          <title>Bilans des fonctions oro-faciales</title>
+          <author>Eyoum, Isabelle</author>
+          <date when="2002-12">12 2002</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30809" type="example" source="ls:fr:ex:31088">
+        <quote>L’enfant qui apprend à lire dispose d’un vocabulaire déjà étendu, comprend les phrases à l’<seg xml:id="seg51335" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/54700">oral</seg>, effectue des inférences.</quote>
+        <bibl>
+          <title>Reconnaisance visuelle de mots et dyslexies de l’enfant.</title>
+          <author>Casalis, Séverine</author>
+          <date when="1997-12">12 1997</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30863" type="example" source="ls:fr:ex:31142">
+        <quote>La rééducation vocale est souvent difficile à adapter à l’enfant hypertonique dans le sens où celui-ci n’est pas toujours gêné par sa <seg xml:id="seg51393" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/54758">dysphonie</seg> et ne se sent pas nécessairement concerné par sa rééducation.</quote>
+        <bibl>
+          <title>Apports de la sophrologie en rééducation vocale de la dysphonie de l’enfant</title>
+          <author>De Montauzan, Emmanuelle</author>
+          <date when="1998-06">06 1998</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30865" type="example" source="ls:fr:ex:31144">
+        <quote>Identifier la déficience vocale est important pour comprendre la vraie nature de la <seg xml:id="seg51395" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/54759">dysarthrie</seg> (qui est souvent un trouble de la voix associé à des troubles de l’articulation, de la résonance et de la prosodie).</quote>
+        <bibl>
+          <title>Entretien avec Raymond D. Kent, Ph.D.</title>
+          <author>Menin-Sicard, Anne</author>
+          <author>Kent, Raymond-D.</author>
+          <date when="2013-06">06 2013</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30867" type="example" source="ls:fr:ex:31146">
+        <quote>Ainsi, l’expression « <seg xml:id="seg51397" type="st00000000000000000000" ana="ls:fr:gc:20" function="active" source="https://spiderlex.atilf.fr/fr/id/54760">dyscalculie</seg> vraie » qui a été proposée par certains désignerait l’existence d’un trouble en calcul (et uniquement en calcul) non explicable par une déficience intellectuelle (l’enfant est normalement « intelligent »… sauf, peut-être, en mathématiques !), par un déséquilibre affectif ou par des causes ou circonstances pédagogiques directes (absentéisme, changement d’enseignant, méthodologies inappropriées, etc.).</quote>
+        <bibl>
+          <title>La délicate question de la compétence professionnelle face aux dysfonctionnements</title>
+          <author>Dessailly, Pierre</author>
+          <date when="1999-09">09 1999</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30892" type="example" source="ls:fr:ex:31171">
+        <quote>La démarche générale est cyclique : elle s’amorce par un <seg xml:id="seg51426" type="st01680000000000000000" ana="ls:fr:gc:21" function="active" source="https://spiderlex.atilf.fr/fr/id/54786">bilan initial</seg> – où en est l’enfant ou l’adulte : que sait-il ? Et que ne sait-il pas ? Que sait-il faire ou ne pas faire ? – mis en relation avec des objectifs de savoir et de savoir-faire (que doit-il savoir ou savoir-faire à l’issue des interventions ?).</quote>
+        <bibl>
+          <title>La question des apprentissages : une ardente obligation</title>
+          <author>Fayol, Michel</author>
+          <date when="2014-03">03 2014</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30902" type="example" source="ls:fr:ex:31181">
+        <quote>Une fois le <seg xml:id="seg51437" type="st01710000000000000000" ana="ls:fr:gc:192" function="active" source="https://spiderlex.atilf.fr/fr/id/54802">bilan <seg xml:id="seg51438" type="st00000000000000000000" ana="ls:fr:gc:19" function="active" source="https://spiderlex.atilf.fr/fr/id/54805"><seg xml:id="seg51439" type="st00000000000000000000" ana="ls:fr:gc:219" function="active" source="https://spiderlex.atilf.fr/fr/id/54821">pré-</seg>opératoire</seg></seg> réalisé, le type de paralysie et son retentissement déterminés, le traitement palliatif chirurgical est mis en œuvre, corrigeant étage par étage les lésions observées (cf. paragraphes 3 et 4).</quote>
+        <bibl>
+          <title>Myoplastie d’allongement du muscle temporal et traitement de la paralysie faciale</title>
+          <author>Labbé, Daniel</author>
+          <author>Soubeyrand, E.</author>
+          <date when="2002-06">06 2002</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30907" type="example" source="ls:fr:ex:31186">
+        <quote>Je rencontre la patiente pour un bilan préopératoire, puis la rééducation orthophonique commence juste après le <seg xml:id="seg51445" type="st01710000000000000000" ana="ls:fr:gc:192" function="active" source="https://spiderlex.atilf.fr/fr/id/54807">bilan post-opératoire</seg>, 21 jours après l’intervention, en octobre 2003.</quote>
+        <bibl>
+          <title>Cancers de la face : impacts sur la relation au monde, communication, alimentation : rôle et limites de l’orthophoniste à travers trois cas</title>
+          <author>Eyoum, Isabelle</author>
+          <date when="2011-03">03 2011</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30913" type="example" source="ls:fr:ex:31192">
+        <quote>Lors du <seg xml:id="seg51452" type="st01710000000000000000" ana="ls:fr:gc:192" function="active" source="https://spiderlex.atilf.fr/fr/id/54815">bilan de contrôle</seg> après une série de séances, la dysphonie est jugée moins importante par l’orthophoniste et par l’enfant dont la motivation s’est accrue.</quote>
+        <bibl>
+          <title>Evaluation clinique de la voix en orthophonie : E.C.V.O.</title>
+          <author>Osta, Arlette</author>
+          <date when="2013-06">06 2013</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30936" type="example" source="ls:fr:ex:31215">
+        <quote>D’autre part, en <seg xml:id="seg51478" type="st01710000000000000000" ana="ls:fr:gc:192" function="active" source="https://spiderlex.atilf.fr/fr/id/54834">bilan logico-mathématique</seg> d’enfants ou d’adolescents, on constate parfois que les mots utilisés par les patients ne sont pas en adéquation avec les réalisations de leurs mains.</quote>
+        <bibl>
+          <title>Approche logico-mathématique chez les adultes cérébrolésés : une perspective complémentaire</title>
+          <author>Gendre-Grenier, Louise</author>
+          <author>Vaillandet, Catherine</author>
+          <date when="2013-09">09 2013</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30937" type="example" source="ls:fr:ex:31216">
+        <quote>C’est dans ce contexte que le <seg xml:id="seg51479" type="st01710000000000000000" ana="ls:fr:gc:192" function="active" source="https://spiderlex.atilf.fr/fr/id/54834">bilan <seg xml:id="seg51480" type="st00000000000000000000" ana="ls:fr:gc:19" function="active" source="https://spiderlex.atilf.fr/fr/id/54833">logicomathématique</seg></seg> trouve toute sa place. Il nous permet une approche très intéressante du fonctionnement cognitif de l’enfant.</quote>
+        <bibl>
+          <title>Intérêt du bilan logicomathématique pour le pédopsychiatre</title>
+          <author>Chaudoye, Luc</author>
+          <date when="2013-09">09 2013</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit30948" type="example" source="ls:fr:ex:31227">
+        <quote>La plupart des orthophonistes ont rappelé l’importance du <seg xml:id="seg51492" type="st01710000000000000000" ana="ls:fr:gc:192" function="active" source="https://spiderlex.atilf.fr/fr/id/54842">bilan pré-implantation</seg> classique. </quote>
+        <bibl>
+          <title>L’implantation cochléaire précoce en France : état des lieux</title>
+          <author>Colleau, Audrey</author>
+          <date when="2004-03">03 2004</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit31033" type="example" source="ls:fr:ex:31312">
+        <quote>Après exérèse de l’hématome <seg xml:id="seg51589" type="st00000000000000000000" ana="ls:fr:gc:253" function="active" source="https://spiderlex.atilf.fr/fr/id/54929">temporo-</seg>pariétal droit, son élocution s’améliora de façon spectaculaire et 29 jours plus tard, son bégaiement avait disparu.</quote>
+        <bibl>
+          <title>Le bégaiement acquis chez l’enfant</title>
+          <author>Bijleveld, H.A.</author>
+          <date when="2002-09">09 2002</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit31037" type="example" source="ls:fr:ex:31316">
+        <quote>L’examen mandibulaire consiste à effectuer une palpation de la région des <seg xml:id="seg51593" type="st01680000000000000000" ana="ls:fr:gc:21" function="active" source="https://spiderlex.atilf.fr/fr/id/54934">articulations temporo-mandibulaire</seg> (ATM), des masséters, les temporaux, du plancher buccal d’abord au repos puis en serrant les dents.</quote>
+        <bibl>
+          <title>La gestion tonique : jeu de pistes pour rééduquer le dysphonique</title>
+          <author>Martinot-Randoux, Gisèle</author>
+          <date when="2013-06">06 2013</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit31046" type="example" source="ls:fr:ex:31325">
+        <quote>Une respiration costodiaphragmatique est donc entreprise, déjà travaillée avant l’intervention. Son but, outre la future utilisation pour la phonation est d’éviter l’ankylose de l’<seg xml:id="seg51604" type="st01680000000000000000" ana="ls:fr:gc:21" function="active" source="https://spiderlex.atilf.fr/fr/id/54947">articulation crico-aryténoïdienne</seg>.</quote>
+        <bibl>
+          <title>Déglutition et cancers de la sphère ORL : curatif et palliatif</title>
+          <author>Bétancourt, Philippe</author>
+          <author>Kremer, Jean-Marc</author>
+          <author>Lerond, Didier</author>
+          <date when="2011-03">03 2011</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit31052" type="example" source="ls:fr:ex:31331">
+        <quote>Un troisième <seg xml:id="seg51611" type="st01660000000000000000" ana="ls:fr:gc:21" function="active" source="https://spiderlex.atilf.fr/fr/id/54951">niveau d’articulation</seg> correspond à la description arthrique, à l’ensemble des traits pertinents du système phonétique.</quote>
+        <bibl>
+          <title>Des moyens différents pour communiquer et développer le langage</title>
+          <author>Marchand, Marie-Hélène</author>
+          <date when="1998-03">03 1998</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit31053" type="example" source="ls:fr:ex:31332">
+        <quote>Cette <seg xml:id="seg51612" type="st01660000000000000000" ana="ls:fr:gc:21" function="active" source="https://spiderlex.atilf.fr/fr/id/54948">première articulation</seg> réalise le caractère arbitraire de la langue, c’est à dire l’association entre une unité physique (la forme sonore du mot) et une signification ou un concept.</quote>
+        <bibl>
+          <title>Des moyens différents pour communiquer et développer le langage</title>
+          <author>Marchand, Marie-Hélène</author>
+          <date when="1998-03">03 1998</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit31054" type="example" source="ls:fr:ex:31333">
+        <quote>Les épreuves de dénomination permettent de mettre en évidence des productions verbales erronées en réponse à une demande de dénomination : il s’agit des paraphasies. Ces dernières peuvent atteindre la <seg xml:id="seg51613" type="st01660000000000000000" ana="ls:fr:gc:21" function="active" source="https://spiderlex.atilf.fr/fr/id/54949">deuxième articulation</seg> du langage, c’est à dire le choix des phonèmes.</quote>
+        <bibl>
+          <title>Les formes cliniques des aphasies corticales</title>
+          <author>Gil, Roger</author>
+          <date when="1999-06">06 1999</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit31055" type="example" source="ls:fr:ex:31334">
+        <quote>Certains systèmes descendent à un niveau de <seg xml:id="seg51614" type="st01660000000000000000" ana="ls:fr:gc:21" function="active" source="https://spiderlex.atilf.fr/fr/id/54950">troisième articulation</seg> et signent les traits phonétiques.</quote>
+        <bibl>
+          <title>Des moyens différents pour communiquer et développer le langage</title>
+          <author>Marchand, Marie-Hélène</author>
+          <date when="1998-03">03 1998</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit31100" type="example" source="ls:fr:ex:31379">
+        <quote>Son profil d’erreurs lors de la tâche d’inversion syllabique suggère une défaillance dans le processus de la <seg xml:id="seg51661" type="st01680000000000000000" ana="ls:fr:gc:21" function="active" source="https://spiderlex.atilf.fr/fr/id/54998">boucle articulatoire</seg>.</quote>
+        <bibl>
+          <title>Influence des compétences phonologiques, mnésiques et syntaxiques sur l’apprentissage de la lecture et son dysfonctionnement : Étude longitudinale de la grande section de maternelle au CP</title>
+          <author>Plaza, Monique</author>
+          <date when="2000-06">06 2000</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit><cit xml:id="cit31101" type="example" source="ls:fr:ex:31380">
+        <quote>La <seg xml:id="seg51662" type="st01680000000000000000" ana="ls:fr:gc:21" function="active" source="https://spiderlex.atilf.fr/fr/id/54999">suppression articulatoire</seg> abolit d’une part l’effet de longueur des mots et d’autre part supprime l’effet de similarité phonologique pour un matériel à mémoriser présenté visuellement.</quote>
+        <bibl>
+          <title>La mémoire : concepts théoriques</title>
+          <author>Pluchon, Claudette</author>
+          <date when="2000-03">03 2000</date>
+          <ref type="various">Rééducation orthophonique</ref>
+        </bibl>
+      </cit></body>
+  </text>
+</TEI>
