@@ -1,0 +1,7 @@
+source,target,source_lexname,target_lexname
+ls:fr:node:29291,ls:fr:node:40613,route,mener
+ls:fr:node:29291,ls:fr:node:40398,route,aller
+ls:fr:node:38292,ls:fr:node:26862,chiffre,concerner
+ls:fr:node:42595,ls:fr:node:42717,pluie,tomber
+ls:fr:node:42696,ls:fr:node:44369,vent,souffler
+ls:fr:node:42696,ls:fr:node:44370,vent,passer
