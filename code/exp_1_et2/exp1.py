@@ -20,9 +20,6 @@ model_name = "camembert-base"
 tokenizer = CamembertTokenizer.from_pretrained(model_name)
 model = CamembertModel.from_pretrained(model_name)
 
-v1, v2 = torch.tensor([1,2,3,4,5]), torch.tensor([1,2,3,4,5])
-print(cosineSimilarity(v1,v2))
-
 
 ### CHOIX DE LA FONCTION LEXICALE ############################
 import pandas as pd
@@ -33,9 +30,52 @@ lexfn_count = df["lf"].value_counts()
 print(lexfn_count.head())
 
 
+### RECUPERATION DES MATRICES D'ATTENTION #####################
+
+
+import torch
+from transformers import CamembertTokenizer, CamembertModel
+
+modelName="camembert-base"
+tokenizer = CamembertTokenizer.from_pretrained(modelName)
+model=CamembertModel.from_pretrained(modelName, output_attentions=True)
+
+def tokenize(sentences,tokenizer):
+    """ returns the tokens of the sentences passed sentences as computed by the model """
+    tokens=tokenizer(sentences,return_tensors='pt',padding=True)
+    return tokens['input_ids']
+
+
+def attentionMatrices(sentences,tokenizer,model):
+    encoded_input = tokenizer(sentences, return_tensors='pt')
+    outputs = model(**encoded_input)
+    return outputs.attentions
+
+
+def LayerAttentionMatrices(sentences,tokenizer,model,layer):
+    encoded_input = tokenizer(sentences, return_tensors='pt')
+    outputs = model(**encoded_input)
+    return outputs.attentions[layer]
 
 
 
+corpus = ["Aujourd'hui est une belle journée."]
+tokens = tokenize(corpus, tokenizer)
+layer0 = LayerAttentionMatrices(corpus,tokenizer,model,0)
+attention_matrices = attentionMatrices(corpus,tokenizer,model)
+
+
+print(len(tokens))
+print(layer0.shape)
+print(len(attention_matrices))
+print(attention_matrices.head())
+
+
+
+
+
+
+### ETUDE STATISTIQUE DE L'ATTENTION ##############################
 
 
 
