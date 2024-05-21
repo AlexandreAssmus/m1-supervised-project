@@ -101,11 +101,11 @@ def layerPairPlot(corpus,pos1,pos2, tokenizer, model):
 
 ### CALCUL MOYENNE GLOBALE ########################################
 
-# def globalAverageAttention(corpus, tokenizer, model):
-#     attention_matrix = attentionMatrices(corpus, tokenizer, model)
-#     for i in range(12):
-#         for j in range(12):
-#             print("matrix 1", attentionMatrices[i][j])
+def headAverageAttention(corpus, layer, head, tokenizer, model):
+    attention_matrices = attentionMatrices(corpus,tokenizer,model)
+    average_attention = torch.mean(attention_matrices[layer][0][head])
+    return(average_attention.item())
+
 
 
 
@@ -135,26 +135,39 @@ def main():
     corpus = ["Aujourd'hui est une belle journée."]
 
 
-    tokens = tokenize(corpus, tokenizer)
-    layer0 = layerAttentionMatrices(corpus,tokenizer,model,0)
+    # tokens = tokenize(corpus, tokenizer)
+    # layer0 = layerAttentionMatrices(corpus,tokenizer,model,0)
+    # attention_matrices = attentionMatrices(corpus,tokenizer,model)
+    # # print(untokenize(tokens,tokenizer))
+    # # print("nb of tokens:", len(tokens[0]))
+    # # print(layer0.shape)
+    # # print(len(attention_matrices))
+    # # print(attention_matrices[0].shape)
+
+    # relative_attentions = relativeAttention(corpus, 0, 1, tokenizer, model)
+    # #print(relative_attentions)
+
+    # layerPairPlot(corpus,0,1,tokenizer,model)
+
+    # matrices = attentionMatrices(corpus,tokenizer,model)
+    # print(type(matrices))
+
+    # #globalAverageAttention(corpus,tokenizer,model)
+
+
     attention_matrices = attentionMatrices(corpus,tokenizer,model)
-    # print(untokenize(tokens,tokenizer))
-    # print("nb of tokens:", len(tokens[0]))
-    # print(layer0.shape)
-    # print(len(attention_matrices))
-    # print(attention_matrices[0].shape)
+    print(type(attention_matrices)) # tuple
+    print(len(attention_matrices)) #12
+    print(len(attention_matrices[0])) #1
+    print(len(attention_matrices[0][0])) #12
+    print(attention_matrices[0][0])
+    print(len(attention_matrices[0][0][0])) #10
+    print(len(attention_matrices[0][0][0][0])) #10
 
-    relative_attentions = relativeAttention(corpus, 0, 1, tokenizer, model)
-    #print(relative_attentions)
-
-    layerPairPlot(corpus,0,1,tokenizer,model)
-
-    matrices = attentionMatrices(corpus,tokenizer,model)
-    print(type(matrices))
-
-    #globalAverageAttention(corpus,tokenizer,model)
-
-
+    print(attention_matrices[0][0][0])
+    average_attention = torch.mean(attention_matrices[0][0][0])
+    print(average_attention.item())
+    print(headAverageAttention(corpus,0,0,tokenizer,model))
 
 
 
