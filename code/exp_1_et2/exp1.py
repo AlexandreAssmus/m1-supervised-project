@@ -116,6 +116,14 @@ def layerAverageAttention(corpus, layer, tokenizer, model):
     layer_average = np.mean(array)
     return layer_average
 
+def averageAttention(corpus, tokenizer, model):
+    layer_averages = []
+    for layer in range(nb_layers):
+        layer_averages.append(layerAverageAttention(corpus,layer,tokenizer,model))
+    array = np.array(layer_averages)
+    layer_average = np.mean(array)
+    return layer_average
+
 
 
 
@@ -175,6 +183,9 @@ def main():
     average_attention = torch.mean(attention_matrices[0][0][0])
     print(average_attention.item())
     print(headAverageAttention(corpus,0,0,tokenizer,model))
+
+    print(layerAverageAttention(corpus,0,tokenizer,model))
+    print(averageAttention(corpus,tokenizer,model))
 
 
 
