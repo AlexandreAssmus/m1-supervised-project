@@ -123,6 +123,12 @@ def averageAttention(corpus, tokenizer, model):
 ### CENTRAGE #####################################################
 
 
+def headCentering(corpus,layer,head,tokenizer,model):
+    attention_matrices = attentionMatrices(corpus, tokenizer,model)
+    head_average_attention = headAverageAttention(corpus,layer,head,tokenizer,model)
+    head_attention_matrix = attention_matrices[layer][0][head]
+    centered_matrix = head_attention_matrix-head_average_attention
+    return centered_matrix
 
 
 ### POSITIONNEMENT PAR RAPPORT AUX MOYENNES DE L'ATTENTION #########
@@ -184,6 +190,10 @@ def main():
     print(averageAttention(corpus,tokenizer,model))
 
 
+    hm = headCentering(corpus,0,0,tokenizer,model)
+    print(type(hm))
+    print(hm)
+    print(len(hm[0]))
 
 if __name__ == "__main__":
     main()
