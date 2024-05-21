@@ -59,11 +59,17 @@ def attentionMatrices(corpus,tokenizer,model):
     return outputs.attentions
 
 
-def layerAttentionMatrices(corpus,tokenizer,model,layer):
+def layerAttentionMatrices(corpus,layer,tokenizer,model):
     encoded_input = tokenizer(corpus, return_tensors='pt')
     outputs = model(**encoded_input)
     output = outputs.attentions
     return output[layer]
+
+def headAttentionMatrix(corpus,layer,head,tokenizer,model):
+    encoded_input = tokenizer(corpus, return_tensors='pt')
+    outputs = model(**encoded_input)
+    output = outputs.attentions
+    return output[layer][0][head]
 
 
 ### RECUPERATION DE L'ATTENTION RELATIVE ENTRE DEUX MOTS DONNÉS ###
@@ -124,11 +130,13 @@ def averageAttention(corpus, tokenizer, model):
 
 
 def headCentering(corpus,layer,head,tokenizer,model):
-    attention_matrices = attentionMatrices(corpus, tokenizer,model)
+    head_attention_matrix = headAttentionMatrix(corpus, layer, head, tokenizer,model)
     head_average_attention = headAverageAttention(corpus,layer,head,tokenizer,model)
-    head_attention_matrix = attention_matrices[layer][0][head]
     centered_matrix = head_attention_matrix-head_average_attention
     return centered_matrix
+
+def layerCentering(corpus,layer,tokenizer,model):
+    pass
 
 
 ### POSITIONNEMENT PAR RAPPORT AUX MOYENNES DE L'ATTENTION #########
