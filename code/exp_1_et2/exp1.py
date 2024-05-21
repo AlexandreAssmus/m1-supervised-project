@@ -24,7 +24,7 @@ import numpy as np
 
 ### CHOIX DE LA FONCTION LEXICALE ############################
 
-path = "/home/marina/Documents/M1/facS8/supproj/m1-supervised-project/lexical-system-fr/ls-fr-V3/15-lslf-rel.csv"
+path = "../../lexical-system-fr/ls-fr-V3/15-lslf-rel.csv"
 df = pd.read_csv(path, delimiter='\t')
 lexfn_count = df["lf"].value_counts()
 print(lexfn_count.head())
@@ -41,9 +41,9 @@ nb_heads = model.config.num_attention_heads
 
 
 
-def tokenize(sentences,tokenizer):
+def tokenize(corpus,tokenizer):
     """ returns the tokens of the sentences passed sentences as computed by the model """
-    tokens=tokenizer(sentences,return_tensors='pt',padding=True)
+    tokens=tokenizer(corpus,return_tensors='pt',padding=True)
     return tokens['input_ids'] # torch.tensor
 
 def untokenize(input_ids,tokenizer):
@@ -53,14 +53,14 @@ def untokenize(input_ids,tokenizer):
     return output
 
 
-def attentionMatrices(sentences,tokenizer,model):
-    encoded_input = tokenizer(sentences, return_tensors='pt')
+def attentionMatrices(corpus,tokenizer,model):
+    encoded_input = tokenizer(corpus, return_tensors='pt')
     outputs = model(**encoded_input)
     return outputs.attentions
 
 
-def layerAttentionMatrices(sentences,tokenizer,model,layer):
-    encoded_input = tokenizer(sentences, return_tensors='pt')
+def layerAttentionMatrices(corpus,tokenizer,model,layer):
+    encoded_input = tokenizer(corpus, return_tensors='pt')
     outputs = model(**encoded_input)
     output = outputs.attentions
     return output[layer]
@@ -95,11 +95,6 @@ def layerPairPlot(corpus,pos1,pos2, tokenizer, model):
     plt.legend()
     plt.show()
 
-
-
-### NORMALISATION AVEC MOYENNE LOCALE ##############################
-
-
 ### CALCUL MOYENNE GLOBALE ########################################
 
 def headAverageAttention(corpus, layer, head, tokenizer, model):
@@ -125,9 +120,10 @@ def averageAttention(corpus, tokenizer, model):
     return layer_average
 
 
+### CENTRAGE #####################################################
 
 
-### NORMALISATION AVEC MOYENNE GLOBALE ############################
+
 
 ### POSITIONNEMENT PAR RAPPORT AUX MOYENNES DE L'ATTENTION #########
 
