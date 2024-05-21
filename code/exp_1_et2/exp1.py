@@ -16,6 +16,7 @@ import torch
 from transformers import CamembertTokenizer, CamembertModel
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 ### IMPACT DU POSITIONAL ENCODING ############################
@@ -107,7 +108,13 @@ def headAverageAttention(corpus, layer, head, tokenizer, model):
     return(average_attention.item())
 
 
-
+def layerAverageAttention(corpus, layer, tokenizer, model):
+    head_averages = []
+    for head in range(nb_heads):
+        head_averages.append(headAverageAttention(corpus,layer,head, tokenizer,model))
+    array = np.array(head_averages)
+    layer_average = np.mean(array)
+    return layer_average
 
 
 
