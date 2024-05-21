@@ -11,18 +11,17 @@
 # prender en compte la repr dans l'espace ----> gare au hors sujets
 
 
-### IMPACT DU POSITIONAL ENCODING ############################
-
+### IMPORTS ###################################################
 import torch
 from transformers import CamembertTokenizer, CamembertModel
+import pandas as pd
+import matplotlib.pyplot as plt
 
-model_name = "camembert-base"
-tokenizer = CamembertTokenizer.from_pretrained(model_name)
-model = CamembertModel.from_pretrained(model_name)
+
+### IMPACT DU POSITIONAL ENCODING ############################
 
 
 ### CHOIX DE LA FONCTION LEXICALE ############################
-import pandas as pd
 
 path = "/home/marina/Documents/M1/facS8/supproj/m1-supervised-project/lexical-system-fr/ls-fr-V3/15-lslf-rel.csv"
 df = pd.read_csv(path, delimiter='\t')
@@ -32,13 +31,14 @@ print(lexfn_count.head())
 
 ### RECUPERATION DES MATRICES D'ATTENTION #####################
 
-
-import torch
-from transformers import CamembertTokenizer, CamembertModel
-
 modelName="camembert-base"
 tokenizer = CamembertTokenizer.from_pretrained(modelName)
 model=CamembertModel.from_pretrained(modelName, output_attentions=True)
+
+nb_layers = model.config.num_hidden_layers
+nb_heads = model.config.num_attention_heads
+
+
 
 def tokenize(sentences,tokenizer):
     """ returns the tokens of the sentences passed sentences as computed by the model """
@@ -58,84 +58,105 @@ def attentionMatrices(sentences,tokenizer,model):
     return outputs.attentions
 
 
-def LayerAttentionMatrices(sentences,tokenizer,model,layer):
+def layerAttentionMatrices(sentences,tokenizer,model,layer):
     encoded_input = tokenizer(sentences, return_tensors='pt')
     outputs = model(**encoded_input)
-    return outputs.attentions[layer]
-
-
-
-corpus = ["Aujourd'hui est une belle journée."]
-tokens = tokenize(corpus, tokenizer)
-layer0 = LayerAttentionMatrices(corpus,tokenizer,model,0)
-attention_matrices = attentionMatrices(corpus,tokenizer,model)
-
-print(untokenize(tokens,tokenizer))
-print("nb of tokens:", len(tokens[0]))
-print(layer0.shape)
-print(len(attention_matrices))
-print(attention_matrices[0].shape)
-
-
-### CALCUL DE LA MOYENNE DE L'ATTENTION ###########################
-
+    output = outputs.attentions
+    return output[layer]
 
 
 ### RECUPERATION DE L'ATTENTION RELATIVE ENTRE DEUX MOTS DONNÉS ###
 
 
-def LayerRelativeAttention(pos1, pos2, layer_attention_matrix):
-    nb_heads = attention_matrices[0].shape[1]
+def layerRelativeAttention(corpus, layer,  pos1, pos2, tokenizer, model):
+    layer_attention_matrix = layerAttentionMatrices(corpus, tokenizer, model, layer)
     layer_relative_attention = []
     for head in range(nb_heads):
         layer_relative_attention.append(layer_attention_matrix[0][head][pos1][pos2])
     return [tensor.item() for tensor in layer_relative_attention]
 
-def relativeAttention(pos1,pos2,attention_matrices):
-    nb_layers = len(attention_matrices)
+def relativeAttention(corpus, pos1, pos2, tokenizer, model):
     relative_attention = []
     for layer in range(nb_layers):
-        relative_attention.append(LayerRelativeAttention(pos1,pos2,attention_matrices[layer]))
+        relative_attention.append(layerRelativeAttention(corpus, layer, pos1,pos2,tokenizer,model))
     return relative_attention
 
 
-relatt1 = LayerRelativeAttention(0,1,attention_matrices[0])
-relatt2 = LayerRelativeAttention(0,1,attention_matrices[0])
 
-resultat = [[relatt1[i], relatt2[i]] for i in range(min(len(relatt1), len(relatt2)))]
-print(resultat)
+### PREMIERS TRACÉS ##################################################
 
 
-test = relativeAttention(0,1,attention_matrices)
-print(test)
-print(len(test))
-print(len(test[0]))
+def layerPairPlot(corpus,pos1,pos2, tokenizer, model):
+    colors = ['red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'black', 'orange', 'purple', 'brown', 'pink', 'grey']
+    relative_attentions = relativeAttention(corpus,pos1,pos2, tokenizer, model)
+    for i in range(12):
+        plt.plot(relative_attentions[i], marker='o',linestyle='-',color=colors[i],label=f'Layer{i}')
+    plt.legend()
+    plt.show()
 
+
+
+### NORMALISATION AVEC MOYENNE LOCALE ##############################
+
+
+### CALCUL MOYENNE GLOBALE ########################################
+
+# def globalAverageAttention(corpus, tokenizer, model):
+#     attention_matrix = attentionMatrices(corpus, tokenizer, model)
+#     for i in range(12):
+#         for j in range(12):
+#             print("matrix 1", attentionMatrices[i][j])
+
+
+
+
+
+
+### NORMALISATION AVEC MOYENNE GLOBALE ############################
+
+### POSITIONNEMENT PAR RAPPORT AUX MOYENNES DE L'ATTENTION #########
 
 
 ### ETUDE STATISTIQUE DE L'ATTENTION ##############################
 
 
+### GESTION DES UNITÉS LEXICALES À PLUSIEURS TOKENS ###############
+
+
+### MAIN #########################################################
+
+def main():
+
+    model_name = "camembert-base"
+    tokenizer = CamembertTokenizer.from_pretrained(model_name)
+    model = CamembertModel.from_pretrained(model_name,output_attentions=True)
+
+
+    corpus = ["Aujourd'hui est une belle journée."]
+
+
+    tokens = tokenize(corpus, tokenizer)
+    layer0 = layerAttentionMatrices(corpus,tokenizer,model,0)
+    attention_matrices = attentionMatrices(corpus,tokenizer,model)
+    # print(untokenize(tokens,tokenizer))
+    # print("nb of tokens:", len(tokens[0]))
+    # print(layer0.shape)
+    # print(len(attention_matrices))
+    # print(attention_matrices[0].shape)
+
+    relative_attentions = relativeAttention(corpus, 0, 1, tokenizer, model)
+    #print(relative_attentions)
+
+    layerPairPlot(corpus,0,1,tokenizer,model)
+
+    matrices = attentionMatrices(corpus,tokenizer,model)
+    print(type(matrices))
+
+    #globalAverageAttention(corpus,tokenizer,model)
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-# model definition
-model = ""
-tokenizer = ""
-
-
-def relative_attention(corpus,word):
-    pass
+if __name__ == "__main__":
+    main()
