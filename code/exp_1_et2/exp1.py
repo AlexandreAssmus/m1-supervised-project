@@ -136,7 +136,11 @@ def headCentering(corpus,layer,head,tokenizer,model):
     return centered_matrix
 
 def layerCentering(corpus,layer,tokenizer,model):
-    pass
+    layer_attention_matrix = layerAttentionMatrices(corpus,layer,tokenizer,model)
+    layer_average_attention = layerAverageAttention(corpus,layer,tokenizer,model)
+    centered_matrix = layer_attention_matrix-layer_average_attention
+    return centered_matrix[0]
+
 
 
 ### POSITIONNEMENT PAR RAPPORT AUX MOYENNES DE L'ATTENTION #########
@@ -180,28 +184,31 @@ def main():
     # #globalAverageAttention(corpus,tokenizer,model)
 
 
-    attention_matrices = attentionMatrices(corpus,tokenizer,model)
-    print(type(attention_matrices)) # tuple
-    print(len(attention_matrices)) #12
-    print(len(attention_matrices[0])) #1
-    print(len(attention_matrices[0][0])) #12
-    print(attention_matrices[0][0])
-    print(len(attention_matrices[0][0][0])) #10
-    print(len(attention_matrices[0][0][0][0])) #10
+    # attention_matrices = attentionMatrices(corpus,tokenizer,model)
+    # print(type(attention_matrices)) # tuple
+    # print(len(attention_matrices)) #12
+    # print(len(attention_matrices[0])) #1
+    # print(len(attention_matrices[0][0])) #12
+    # print(attention_matrices[0][0])
+    # print(len(attention_matrices[0][0][0])) #10
+    # print(len(attention_matrices[0][0][0][0])) #10
 
-    print(attention_matrices[0][0][0])
-    average_attention = torch.mean(attention_matrices[0][0][0])
-    print(average_attention.item())
-    print(headAverageAttention(corpus,0,0,tokenizer,model))
+    # print(attention_matrices[0][0][0])
+    # average_attention = torch.mean(attention_matrices[0][0][0])
+    # print(average_attention.item())
+    # print(headAverageAttention(corpus,0,0,tokenizer,model))
 
-    print(layerAverageAttention(corpus,0,tokenizer,model))
-    print(averageAttention(corpus,tokenizer,model))
+    # print(layerAverageAttention(corpus,0,tokenizer,model))
+    # print(averageAttention(corpus,tokenizer,model))
 
+    hc = headCentering(corpus, 0,0,tokenizer,model)
+    print(type(hc))
+    print(hc.size())
 
-    hm = headCentering(corpus,0,0,tokenizer,model)
-    print(type(hm))
-    print(hm)
-    print(len(hm[0]))
+    lc = layerCentering(corpus,0,tokenizer,model)
+    print(type(lc))
+    print(lc.size())
+
 
 if __name__ == "__main__":
     main()
