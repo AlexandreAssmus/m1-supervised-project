@@ -69,15 +69,21 @@ def cosineSimilarity(embeddings1,embeddings2):
     output=CosSim(embeddings1,embeddings2)
     return(output)
 
-def pairCosineSimilarity(embeddings1,embeddings2,layer,pos1,pos2):
+def pairCosineSimilarity(embeddings,layer,pos1,pos2):
     CosSim = torch.nn.CosineSimilarity(dim=0, eps=1e-6)
-    cs=CosSim(embeddings1[layer][0][pos1],embeddings2[layer][0][pos2])
+    cs=CosSim(embeddings[layer][0][pos1],embeddings[layer][0][pos2])
     output = cs.item()
     return(output)
 
-### THROUGH LAYERS ##############################################################################################################
+def storeCosineSimilarity(embeddings,pos1,pos2):
+    cosine_similarities = []
+    for layer in range(12):
+        cosine_similarities.append(pairCosineSimilarity(embeddings,layer,pos1,pos2))
+    return cosine_similarities
 
 ### PLOTTING ####################################################################################################################
+
+
 
 ### MAIN ###########################################################################################################################
 
@@ -95,6 +101,9 @@ def main():
     # experiment
     tokens = tokenize(corpus,tokenizer)
     e = computeEmbeddings(tokens,model)
+    cs1 = cosineSimilarity(e[1],e[1])
+    print(type(cs1))
+    print(cs1.size())
     print(type(e[2]))
     print(e[2].size())
     cs = cosineSimilarity(e[2][0][2],e[2][0][4])
