@@ -21,14 +21,6 @@ import numpy as np
 
 ### IMPACT DU POSITIONAL ENCODING ##################################################################################################################
 
-
-### LEXICAL FUNCTION SELECTION #####################################################################################################################
-
-path = "../../lexical-system-fr/ls-fr-V3/15-lslf-rel.csv"
-df = pd.read_csv(path, delimiter='\t')
-lexfn_count = df["lf"].value_counts()
-print(lexfn_count.head())
-
 ### TOKENIZATION AND UNTOKENIZATION ################################################################################################################
 
 def tokenize(corpus,tokenizer):
@@ -155,6 +147,12 @@ def main():
 
     # corpus definition
     corpus = ["Aujourd'hui est une belle journée."]
+
+    # lexical function selection
+    path = "../../lexical-system-fr/ls-fr-V3/15-lslf-rel.csv"
+    df = pd.read_csv(path, delimiter='\t')
+    lexfn_count = df["lf"].value_counts()
+    print(lexfn_count.head())   
 
     # experiment
     c = centering(corpus,tokenizer,model)
