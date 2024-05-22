@@ -124,11 +124,22 @@ def headCentering(corpus,layer,head,tokenizer,model):
 def layerCentering(corpus,layer,tokenizer,model):
     layer_attention_matrix = layerAttentionMatrices(corpus,layer,tokenizer,model)
     layer_average_attention = layerAverageAttention(corpus,layer,tokenizer,model)
-    centered_matrix = layer_attention_matrix-layer_average_attention
-    return centered_matrix[0]
+    centered_matrices = layer_attention_matrix-layer_average_attention
+    return centered_matrices[0]
 
 def centering(corpus, tokenizer, model):
-    pass
+    nb_layers = model.config.num_hidden_layers
+    nb_heads = model.config.num_attention_heads
+    attention_matrices = attentionMatrices(corpus,tokenizer,model)
+    average_attention = averageAttention(corpus,tokenizer,model)
+    centered_matrices = []
+    for layer in range(nb_layers):
+        layer_centered_matrices = []
+        for head in range(nb_heads):
+            clean_head_attention_matrix = attention_matrices[layer][0][head].tolist()
+            layer_centered_matrices.append(clean_head_attention_matrix-average_attention)
+        centered_matrices.append(layer_centered_matrices)
+    return centered_matrices # list of lists, 12x12
 
 ### GESTION DES UNITÉS LEXICALES À PLUSIEURS TOKENS ################################################################################################
 
@@ -146,22 +157,10 @@ def main():
     corpus = ["Aujourd'hui est une belle journée."]
 
     # experiment
-    matrices = attentionMatrices(corpus,tokenizer,model)
-    print(type(matrices))
-
-    lam = layerAttentionMatrices(corpus,0,tokenizer,model)
-    print(type(lam))
-    print(lam)
-
-    hra = headRelativeAttention(corpus, 0, 0, 0, 1, tokenizer, model)
-    print(type(hra))
-
-    lra = layerRelativeAttention(corpus,0,0,1,tokenizer,model)
-    print(type(lra))
-
-    ra = relativeAttention(corpus,0,1,tokenizer,model)
-    print(type(ra))
-
+    c = centering(corpus,tokenizer,model)
+    print(type(c))
+    print(len(c))
+    print(len(c[0]))
 
 
 
