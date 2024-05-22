@@ -71,12 +71,9 @@ def relativeAttention(corpus, pos1, pos2, tokenizer, model):
 
 ### PREMIERS TRACÉS ################################################################################################################################
 
-def headRelativeAttentionPlot(corpus,layer,pos1,pos2,tokenizer,model):
-    nb_heads = model.config.num_attention_heads
-    colors = ['red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'black', 'orange', 'purple', 'brown', 'pink', 'grey']
+def layerRelativeAttentionPlot(corpus,layer,pos1,pos2,tokenizer,model):
     layer_relative_attention = layerRelativeAttention(corpus,layer,pos1,pos2,tokenizer,model)
-    for head in range(nb_heads):
-        plt.plot(layer_relative_attention[head], marker='o',linestyle='-',color=colors[head],label=f'Layer{head}')
+    plt.plot(layer_relative_attention, marker='o',linestyle='-',color='black')
     plt.legend()
     plt.show()
 
@@ -88,7 +85,7 @@ def headRelativeAttentionPlot(corpus,layer,pos1,pos2,tokenizer,model):
 #     plt.legend()
 #     plt.show()
 
-def layerRelativeAttentionPlot(corpus,pos1,pos2, tokenizer, model):
+def relativeAttentionPlot(corpus,pos1,pos2, tokenizer, model):
     nb_layers = model.config.num_hidden_layers
     colors = ['red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'black', 'orange', 'purple', 'brown', 'pink', 'grey']
     relative_attention = relativeAttention(corpus,pos1,pos2, tokenizer, model)
@@ -177,10 +174,8 @@ def main():
     print(lexfn_count.head())   
 
     # experiment
-    c = centering(corpus,tokenizer,model)
-    print(type(c))
-    print(len(c))
-    print(len(c[0]))
+    relativeAttentionPlot(corpus,0,1,tokenizer,model)
+    layerRelativeAttentionPlot(corpus,0,0,1,tokenizer,model)
 
 
 
