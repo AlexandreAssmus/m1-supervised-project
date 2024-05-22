@@ -69,21 +69,7 @@ def relativeAttention(corpus, pos1, pos2, tokenizer, model):
         relative_attention.append(layerRelativeAttention(corpus, layer, pos1,pos2,tokenizer,model))
     return relative_attention
 
-### PREMIERS TRACÉS ################################################################################################################################
-
-def layerRelativeAttentionPlot(corpus,layer,pos1,pos2,tokenizer,model):
-    layer_relative_attention = layerRelativeAttention(corpus,layer,pos1,pos2,tokenizer,model)
-    plt.plot(layer_relative_attention, marker='o',linestyle='-',color='black')
-    plt.legend()
-    plt.show()
-
-# def layerPairPlot(corpus,pos1,pos2, tokenizer, model):
-#     colors = ['red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'black', 'orange', 'purple', 'brown', 'pink', 'grey']
-#     relative_attentions = relativeAttention(corpus,pos1,pos2, tokenizer, model)
-#     for i in range(12):
-#         plt.plot(relative_attentions[i], marker='o',linestyle='-',color=colors[i],label=f'Layer{i}')
-#     plt.legend()
-#     plt.show()
+### RELATIVE ATTENTION PLOTTING #####################################################################################################################
 
 def relativeAttentionPlot(corpus,pos1,pos2, tokenizer, model):
     nb_layers = model.config.num_hidden_layers
@@ -94,13 +80,25 @@ def relativeAttentionPlot(corpus,pos1,pos2, tokenizer, model):
     plt.legend()
     plt.show()
 
-# def allLayersRelativeAttentionSubplot(corpus,pos1,pos2,tokenizer,model):
-#     nb_layers = model.config.num_hidden_layers
-#     colors = ['red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'black', 'orange', 'purple', 'brown', 'pink', 'grey']
-#     for layer in range(nb_layers):
-#         print('yes')
+def layerRelativeAttentionPlot(corpus,layer,pos1,pos2,tokenizer,model):
+    layer_relative_attention = layerRelativeAttention(corpus,layer,pos1,pos2,tokenizer,model)
+    plt.plot(layer_relative_attention, marker='o',linestyle='-',color='black')
+    plt.legend()
+    plt.show()
 
-### COMPUTATION OF AVERAGE ATTENTION RATES ##########################################################################################################
+def relativeAttentionSubplot(corpus,pos1,pos2,tokenizer,model):
+    plt.figure(figsize=(15, 10))
+    nb_layers = model.config.num_hidden_layers
+    relative_attention = relativeAttention(corpus,pos1,pos2,tokenizer,model)
+    for layer in range(nb_layers):
+        plt.subplot(4,3,layer+1)
+        plt.plot(relative_attention[layer])
+        plt.title(f"Layer {layer}")
+        plt.xticks(range(12))
+    plt.tight_layout()
+    plt.show() 
+
+### COMPUTATION OF AVERAGE ATTENTION RATES ########################################################################################################
 
 def headAverageAttention(corpus, layer, head, tokenizer, model):
     attention_matrices = attentionMatrices(corpus,tokenizer,model)
@@ -124,6 +122,8 @@ def averageAttention(corpus, tokenizer, model):
     array = np.array(layer_averages)
     layer_average = np.mean(array)
     return layer_average
+
+### RELATIVE ATTENTION AVERAGE COMPARISON ########################################################################################################
 
 ### CENTERING #####################################################################################################################################
 
@@ -174,10 +174,7 @@ def main():
     print(lexfn_count.head())   
 
     # experiment
-    relativeAttentionPlot(corpus,0,1,tokenizer,model)
-    layerRelativeAttentionPlot(corpus,0,0,1,tokenizer,model)
-
-
+    relativeAttentionSubplot(corpus, 0, 1, tokenizer, model)
 
 
 
