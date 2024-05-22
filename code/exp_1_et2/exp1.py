@@ -1,16 +1,3 @@
-
-
-# exp 1 - fil conducteur
-#TODO
-# calculer moyenne attention relative dans le corpus selon les couches et têtes (à voir)
-# extraire fn lex pour trouver les mots liés par elles
-# faire une étude stats pour choisir quelle fn lex eventuellement
-# idem pour trouver un seuil, moyenne la meilleure solution?
-# extraire attention relative pour paire de mots reliés par dite fn lex
-# comparer cette attention relative avec moyenne calculée
-# prender en compte la repr dans l'espace ----> gare au hors sujets
-
-
 ### IMPORTS ########################################################################################################################################
 import torch
 from transformers import CamembertTokenizer, CamembertModel
@@ -234,6 +221,7 @@ def main():
     pos1_oppos = 7
     pos2_oppos = 12
 
+    # experiment
     # plot and analysis
     relativeAttentionCenteredSubplot(corpus_syn,pos1_syn,pos2_syn,tokenizer,model)
     relativeAttentionCenteredSubplot(corpus_oppos,pos1_oppos,pos2_oppos,tokenizer,model)
