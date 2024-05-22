@@ -84,8 +84,7 @@ def storeCosineSimilarity(embeddings,pos1,pos2):
 
 ### PLOTTING ####################################################################################################################
 
-def cosineSimilarityPlot(tokens,pos1,pos2,model):
-    embeddings = computeEmbeddings(tokens,model)
+def cosineSimilarityPlot(embeddings,pos1,pos2,model):
     cosine_similarities = storeCosineSimilarity(embeddings,pos1,pos2)
     plt.figure(figsize=(6, 4))
     plt.ylabel('Cosine Similarity')
@@ -115,7 +114,7 @@ def main():
     e = computeEmbeddings(tokens,model)
     st = storeCosineSimilarity(e,3,5)
     print(type(st))
-    cosineSimilarityPlot(tokens,3,5,model)
+    cosineSimilarityPlot(e,3,5,model)
 
 
 if __name__ == "__main__":
