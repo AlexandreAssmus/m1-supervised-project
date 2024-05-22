@@ -3,6 +3,7 @@ from lxml import etree
 import os
 import torch
 from transformers import CamembertTokenizer, CamembertModel
+import matplotlib.pyplot as plt
 
 ### TEXT EXTRACTION #########################################################################################################
 
@@ -83,6 +84,17 @@ def storeCosineSimilarity(embeddings,pos1,pos2):
 
 ### PLOTTING ####################################################################################################################
 
+def cosineSimilarityPlot(tokens,pos1,pos2,model):
+    embeddings = computeEmbeddings(tokens,model)
+    cosine_similarities = storeCosineSimilarity(embeddings,pos1,pos2)
+    plt.figure(figsize=(6, 4))
+    plt.ylabel('Cosine Similarity')
+    plt.title('Cosine Similarity between Embeddings per layer')
+    plt.plot(cosine_similarities)
+    plt.xticks(range(12))
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.show()
+
 
 
 ### MAIN ###########################################################################################################################
@@ -101,17 +113,9 @@ def main():
     # experiment
     tokens = tokenize(corpus,tokenizer)
     e = computeEmbeddings(tokens,model)
-    cs1 = cosineSimilarity(e[1],e[1])
-    print(type(cs1))
-    print(cs1.size())
-    print(type(e[2]))
-    print(e[2].size())
-    cs = cosineSimilarity(e[2][0][2],e[2][0][4])
-    print(type(cs))
-    print(cs.item())
-    pcs = pairCosineSimilarity(e,e,2,2,4)
-    print(type(pcs))
-    print(pcs)
+    st = storeCosineSimilarity(e,3,5)
+    print(type(st))
+    cosineSimilarityPlot(tokens,3,5,model)
 
 
 if __name__ == "__main__":
