@@ -18,7 +18,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-
 ### IMPACT DU POSITIONAL ENCODING ##################################################################################################################
 
 ### TOKENIZATION AND UNTOKENIZATION ################################################################################################################
@@ -72,15 +71,39 @@ def relativeAttention(corpus, pos1, pos2, tokenizer, model):
 
 ### PREMIERS TRACÉS ################################################################################################################################
 
-def layerPairPlot(corpus,pos1,pos2, tokenizer, model):
+def headRelativeAttentionPlot(corpus,layer,pos1,pos2,tokenizer,model):
+    nb_heads = model.config.num_attention_heads
     colors = ['red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'black', 'orange', 'purple', 'brown', 'pink', 'grey']
-    relative_attentions = relativeAttention(corpus,pos1,pos2, tokenizer, model)
-    for i in range(12):
-        plt.plot(relative_attentions[i], marker='o',linestyle='-',color=colors[i],label=f'Layer{i}')
+    layer_relative_attention = layerRelativeAttention(corpus,layer,pos1,pos2,tokenizer,model)
+    for head in range(nb_heads):
+        plt.plot(layer_relative_attention[head], marker='o',linestyle='-',color=colors[head],label=f'Layer{head}')
     plt.legend()
     plt.show()
 
-### COMPUTATION OF AVERAGE ATTENION RATES ###########################################################################################################
+# def layerPairPlot(corpus,pos1,pos2, tokenizer, model):
+#     colors = ['red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'black', 'orange', 'purple', 'brown', 'pink', 'grey']
+#     relative_attentions = relativeAttention(corpus,pos1,pos2, tokenizer, model)
+#     for i in range(12):
+#         plt.plot(relative_attentions[i], marker='o',linestyle='-',color=colors[i],label=f'Layer{i}')
+#     plt.legend()
+#     plt.show()
+
+def layerRelativeAttentionPlot(corpus,pos1,pos2, tokenizer, model):
+    nb_layers = model.config.num_hidden_layers
+    colors = ['red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'black', 'orange', 'purple', 'brown', 'pink', 'grey']
+    relative_attention = relativeAttention(corpus,pos1,pos2, tokenizer, model)
+    for layer in range(nb_layers):
+        plt.plot(relative_attention[layer], marker='o',linestyle='-',color=colors[layer],label=f'Layer{layer}')
+    plt.legend()
+    plt.show()
+
+# def allLayersRelativeAttentionSubplot(corpus,pos1,pos2,tokenizer,model):
+#     nb_layers = model.config.num_hidden_layers
+#     colors = ['red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'black', 'orange', 'purple', 'brown', 'pink', 'grey']
+#     for layer in range(nb_layers):
+#         print('yes')
+
+### COMPUTATION OF AVERAGE ATTENTION RATES ##########################################################################################################
 
 def headAverageAttention(corpus, layer, head, tokenizer, model):
     attention_matrices = attentionMatrices(corpus,tokenizer,model)
@@ -133,8 +156,7 @@ def centering(corpus, tokenizer, model):
         centered_matrices.append(layer_centered_matrices)
     return centered_matrices # list of lists, 12x12
 
-### GESTION DES UNITÉS LEXICALES À PLUSIEURS TOKENS ################################################################################################
-
+### PLUSIEURS TOKENS?
 
 ### MAIN - EXPERIMENT ##############################################################################################################################
 
