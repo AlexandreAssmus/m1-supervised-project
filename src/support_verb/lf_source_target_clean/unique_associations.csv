@@ -1,0 +1,949 @@
+source,target,source_lexname,target_lexname,lexical_function
+ls:fr:node:27825,ls:fr:node:26181,hold-up,accomplir,Oper1
+ls:fr:node:39959,ls:fr:node:26181,toilette,accomplir,Oper2
+ls:fr:node:26968,ls:fr:node:26181,crime,accomplir,Oper1
+ls:fr:node:28514,ls:fr:node:55145,nouvelle,accueillir,Oper2
+ls:fr:node:47910,ls:fr:node:33605,manche,actionner,Oper1
+ls:fr:node:55397,ls:fr:node:26204,sacrement,administrer,Oper1
+ls:fr:node:36136,ls:fr:node:35246,injure,adresser,Oper1
+ls:fr:node:36135,ls:fr:node:35246,insulte,adresser,Oper1
+ls:fr:node:30718,ls:fr:node:35246,félicitations,adresser,Oper1
+ls:fr:node:28219,ls:fr:node:48560,maladie,affecter,Func1
+ls:fr:node:38425,ls:fr:node:43785,visage,afficher,Oper1
+ls:fr:node:42595,ls:fr:node:39838,pluie,affronter,Oper3
+ls:fr:node:43272,ls:fr:node:39838,désert,affronter,Oper1
+ls:fr:node:28834,ls:fr:node:39993,pluie,alimenter,Func2
+ls:fr:node:29291,ls:fr:node:40398,route,aller,Func3
+ls:fr:node:28764,ls:fr:node:51426,peur,apeurer,Oper2
+ls:fr:node:27348,ls:fr:node:33677,environnement,appartenir,Oper1
+ls:fr:node:38288,ls:fr:node:33677,corps,appartenir,Oper1
+ls:fr:node:56456,ls:fr:node:53053,résistance,appartenir,Oper1
+ls:fr:node:27497,ls:fr:node:33677,famille,appartenir,Oper1
+ls:fr:node:28466,ls:fr:node:33677,nation,appartenir,Oper1
+ls:fr:node:56457,ls:fr:node:53053,Résistance,appartenir,Oper1
+ls:fr:node:30654,ls:fr:node:33677,majorité,appartenir,Oper1
+ls:fr:node:28865,ls:fr:node:44202,politique,appliquer,Oper1
+ls:fr:node:38386,ls:fr:node:47763,visage,arborer,Oper1
+ls:fr:node:27561,ls:fr:node:31300,fleuve,arroser,Func1
+ls:fr:node:28834,ls:fr:node:31292,pluie,arroser,Func2
+ls:fr:node:29265,ls:fr:node:31300,rivière,arroser,Func1
+ls:fr:node:44189,ls:fr:node:40300,repas,assister,Oper2
+ls:fr:node:45501,ls:fr:node:42692,cours,assurer,Oper1
+ls:fr:node:55988,ls:fr:node:45511,coup de couteau,asséner,Oper1
+ls:fr:node:49295,ls:fr:node:45106,maladie,attaquer,Func1
+ls:fr:node:28219,ls:fr:node:44104,maladie,atteindre,Func1
+ls:fr:node:29658,ls:fr:node:44104,tornade,atteindre,Func1
+ls:fr:node:40551,ls:fr:node:39551,route,avancer,Oper1
+ls:fr:node:35856,ls:fr:node:56691,goutte,avoir,Oper1
+ls:fr:node:26987,ls:fr:node:56691,curiosité,avoir,Oper1
+ls:fr:node:43226,ls:fr:node:43932,chat dans la gorge,avoir,Oper1
+ls:fr:node:34962,ls:fr:node:56691,tête dure,avoir,Oper1
+ls:fr:node:43211,ls:fr:node:56691,le couteau sous la gorge,avoir,Oper1
+ls:fr:node:47488,ls:fr:node:56691,coudées franches,avoir,Oper1
+ls:fr:node:27640,ls:fr:node:56691,frustration,avoir,Oper1
+ls:fr:node:34040,ls:fr:node:56691,distinction,avoir,Oper1
+ls:fr:node:27754,ls:fr:node:56691,grippe,avoir,Oper1
+ls:fr:node:28972,ls:fr:node:39248,problème,avoir,Oper2
+ls:fr:node:28764,ls:fr:node:56691,peur,avoir,Oper1
+ls:fr:node:37496,ls:fr:node:56691,orgueil,avoir,Oper1
+ls:fr:node:47596,ls:fr:node:56691,honnêteté,avoir,Oper1
+ls:fr:node:49268,ls:fr:node:56691,maladie honteuse,avoir,Oper1
+ls:fr:node:38604,ls:fr:node:56691,mains propres,avoir,Oper1
+ls:fr:node:55630,ls:fr:node:43932,carapace,avoir,Oper1
+ls:fr:node:45599,ls:fr:node:43932,sujet,avoir,Labor12
+ls:fr:node:42723,ls:fr:node:56691,train de vie,avoir,Oper1
+ls:fr:node:26291,ls:fr:node:43932,ami,avoir,Labor21
+ls:fr:node:27309,ls:fr:node:43932,ennemi,avoir,Labor21
+ls:fr:node:27348,ls:fr:node:26434,environnement,avoir,Labor21
+ls:fr:node:48469,ls:fr:node:56691,pêche,avoir,Oper1
+ls:fr:node:26292,ls:fr:node:56691,amour,avoir,Oper1
+ls:fr:node:48164,ls:fr:node:56691,la tête ailleurs,avoir,Oper1
+ls:fr:node:38389,ls:fr:node:43932,corps,avoir,Oper1
+ls:fr:node:43180,ls:fr:node:43932,ventre,avoir,Oper1
+ls:fr:node:42870,ls:fr:node:56691,mains sales,avoir,Oper1
+ls:fr:node:42903,ls:fr:node:56691,les jambes mortes,avoir,Oper1
+ls:fr:node:26526,ls:fr:node:56691,bonheur,avoir,Oper1
+ls:fr:node:26625,ls:fr:node:56691,cancer,avoir,Oper1
+ls:fr:node:26698,ls:fr:node:56691,chagrin,avoir,Oper1
+ls:fr:node:54321,ls:fr:node:56691,emprise,avoir,Oper1
+ls:fr:node:43101,ls:fr:node:43932,balai dans le cul,avoir,Oper1
+ls:fr:node:47729,ls:fr:node:56691,visite médicale,avoir,Oper1
+ls:fr:node:26742,ls:fr:node:43932,cheveux,avoir,Oper1
+ls:fr:node:26814,ls:fr:node:56691,colère,avoir,Oper1
+ls:fr:node:54719,ls:fr:node:56691,gale,avoir,Oper1
+ls:fr:node:47651,ls:fr:node:56691,sommeil,avoir,Oper1
+ls:fr:node:26911,ls:fr:node:43932,coquille,avoir,Oper1
+ls:fr:node:56472,ls:fr:node:56691,empathie,avoir,Oper1
+ls:fr:node:33796,ls:fr:node:43932,cheveu,avoir,Oper1
+ls:fr:node:28219,ls:fr:node:56691,maladie,avoir,Oper1
+ls:fr:node:28938,ls:fr:node:43932,prénom,avoir,Oper2
+ls:fr:node:56697,ls:fr:node:56691,maladie vénérienne,avoir,Oper1
+ls:fr:node:30931,ls:fr:node:43932,coup de soleil,avoir,Oper1
+ls:fr:node:56694,ls:fr:node:56691,maladie mentale,avoir,Oper1
+ls:fr:node:29721,ls:fr:node:56691,tristesse,avoir,Oper1
+ls:fr:node:56425,ls:fr:node:56691,rêve,avoir,Oper1
+ls:fr:node:30913,ls:fr:node:56691,gratitude,avoir,Oper1
+ls:fr:node:30876,ls:fr:node:56691,excuse,avoir,Oper1
+ls:fr:node:30002,ls:fr:node:38681,air,avoir,Oper1
+ls:fr:node:30514,ls:fr:node:56691,effroi,avoir,Oper1
+ls:fr:node:56544,ls:fr:node:43932,cornes,avoir,Oper1
+ls:fr:node:44377,ls:fr:node:56691,angine de poitrine,avoir,Oper1
+ls:fr:node:30533,ls:fr:node:56691,admiration,avoir,Oper1
+ls:fr:node:43802,ls:fr:node:56691,petit vélo dans la tête,avoir,Oper1
+ls:fr:node:30552,ls:fr:node:56691,déception,avoir,Oper1
+ls:fr:node:56476,ls:fr:node:56691,apitoiement,avoir,Oper1
+ls:fr:node:30720,ls:fr:node:56691,fierté,avoir,Oper1
+ls:fr:node:30553,ls:fr:node:56691,dégoût,avoir,Oper1
+ls:fr:node:43910,ls:fr:node:56691,mal,avoir,Oper1
+ls:fr:node:30565,ls:fr:node:56691,désir,avoir,Oper1
+ls:fr:node:30684,ls:fr:node:56691,mécontentement,avoir,Oper1
+ls:fr:node:44014,ls:fr:node:56691,dent,avoir,Oper1
+ls:fr:node:30596,ls:fr:node:56691,émoi,avoir,Oper1
+ls:fr:node:44024,ls:fr:node:56691,dents longues,avoir,Oper1
+ls:fr:node:44023,ls:fr:node:56691,dent dure,avoir,Oper1
+ls:fr:node:30601,ls:fr:node:56691,animosité,avoir,Oper1
+ls:fr:node:30950,ls:fr:node:56691,répugnance,avoir,Oper1
+ls:fr:node:56700,ls:fr:node:56691,jaunisse,avoir,Oper1
+ls:fr:node:56701,ls:fr:node:56691,ictère,avoir,Oper1
+ls:fr:node:56702,ls:fr:node:56691,étonnement,avoir,Oper1
+ls:fr:node:47137,ls:fr:node:43932,partie du corps,avoir,Oper1
+ls:fr:node:46897,ls:fr:node:56691,poids,avoir,Oper1
+ls:fr:node:46513,ls:fr:node:43932,bras long,avoir,Oper1
+ls:fr:node:28009,ls:fr:node:56691,jalousie,avoir,Oper1
+ls:fr:node:28011,ls:fr:node:43932,jambes,avoir,Oper1
+ls:fr:node:54707,ls:fr:node:56691,le pied au plancher,avoir,Oper1
+ls:fr:node:54206,ls:fr:node:56691,le cul entre deux chaises,avoir,Oper1
+ls:fr:node:32378,ls:fr:node:56691,casserole,avoir,Oper1
+ls:fr:node:31696,ls:fr:node:56691,certitude,avoir,Oper1
+ls:fr:node:55919,ls:fr:node:56691,cancer du sein,avoir,Oper1
+ls:fr:node:41502,ls:fr:node:56691,les jambes molles,avoir,Oper1
+ls:fr:node:55920,ls:fr:node:56691,carcinome,avoir,Oper1
+ls:fr:node:27791,ls:fr:node:56691,haine,avoir,Oper1
+ls:fr:node:31252,ls:fr:node:43932,antennes,avoir,Oper1
+ls:fr:node:28921,ls:fr:node:26434,pouvoir,avoir,Oper1
+ls:fr:node:28964,ls:fr:node:56691,priorité,avoir,Oper1
+ls:fr:node:31096,ls:fr:node:43932,brosse,avoir,Oper1
+ls:fr:node:54481,ls:fr:node:56691,reconnaissance,avoir,Oper1
+ls:fr:node:29079,ls:fr:node:56691,rage,avoir,Oper1
+ls:fr:node:28495,ls:fr:node:43932,nom,avoir,Oper2
+ls:fr:node:29251,ls:fr:node:56691,rhumatisme,avoir,Oper1
+ls:fr:node:29252,ls:fr:node:56691,rhume,avoir,Oper1
+ls:fr:node:55922,ls:fr:node:56691,carcinome mammaire,avoir,Oper1
+ls:fr:node:30959,ls:fr:node:56691,répulsion,avoir,Oper1
+ls:fr:node:29383,ls:fr:node:56691,sentiment,avoir,Oper1
+ls:fr:node:29593,ls:fr:node:26434,téléphone,avoir,Oper1
+ls:fr:node:45770,ls:fr:node:56691,angine,avoir,Oper1
+ls:fr:node:35109,ls:fr:node:43935,visite,avoir,Oper2
+ls:fr:node:38386,ls:fr:node:38681,visage,avoir,Oper1
+ls:fr:node:30612,ls:fr:node:56691,aversion,avoir,Oper1
+ls:fr:node:54100,ls:fr:node:43932,deux poids et deux mesures,avoir,Oper1
+ls:fr:node:54926,ls:fr:node:43932,nom de famille,avoir,Oper2
+ls:fr:node:52009,ls:fr:node:56691,plaisir,avoir,Oper1
+ls:fr:node:42503,ls:fr:node:56691,maladie de la vache folle,avoir,Oper1
+ls:fr:node:51397,ls:fr:node:43974,honneurs de la presse,avoir,Oper1
+ls:fr:node:40569,ls:fr:node:26434,oreilles,avoir,Oper2
+ls:fr:node:40380,ls:fr:node:56691,coup de fourchette,avoir,Oper1
+ls:fr:node:53542,ls:fr:node:56691,mélancolie,avoir,Oper1
+ls:fr:node:26327,ls:fr:node:38681,appartement,avoir,Func2
+ls:fr:node:53920,ls:fr:node:56691,accident vasculaire cérébral,avoir,Oper1
+ls:fr:node:40330,ls:fr:node:56691,coup dans le nez,avoir,Oper1
+ls:fr:node:42174,ls:fr:node:43932,couleurs,avoir,Oper1
+ls:fr:node:42133,ls:fr:node:56691,mal du pays,avoir,Oper1
+ls:fr:node:41103,ls:fr:node:56691,vingtaine,avoir,Oper1
+ls:fr:node:40575,ls:fr:node:56691,coup d’œil,avoir,Oper1
+ls:fr:node:52530,ls:fr:node:56691,frayeur,avoir,Oper1
+ls:fr:node:53956,ls:fr:node:56691,pneumonie,avoir,Oper1
+ls:fr:node:40390,ls:fr:node:56691,coup de cœur,avoir,Oper1
+ls:fr:node:52799,ls:fr:node:56691,déprime,avoir,Oper1
+ls:fr:node:55622,ls:fr:node:56691,poil dans la main,avoir,Oper1
+ls:fr:node:54067,ls:fr:node:56691,bougeotte,avoir,Oper1
+ls:fr:node:52874,ls:fr:node:56691,satisfaction,avoir,Oper1
+ls:fr:node:40449,ls:fr:node:56691,coup de froid,avoir,Oper1
+ls:fr:node:53262,ls:fr:node:56691,mépris,avoir,Oper1
+ls:fr:node:53987,ls:fr:node:56691,atomes crochus,avoir,Oper1
+ls:fr:node:52635,ls:fr:node:56691,main verte,avoir,Oper1
+ls:fr:node:42928,ls:fr:node:43974,éclair,avoir,Oper2
+ls:fr:node:53960,ls:fr:node:26434,beaux restes,avoir,Oper1
+ls:fr:node:46139,ls:fr:node:43932,train,avoir,Oper2
+ls:fr:node:42179,ls:fr:node:38681,couleur,avoir,Oper1
+ls:fr:node:54068,ls:fr:node:56691,bon pied bon œil,avoir,Oper1
+ls:fr:node:54165,ls:fr:node:56691,descente,avoir,Oper1
+ls:fr:node:53524,ls:fr:node:56691,cafard,avoir,Oper1
+ls:fr:node:55144,ls:fr:node:56691,nostalgie,avoir,Oper1
+ls:fr:node:39696,ls:fr:node:56691,oreille absolue,avoir,Oper1
+ls:fr:node:40460,ls:fr:node:56691,coup de chaleur,avoir,Oper1
+ls:fr:node:53774,ls:fr:node:56691,nausée,avoir,Oper1
+ls:fr:node:42694,ls:fr:node:56691,vent,avoir,Oper1
+ls:fr:node:39490,ls:fr:node:56691,frite,avoir,Oper1
+ls:fr:node:56703,ls:fr:node:39248,souci,avoir,Oper2
+ls:fr:node:42642,ls:fr:node:56691,ressemblance,avoir,Oper1
+ls:fr:node:41217,ls:fr:node:56691,le feu aux fesses,avoir,Oper1
+ls:fr:node:41400,ls:fr:node:56691,fourmis dans les jambes,avoir,Oper1
+ls:fr:node:50140,ls:fr:node:56691,coup de sang,avoir,Oper1
+ls:fr:node:41663,ls:fr:node:26434,fond,avoir,Oper1
+ls:fr:node:50642,ls:fr:node:56691,tuberculose,avoir,Oper1
+ls:fr:node:39149,ls:fr:node:56691,tête près du bonnet,avoir,Oper1
+ls:fr:node:41556,ls:fr:node:43974,politique,avoir,Oper1
+ls:fr:node:53806,ls:fr:node:56691,bronchite,avoir,Oper1
+ls:fr:node:55214,ls:fr:node:56691,horreur,avoir,Oper1
+ls:fr:node:41461,ls:fr:node:56691,syndrome des jambes sans repos,avoir,Oper1
+ls:fr:node:51127,ls:fr:node:56691,compassion,avoir,Oper1
+ls:fr:node:39809,ls:fr:node:39429,marche,avoir lieu,Func0
+ls:fr:node:49491,ls:fr:node:39429,avalanche,avoir lieu,Func0
+ls:fr:node:47729,ls:fr:node:39429,visite médicale,avoir lieu,Func2
+ls:fr:node:44189,ls:fr:node:39429,repas,avoir lieu,Func0
+ls:fr:node:32898,ls:fr:node:39429,course,avoir lieu,Func0
+ls:fr:node:47759,ls:fr:node:39429,visite,avoir lieu,Func0
+ls:fr:node:28069,ls:fr:node:40645,lac,baigner,Func1
+ls:fr:node:29658,ls:fr:node:44099,tornade,balayer,Func1
+ls:fr:node:28904,ls:fr:node:30300,pouls,battre,Func0
+ls:fr:node:28834,ls:fr:node:44531,pluie,battre,Func2
+ls:fr:node:51349,ls:fr:node:26516,tasse,boire,Oper1
+ls:fr:node:27215,ls:fr:node:26566,éclair,briller,Func0
+ls:fr:node:31057,ls:fr:node:41562,faveurs,bénéficier,Oper2
+ls:fr:node:40163,ls:fr:node:31596,produit,calculer,Oper1
+ls:fr:node:29450,ls:fr:node:31596,somme,calculer,Oper1
+ls:fr:node:30552,ls:fr:node:26669,déception,causer,Oper2
+ls:fr:node:29968,ls:fr:node:26669,bien,causer,Oper2
+ls:fr:node:53543,ls:fr:node:26669,mélancolie,causer,Oper1
+ls:fr:node:28834,ls:fr:node:44940,pluie,cingler,Func2
+ls:fr:node:45007,ls:fr:node:31847,bruit,circuler,Func2
+ls:fr:node:28904,ls:fr:node:35721,pouls,cogner,Func0
+ls:fr:node:45790,ls:fr:node:30283,carton rouge,coller,Oper1
+ls:fr:node:28056,ls:fr:node:39833,karaté,combattre,Oper1
+ls:fr:node:26968,ls:fr:node:26837,crime,commettre,Oper1
+ls:fr:node:53835,ls:fr:node:26837,putsch,commettre,Oper1
+ls:fr:node:40358,ls:fr:node:26837,coup d’État,commettre,Oper1
+ls:fr:node:53909,ls:fr:node:26837,violence,commettre,Oper1
+ls:fr:node:27825,ls:fr:node:26837,hold-up,commettre,Oper1
+ls:fr:node:26383,ls:fr:node:26837,attentat,commettre,Oper1
+ls:fr:node:54539,ls:fr:node:50944,bilan,compléter,Oper1
+ls:fr:node:26327,ls:fr:node:32403,appartement,comporter,Func2
+ls:fr:node:40823,ls:fr:node:32403,marche,comporter,Oper1
+ls:fr:node:40823,ls:fr:node:32416,marche,composer,Func1
+ls:fr:node:29198,ls:fr:node:26854,repas,composer,Oper2
+ls:fr:node:26327,ls:fr:node:45407,appartement,comprendre,Func2
+ls:fr:node:26327,ls:fr:node:31269,appartement,compter,Func2
+ls:fr:node:38292,ls:fr:node:26862,chiffre,concerner,Func3
+ls:fr:node:28865,ls:fr:node:44203,politique,conduire,Oper1
+ls:fr:node:56616,ls:fr:node:52494,voie,conduire,Func2
+ls:fr:node:43272,ls:fr:node:43700,désert,connaître,Oper1
+ls:fr:node:29658,ls:fr:node:43700,tornade,connaître,Oper1
+ls:fr:node:26514,ls:fr:node:26884,bocal,conserver,Labor12
+ls:fr:node:41556,ls:fr:node:41768,politique,consister,Func2
+ls:fr:node:29198,ls:fr:node:39411,repas,constituer,Oper2
+ls:fr:node:27348,ls:fr:node:39052,environnement,constituer,Oper1
+ls:fr:node:38388,ls:fr:node:39052,corps,constituer,Oper2
+ls:fr:node:26553,ls:fr:node:26891,bouteille,contenir,Func2
+ls:fr:node:42059,ls:fr:node:26891,lac,contenir,Oper2
+ls:fr:node:47398,ls:fr:node:47944,boîte aux lettres,contenir,Func2
+ls:fr:node:27561,ls:fr:node:26928,fleuve,couler,Func0
+ls:fr:node:29265,ls:fr:node:26928,rivière,couler,Func0
+ls:fr:node:44749,ls:fr:node:44960,péril,courir,Oper1
+ls:fr:node:45089,ls:fr:node:31137,buzz,courir,Func2
+ls:fr:node:45007,ls:fr:node:31137,bruit,courir,Func2
+ls:fr:node:29291,ls:fr:node:31152,route,courir,Func0
+ls:fr:node:26992,ls:fr:node:44960,danger,courir,Oper1
+ls:fr:node:28519,ls:fr:node:31296,nuage,courir,Func1
+ls:fr:node:29262,ls:fr:node:44960,risque,courir,Oper1
+ls:fr:node:27215,ls:fr:node:44435,éclair,cracher,Oper1
+ls:fr:node:29254,ls:fr:node:55743,ride,creuser,Func2
+ls:fr:node:28333,ls:fr:node:51310,messe,célébrer,Oper1
+ls:fr:node:51312,ls:fr:node:51310,messe de minuit,célébrer,Oper1
+ls:fr:node:51314,ls:fr:node:51310,office,célébrer,Oper1
+ls:fr:node:54318,ls:fr:node:47640,vacherie,dire,Oper1
+ls:fr:node:54317,ls:fr:node:47640,méchanceté,dire,Oper1
+ls:fr:node:51312,ls:fr:node:27137,messe de minuit,dire,Oper1
+ls:fr:node:36136,ls:fr:node:27137,injure,dire,Oper1
+ls:fr:node:29005,ls:fr:node:52573,proverbe,dire,Func2
+ls:fr:node:54121,ls:fr:node:27137,calembour,dire,Oper1
+ls:fr:node:26505,ls:fr:node:27137,blague,dire,Oper1
+ls:fr:node:28333,ls:fr:node:27137,messe,dire,Oper1
+ls:fr:node:45501,ls:fr:node:51514,cours,dispenser,Oper1
+ls:fr:node:30857,ls:fr:node:34026,ami,disposer,Oper2
+ls:fr:node:41179,ls:fr:node:42745,coup de frein,donner,Oper1
+ls:fr:node:43711,ls:fr:node:34128,coup de coude,donner,Oper1
+ls:fr:node:53727,ls:fr:node:34128,coup de pied,donner,Oper1
+ls:fr:node:43467,ls:fr:node:34128,coup de reins,donner,Oper1
+ls:fr:node:45501,ls:fr:node:34128,cours,donner,Oper1
+ls:fr:node:45661,ls:fr:node:33606,récital,donner,Oper1
+ls:fr:node:55988,ls:fr:node:34128,coup de couteau,donner,Oper1
+ls:fr:node:53774,ls:fr:node:42745,nausée,donner,Oper2
+ls:fr:node:45790,ls:fr:node:34128,carton rouge,donner,Oper1
+ls:fr:node:41201,ls:fr:node:42745,coup de pied aux fesses,donner,Oper1
+ls:fr:node:29490,ls:fr:node:33606,spectacle,donner,Oper1
+ls:fr:node:38902,ls:fr:node:42745,coup de fouet,donner,Oper1
+ls:fr:node:34264,ls:fr:node:34128,coup,donner,Oper1
+ls:fr:node:26863,ls:fr:node:33606,concert,donner,Oper1
+ls:fr:node:40384,ls:fr:node:34128,coup de collier,donner,Oper1
+ls:fr:node:40444,ls:fr:node:42745,coup de pied dans la fourmilière,donner,Oper1
+ls:fr:node:38365,ls:fr:node:34128,savon,donner,Oper1
+ls:fr:node:38842,ls:fr:node:34128,cravate,donner,Oper1
+ls:fr:node:46469,ls:fr:node:55259,tableau,dresser,Oper1
+ls:fr:node:56616,ls:fr:node:48388,voie,déboucher,Func2
+ls:fr:node:30552,ls:fr:node:27009,déception,décevoir,Oper2
+ls:fr:node:27215,ls:fr:node:44452,éclair,déchirer,Func1
+ls:fr:node:28519,ls:fr:node:40888,nuage,dériver,Func1
+ls:fr:node:40163,ls:fr:node:35390,produit,effectuer,Oper1
+ls:fr:node:47745,ls:fr:node:35390,visite,effectuer,Oper1
+ls:fr:node:29883,ls:fr:node:35390,voyage,effectuer,Oper1
+ls:fr:node:47729,ls:fr:node:35390,visite médicale,effectuer,Oper1
+ls:fr:node:29673,ls:fr:node:35390,tournée,effectuer,Oper1
+ls:fr:node:39959,ls:fr:node:35390,toilette,effectuer,Oper2
+ls:fr:node:37781,ls:fr:node:35390,mesure,effectuer,Oper1
+ls:fr:node:54539,ls:fr:node:35390,bilan,effectuer,Oper1
+ls:fr:node:38486,ls:fr:node:35390,déplacement,effectuer,Oper1
+ls:fr:node:27215,ls:fr:node:44559,éclair,embraser,Func1
+ls:fr:node:29658,ls:fr:node:38831,tornade,essuyer,Oper1
+ls:fr:node:28834,ls:fr:node:38831,pluie,essuyer,Oper2
+ls:fr:node:42586,ls:fr:node:38831,averse,essuyer,Oper2
+ls:fr:node:29600,ls:fr:node:38831,tempête,essuyer,Oper1
+ls:fr:node:38503,ls:fr:node:38831,veste,essuyer,Oper1
+ls:fr:node:54321,ls:fr:node:39277,emprise,exercer,Oper1
+ls:fr:node:26709,ls:fr:node:39277,chantage,exercer,Oper1
+ls:fr:node:28921,ls:fr:node:35424,pouvoir,exercer,Oper1
+ls:fr:node:38425,ls:fr:node:43761,visage,exhiber,Oper1
+ls:fr:node:35440,ls:fr:node:41548,exigence,exiger,Oper2
+ls:fr:node:30718,ls:fr:node:27473,félicitations,exprimer,Oper1
+ls:fr:node:27825,ls:fr:node:27458,hold-up,exécuter,Oper1
+ls:fr:node:38777,ls:fr:node:27458,numéro,exécuter,Oper1
+ls:fr:node:30965,ls:fr:node:27458,crime,exécuter,Oper1
+ls:fr:node:40043,ls:fr:node:39134,marche arrière,faire,Oper1
+ls:fr:node:43669,ls:fr:node:39134,voile,faire,Oper1
+ls:fr:node:40860,ls:fr:node:39134,auto-stop,faire,Oper1
+ls:fr:node:40943,ls:fr:node:39134,avion,faire,Oper1
+ls:fr:node:38912,ls:fr:node:39134,lessive,faire,Oper1
+ls:fr:node:39986,ls:fr:node:39134,marche nordique,faire,Oper1
+ls:fr:node:41150,ls:fr:node:39134,bicyclette,faire,Oper1
+ls:fr:node:39899,ls:fr:node:39134,promenade,faire,Oper1
+ls:fr:node:39615,ls:fr:node:39134,ski,faire,Oper1
+ls:fr:node:38486,ls:fr:node:39134,déplacement,faire,Oper1
+ls:fr:node:42685,ls:fr:node:39134,sale boulot,faire,Oper1
+ls:fr:node:38524,ls:fr:node:39134,marche,faire,Oper1
+ls:fr:node:42694,ls:fr:node:39509,vent,faire,Oper1
+ls:fr:node:38842,ls:fr:node:39318,cravate,faire,Oper1
+ls:fr:node:38777,ls:fr:node:39134,numéro,faire,Oper1
+ls:fr:node:38828,ls:fr:node:39134,autoroute,faire,Oper1
+ls:fr:node:30651,ls:fr:node:39134,cinéma,faire,Oper1
+ls:fr:node:38829,ls:fr:node:39134,route,faire,Oper1
+ls:fr:node:41057,ls:fr:node:39134,voiture,faire,Oper1
+ls:fr:node:40461,ls:fr:node:39134,coup double,faire,Oper1
+ls:fr:node:30948,ls:fr:node:39134,volte-face,faire,Oper1
+ls:fr:node:55643,ls:fr:node:39134,pompe,faire,Oper1
+ls:fr:node:31814,ls:fr:node:39509,choix,faire,Oper1
+ls:fr:node:32188,ls:fr:node:39134,demande,faire,Oper1
+ls:fr:node:31290,ls:fr:node:39134,cheval,faire,Oper1
+ls:fr:node:32792,ls:fr:node:39134,causette,faire,Oper1
+ls:fr:node:32898,ls:fr:node:39134,course,faire,Oper1
+ls:fr:node:42311,ls:fr:node:39134,placard,faire,Oper1
+ls:fr:node:32973,ls:fr:node:39134,fellation,faire,Oper1
+ls:fr:node:32975,ls:fr:node:39134,pompier,faire,Oper1
+ls:fr:node:31203,ls:fr:node:39134,bœuf,faire,Oper1
+ls:fr:node:40438,ls:fr:node:39134,coup de maître,faire,Oper1
+ls:fr:node:33033,ls:fr:node:39134,culture,faire,Oper1
+ls:fr:node:33386,ls:fr:node:39134,vélo,faire,Oper1
+ls:fr:node:31022,ls:fr:node:39134,tête-à-queue,faire,Oper1
+ls:fr:node:40386,ls:fr:node:39134,coup,faire,Oper1
+ls:fr:node:43384,ls:fr:node:39134,gros dos,faire,Oper1
+ls:fr:node:34117,ls:fr:node:39134,don,faire,Oper1
+ls:fr:node:55358,ls:fr:node:39134,caca,faire,Oper1
+ls:fr:node:35109,ls:fr:node:39134,visite,faire,Oper1
+ls:fr:node:35218,ls:fr:node:39134,compte,faire,Oper1
+ls:fr:node:35344,ls:fr:node:39509,promesse,faire,Oper1
+ls:fr:node:55776,ls:fr:node:39509,quarantaine,faire,Oper1
+ls:fr:node:30953,ls:fr:node:39134,cri,faire,Oper1
+ls:fr:node:40358,ls:fr:node:39134,coup d’État,faire,Oper1
+ls:fr:node:40637,ls:fr:node:39509,fausse route,faire,Oper1
+ls:fr:node:36908,ls:fr:node:39509,prévision,faire,Oper1
+ls:fr:node:40163,ls:fr:node:39318,produit,faire,Oper1
+ls:fr:node:40647,ls:fr:node:39134,coup par coup,faire,Oper1
+ls:fr:node:30938,ls:fr:node:39134,vaisselle,faire,Oper1
+ls:fr:node:42148,ls:fr:node:39134,tricycle,faire,Oper1
+ls:fr:node:38197,ls:fr:node:39509,rêve,faire,Oper1
+ls:fr:node:33208,ls:fr:node:39134,siège,faire,Oper1
+ls:fr:node:41505,ls:fr:node:39134,rond de jambe,faire,Oper1
+ls:fr:node:47101,ls:fr:node:39134,chevaux,faire,Oper1
+ls:fr:node:47370,ls:fr:node:39134,vélo tout terrain,faire,Oper1
+ls:fr:node:47369,ls:fr:node:39134,VTC,faire,Oper1
+ls:fr:node:27584,ls:fr:node:39134,football,faire,Oper1
+ls:fr:node:47368,ls:fr:node:39134,vélo tout chemin,faire,Oper1
+ls:fr:node:47367,ls:fr:node:39134,BMX,faire,Oper1
+ls:fr:node:47366,ls:fr:node:39134,bicross,faire,Oper1
+ls:fr:node:27782,ls:fr:node:39134,gymnastique,faire,Oper1
+ls:fr:node:27825,ls:fr:node:39134,hold-up,faire,Oper1
+ls:fr:node:49352,ls:fr:node:39134,études,faire,Oper1
+ls:fr:node:46618,ls:fr:node:39134,longueur,faire,Oper1
+ls:fr:node:28027,ls:fr:node:39134,jogging,faire,Oper1
+ls:fr:node:28040,ls:fr:node:39134,judo,faire,Oper1
+ls:fr:node:28056,ls:fr:node:39134,karaté,faire,Oper1
+ls:fr:node:54052,ls:fr:node:39134,doigt d’honneur,faire,Oper1
+ls:fr:node:28764,ls:fr:node:51425,peur,faire,Oper2
+ls:fr:node:54046,ls:fr:node:39134,poisson d’avril,faire,Oper1
+ls:fr:node:28456,ls:fr:node:39134,musique,faire,Oper1
+ls:fr:node:45809,ls:fr:node:39134,moto,faire,Oper1
+ls:fr:node:28688,ls:fr:node:27494,pâte,faire,Oper1
+ls:fr:node:47371,ls:fr:node:39134,VTT,faire,Oper1
+ls:fr:node:47386,ls:fr:node:39134,tandem,faire,Oper1
+ls:fr:node:27142,ls:fr:node:39134,discours,faire,Oper1
+ls:fr:node:27052,ls:fr:node:39134,demi-tour,faire,Oper1
+ls:fr:node:49449,ls:fr:node:39134,table rase,faire,Oper1
+ls:fr:node:50305,ls:fr:node:39134,vélo elliptique,faire,Oper1
+ls:fr:node:48998,ls:fr:node:39134,badminton,faire,Oper1
+ls:fr:node:48744,ls:fr:node:39134,vacherie,faire,Oper1
+ls:fr:node:54316,ls:fr:node:39134,méchanceté,faire,Oper1
+ls:fr:node:48519,ls:fr:node:39134,vélo d’appartement,faire,Oper1
+ls:fr:node:54121,ls:fr:node:39134,calembour,faire,Oper1
+ls:fr:node:50540,ls:fr:node:39134,rapport,faire,Oper1
+ls:fr:node:54120,ls:fr:node:39134,jeu de mots,faire,Oper1
+ls:fr:node:28701,ls:fr:node:39134,pause,faire,Oper1
+ls:fr:node:54100,ls:fr:node:39134,deux poids et deux mesures,faire,Oper1
+ls:fr:node:51239,ls:fr:node:39509,prédiction,faire,Oper1
+ls:fr:node:26471,ls:fr:node:39134,basket,faire,Oper1
+ls:fr:node:26505,ls:fr:node:39134,blague,faire,Oper1
+ls:fr:node:26557,ls:fr:node:39134,boxe,faire,Oper1
+ls:fr:node:26668,ls:fr:node:39509,cauchemar,faire,Oper1
+ls:fr:node:29968,ls:fr:node:39317,bien,faire,Oper2
+ls:fr:node:26709,ls:fr:node:39134,chantage,faire,Oper1
+ls:fr:node:47697,ls:fr:node:39134,roupillon,faire,Oper1
+ls:fr:node:26983,ls:fr:node:39134,cuisine,faire,Oper1
+ls:fr:node:26297,ls:fr:node:39134,analogie,faire,Oper1
+ls:fr:node:28790,ls:fr:node:39134,ping-pong,faire,Oper1
+ls:fr:node:49302,ls:fr:node:39509,dentition,faire,Oper1
+ls:fr:node:53917,ls:fr:node:39134,excentricité,faire,Oper1
+ls:fr:node:29608,ls:fr:node:39134,tennis,faire,Oper1
+ls:fr:node:44717,ls:fr:node:39134,acte de présence,faire,Oper1
+ls:fr:node:53835,ls:fr:node:39134,putsch,faire,Oper1
+ls:fr:node:29494,ls:fr:node:39134,sport,faire,Oper1
+ls:fr:node:44157,ls:fr:node:39134,chant,faire,Oper1
+ls:fr:node:54496,ls:fr:node:39134,saut,faire,Oper1
+ls:fr:node:29406,ls:fr:node:39134,sieste,faire,Oper1
+ls:fr:node:30555,ls:fr:node:39318,pipe,faire,Oper1
+ls:fr:node:44185,ls:fr:node:39134,repas,faire,Oper1
+ls:fr:node:53764,ls:fr:node:39134,sermon,faire,Oper1
+ls:fr:node:30570,ls:fr:node:39134,éloge,faire,Oper1
+ls:fr:node:45501,ls:fr:node:39134,cours,faire,Oper1
+ls:fr:node:45528,ls:fr:node:39134,sprint,faire,Oper1
+ls:fr:node:45101,ls:fr:node:39318,couleur,faire,Oper1
+ls:fr:node:29673,ls:fr:node:39134,tournée,faire,Oper1
+ls:fr:node:56588,ls:fr:node:39134,citation,faire,Oper1
+ls:fr:node:29873,ls:fr:node:39134,volley-ball,faire,Oper1
+ls:fr:node:29883,ls:fr:node:39134,voyage,faire,Oper1
+ls:fr:node:53914,ls:fr:node:39134,lumière,faire,Oper1
+ls:fr:node:29296,ls:fr:node:39134,rugby,faire,Oper1
+ls:fr:node:29645,ls:fr:node:39134,toilette,faire,Oper1
+ls:fr:node:56703,ls:fr:node:56528,souci,faire face,Oper2
+ls:fr:node:41198,ls:fr:node:56528,tragédie,faire face,Oper2
+ls:fr:node:28972,ls:fr:node:56528,problème,faire face,Oper2
+ls:fr:node:30654,ls:fr:node:38628,majorité,faire partie,Oper1
+ls:fr:node:27348,ls:fr:node:38628,environnement,faire partie,Oper1
+ls:fr:node:27497,ls:fr:node:38628,famille,faire partie,Oper1
+ls:fr:node:38288,ls:fr:node:38628,corps,faire partie,Oper1
+ls:fr:node:56457,ls:fr:node:38628,Résistance,faire partie,Oper1
+ls:fr:node:56456,ls:fr:node:38628,résistance,faire partie,Oper1
+ls:fr:node:28466,ls:fr:node:38628,nation,faire partie,Oper1
+ls:fr:node:56472,ls:fr:node:51111,empathie,faire preuve,Oper1
+ls:fr:node:51127,ls:fr:node:51111,compassion,faire preuve,Oper1
+ls:fr:node:30601,ls:fr:node:51111,animosité,faire preuve,Oper1
+ls:fr:node:29600,ls:fr:node:44719,tempête,faire rage,Func0
+ls:fr:node:27215,ls:fr:node:44453,éclair,fendre,Func1
+ls:fr:node:45647,ls:fr:node:29919,tête,figurer,Oper1
+ls:fr:node:28519,ls:fr:node:42850,nuage,filer,Func1
+ls:fr:node:42925,ls:fr:node:44349,éclair,flamboyer,Func1
+ls:fr:node:33967,ls:fr:node:27566,train,flotter,Func0
+ls:fr:node:28519,ls:fr:node:31074,nuage,flotter,Func1
+ls:fr:node:42534,ls:fr:node:31074,nuages,flotter,Func2
+ls:fr:node:33405,ls:fr:node:33405,foot,foot,Oper1
+ls:fr:node:33928,ls:fr:node:39416,train,former,Oper1
+ls:fr:node:44153,ls:fr:node:46072,fleuve,former,Oper1
+ls:fr:node:26934,ls:fr:node:39416,couple,former,Oper1
+ls:fr:node:31028,ls:fr:node:46072,rivière,former,Oper1
+ls:fr:node:28834,ls:fr:node:42683,pluie,fouetter,Func2
+ls:fr:node:53666,ls:fr:node:45516,bâtons dans les roues,foutre,Oper1
+ls:fr:node:29658,ls:fr:node:44100,tornade,frapper,Func0
+ls:fr:node:43198,ls:fr:node:44100,tempête,frapper,Func2
+ls:fr:node:28834,ls:fr:node:44455,pluie,frapper,Func2
+ls:fr:node:28219,ls:fr:node:44100,maladie,frapper,Func1
+ls:fr:node:28519,ls:fr:node:44645,nuage,fuir,Func1
+ls:fr:node:28519,ls:fr:node:41313,nuage,glisser,Func1
+ls:fr:node:52874,ls:fr:node:55113,satisfaction,goûter,Oper1
+ls:fr:node:26526,ls:fr:node:55113,bonheur,goûter,Oper1
+ls:fr:node:52009,ls:fr:node:55113,plaisir,goûter,Oper1
+ls:fr:node:53375,ls:fr:node:55113,ravissement,goûter,Oper1
+ls:fr:node:29655,ls:fr:node:27757,tonnerre,gronder,Func0
+ls:fr:node:28572,ls:fr:node:27757,orage,gronder,Func0
+ls:fr:node:43198,ls:fr:node:44925,tempête,gronder,Func2
+ls:fr:node:33931,ls:fr:node:38626,corps,gésir,Func0
+ls:fr:node:26599,ls:fr:node:38626,cadavre,gésir,Func0
+ls:fr:node:43368,ls:fr:node:27873,soleil,illuminer,Func1
+ls:fr:node:27215,ls:fr:node:27873,éclair,illuminer,Func1
+ls:fr:node:30552,ls:fr:node:37261,déception,infliger,Oper2
+ls:fr:node:27791,ls:fr:node:53627,haine,inspirer,Oper2
+ls:fr:node:53543,ls:fr:node:53627,mélancolie,inspirer,Oper1
+ls:fr:node:53722,ls:fr:node:44351,coup d’œil,jeter,Oper1
+ls:fr:node:53666,ls:fr:node:28021,bâtons dans les roues,jeter,Oper1
+ls:fr:node:41200,ls:fr:node:41633,coup de projecteur,jeter,Oper1
+ls:fr:node:42917,ls:fr:node:44580,éclair,jeter,Oper1
+ls:fr:node:53914,ls:fr:node:41633,lumière,jeter,Oper1
+ls:fr:node:48309,ls:fr:node:41633,voile,jeter,Oper1
+ls:fr:node:30953,ls:fr:node:28021,cri,jeter,Oper1
+ls:fr:node:42760,ls:fr:node:28021,bouteille à la mer,jeter,Oper1
+ls:fr:node:26471,ls:fr:node:39115,basket,jouer,Oper1
+ls:fr:node:29296,ls:fr:node:39115,rugby,jouer,Oper1
+ls:fr:node:40386,ls:fr:node:53941,coup,jouer,Oper1
+ls:fr:node:53942,ls:fr:node:53941,tour,jouer,Oper1
+ls:fr:node:29608,ls:fr:node:39115,tennis,jouer,Oper1
+ls:fr:node:29873,ls:fr:node:39115,volley-ball,jouer,Oper1
+ls:fr:node:33817,ls:fr:node:39287,cor,jouer,Oper1
+ls:fr:node:48998,ls:fr:node:39115,badminton,jouer,Oper1
+ls:fr:node:27584,ls:fr:node:39115,football,jouer,Oper1
+ls:fr:node:28790,ls:fr:node:39115,ping-pong,jouer,Oper1
+ls:fr:node:29937,ls:fr:node:39909,musique,jouer,Oper1
+ls:fr:node:28973,ls:fr:node:28041,procès,juger,Oper1
+ls:fr:node:41766,ls:fr:node:28077,au placard,laisser,Labor12
+ls:fr:node:42760,ls:fr:node:29997,bouteille à la mer,lancer,Oper1
+ls:fr:node:36136,ls:fr:node:31751,injure,lancer,Oper1
+ls:fr:node:30953,ls:fr:node:31179,cri,lancer,Oper1
+ls:fr:node:53722,ls:fr:node:31753,coup d’œil,lancer,Oper1
+ls:fr:node:51239,ls:fr:node:31751,prédiction,lancer,Oper1
+ls:fr:node:42917,ls:fr:node:32271,éclair,lancer,Oper1
+ls:fr:node:27215,ls:fr:node:44436,éclair,luire,Func0
+ls:fr:node:42694,ls:fr:node:44414,vent,lâcher,Oper1
+ls:fr:node:30953,ls:fr:node:44414,cri,lâcher,Oper1
+ls:fr:node:44185,ls:fr:node:28235,repas,manger,Oper1
+ls:fr:node:26387,ls:fr:node:28239,attitude,manifester,Oper1
+ls:fr:node:51127,ls:fr:node:28239,compassion,manifester,Oper1
+ls:fr:node:56472,ls:fr:node:28239,empathie,manifester,Oper1
+ls:fr:node:30601,ls:fr:node:28239,animosité,manifester,Oper1
+ls:fr:node:40551,ls:fr:node:39549,route,marcher,Oper1
+ls:fr:node:42534,ls:fr:node:43581,nuages,menacer,Func2
+ls:fr:node:41130,ls:fr:node:40127,coup de filet,mener,Oper1
+ls:fr:node:28865,ls:fr:node:40127,politique,mener,Oper1
+ls:fr:node:29291,ls:fr:node:40613,route,mener,Func3
+ls:fr:node:33969,ls:fr:node:40127,train,mener,Oper1
+ls:fr:node:56616,ls:fr:node:40613,voie,mener,Func2
+ls:fr:node:42723,ls:fr:node:40127,train de vie,mener,Oper1
+ls:fr:node:38902,ls:fr:node:45204,coup de fouet,mettre,Oper1
+ls:fr:node:45790,ls:fr:node:45204,carton rouge,mettre,Oper1
+ls:fr:node:47507,ls:fr:node:44140,les pieds sous la table,mettre,Oper1
+ls:fr:node:54382,ls:fr:node:45204,haro,mettre,Oper1
+ls:fr:node:42697,ls:fr:node:45204,vent,mettre,Oper1
+ls:fr:node:53666,ls:fr:node:28341,bâtons dans les roues,mettre,Oper1
+ls:fr:node:41766,ls:fr:node:45208,au placard,mettre,Labor12
+ls:fr:node:48309,ls:fr:node:32623,voile,mettre,Oper1
+ls:fr:node:42760,ls:fr:node:28341,bouteille à la mer,mettre,Oper1
+ls:fr:node:51127,ls:fr:node:44694,compassion,montrer,Oper1
+ls:fr:node:56472,ls:fr:node:44694,empathie,montrer,Oper1
+ls:fr:node:30601,ls:fr:node:44694,animosité,montrer,Oper1
+ls:fr:node:38386,ls:fr:node:38897,visage,montrer,Oper1
+ls:fr:node:28834,ls:fr:node:28435,pluie,mouiller,Func2
+ls:fr:node:29655,ls:fr:node:43189,tonnerre,mugir,Func0
+ls:fr:node:28476,ls:fr:node:48788,neige,neiger,Func1
+ls:fr:node:26387,ls:fr:node:44438,attitude,observer,Oper1
+ls:fr:node:45647,ls:fr:node:40022,tête,occuper,Oper1
+ls:fr:node:28333,ls:fr:node:40975,messe,officier,Oper1
+ls:fr:node:38386,ls:fr:node:43764,visage,offrir,Oper1
+ls:fr:node:42642,ls:fr:node:43764,ressemblance,offrir,Oper1
+ls:fr:node:44189,ls:fr:node:28583,repas,organiser,Oper1
+ls:fr:node:43591,ls:fr:node:28644,désert,parcourir,Oper1
+ls:fr:node:45176,ls:fr:node:42619,analogie,partager,Oper1
+ls:fr:node:32898,ls:fr:node:28668,course,participer,Oper1
+ls:fr:node:44189,ls:fr:node:28668,repas,participer,Oper2
+ls:fr:node:47729,ls:fr:node:41942,visite médicale,passer,Oper1
+ls:fr:node:54539,ls:fr:node:47734,bilan,passer,Oper3
+ls:fr:node:27185,ls:fr:node:41576,douche,passer,Oper1
+ls:fr:node:33471,ls:fr:node:40211,antenne,passer,Oper2
+ls:fr:node:29286,ls:fr:node:47702,rouge,passer,Oper1
+ls:fr:node:42925,ls:fr:node:44347,éclair,passer,Func1
+ls:fr:node:43198,ls:fr:node:44370,tempête,passer,Func2
+ls:fr:node:28519,ls:fr:node:56633,nuage,passer,Func1
+ls:fr:node:38365,ls:fr:node:38830,savon,passer,Oper1
+ls:fr:node:29658,ls:fr:node:56633,tornade,passer,Func1
+ls:fr:node:29798,ls:fr:node:56633,vent,passer,Func0
+ls:fr:node:54489,ls:fr:node:41576,petite souris,passer,Func0
+ls:fr:node:53835,ls:fr:node:39361,putsch,perpétrer,Oper1
+ls:fr:node:27825,ls:fr:node:39361,hold-up,perpétrer,Oper1
+ls:fr:node:26383,ls:fr:node:39361,attentat,perpétrer,Oper1
+ls:fr:node:40358,ls:fr:node:39361,coup d’État,perpétrer,Oper1
+ls:fr:node:26968,ls:fr:node:39361,crime,perpétrer,Oper1
+ls:fr:node:40798,ls:fr:node:41385,peuple,peupler,Func2
+ls:fr:node:45529,ls:fr:node:46944,sprint,piquer,Oper1
+ls:fr:node:42534,ls:fr:node:41346,nuages,planer,Func2
+ls:fr:node:39326,ls:fr:node:41346,menace,planer,Func2
+ls:fr:node:28519,ls:fr:node:44722,nuage,planer,Func1
+ls:fr:node:55857,ls:fr:node:34880,cordes,pleuvoir,Func1
+ls:fr:node:28495,ls:fr:node:55302,nom,porter,Oper2
+ls:fr:node:28527,ls:fr:node:32624,numéro,porter,Oper2
+ls:fr:node:33796,ls:fr:node:38555,cheveu,porter,Oper1
+ls:fr:node:28938,ls:fr:node:55302,prénom,porter,Oper2
+ls:fr:node:56760,ls:fr:node:56763,jugement,porter,Oper1
+ls:fr:node:26742,ls:fr:node:38555,cheveux,porter,Oper1
+ls:fr:node:40696,ls:fr:node:56763,toast,porter,Oper1
+ls:fr:node:26292,ls:fr:node:56763,amour,porter,Oper1
+ls:fr:node:54926,ls:fr:node:55302,nom de famille,porter,Oper2
+ls:fr:node:53354,ls:fr:node:53356,devinette,poser,Oper1
+ls:fr:node:29053,ls:fr:node:53356,question,poser,Oper1
+ls:fr:node:40794,ls:fr:node:53356,lapin,poser,Oper1
+ls:fr:node:30775,ls:fr:node:53356,colle,poser,Oper1
+ls:fr:node:31252,ls:fr:node:43735,antennes,posséder,Oper1
+ls:fr:node:45176,ls:fr:node:43735,analogie,posséder,Oper1
+ls:fr:node:56544,ls:fr:node:43735,cornes,posséder,Oper1
+ls:fr:node:26291,ls:fr:node:43735,ami,posséder,Oper2
+ls:fr:node:28921,ls:fr:node:43735,pouvoir,posséder,Oper1
+ls:fr:node:38389,ls:fr:node:43735,corps,posséder,Oper1
+ls:fr:node:55630,ls:fr:node:43735,carapace,posséder,Oper1
+ls:fr:node:26911,ls:fr:node:43735,coquille,posséder,Oper1
+ls:fr:node:28865,ls:fr:node:40620,politique,poursuivre,Oper1
+ls:fr:node:40551,ls:fr:node:40620,route,poursuivre,Oper1
+ls:fr:node:45529,ls:fr:node:46938,sprint,pousser,Oper1
+ls:fr:node:28601,ls:fr:node:46938,ouf,pousser,Oper1
+ls:fr:node:30868,ls:fr:node:46938,exclamation,pousser,Oper1
+ls:fr:node:30953,ls:fr:node:46938,cri,pousser,Oper1
+ls:fr:node:54539,ls:fr:node:39118,bilan,pratiquer,Oper1
+ls:fr:node:28865,ls:fr:node:39118,politique,pratiquer,Oper1
+ls:fr:node:26709,ls:fr:node:39285,chantage,pratiquer,Oper1
+ls:fr:node:28701,ls:fr:node:41570,pause,prendre,Oper1
+ls:fr:node:27185,ls:fr:node:41570,douche,prendre,Oper1
+ls:fr:node:38503,ls:fr:node:38826,veste,prendre,Oper1
+ls:fr:node:45737,ls:fr:node:41570,goûter,prendre,Oper1
+ls:fr:node:55764,ls:fr:node:41570,mesure,prendre,Oper1
+ls:fr:node:55988,ls:fr:node:38826,coup de couteau,prendre,Oper2
+ls:fr:node:38267,ls:fr:node:39700,forme,prendre,Oper2
+ls:fr:node:42267,ls:fr:node:42686,bol,prendre,Oper1
+ls:fr:node:31965,ls:fr:node:41570,décision,prendre,Oper1
+ls:fr:node:38365,ls:fr:node:38826,savon,prendre,Oper2
+ls:fr:node:54312,ls:fr:node:38937,recul,prendre,Oper1
+ls:fr:node:45790,ls:fr:node:38826,carton rouge,prendre,Oper2
+ls:fr:node:42697,ls:fr:node:38826,vent,prendre,Oper2
+ls:fr:node:45599,ls:fr:node:38727,sujet,prendre,Labor12
+ls:fr:node:44185,ls:fr:node:45088,repas,prendre,Oper1
+ls:fr:node:43710,ls:fr:node:42686,bol d’air,prendre,Oper1
+ls:fr:node:29600,ls:fr:node:44788,tempête,pris,Oper1
+ls:fr:node:29645,ls:fr:node:41832,toilette,procéder,Oper1
+ls:fr:node:36136,ls:fr:node:43792,injure,proférer,Oper1
+ls:fr:node:36135,ls:fr:node:43792,insulte,proférer,Oper1
+ls:fr:node:40551,ls:fr:node:39554,route,progresser,Oper1
+ls:fr:node:42917,ls:fr:node:39311,éclair,projeter,Oper1
+ls:fr:node:27142,ls:fr:node:33916,discours,prononcer,Oper1
+ls:fr:node:53764,ls:fr:node:33916,sermon,prononcer,Oper1
+ls:fr:node:30570,ls:fr:node:33916,éloge,prononcer,Oper1
+ls:fr:node:38292,ls:fr:node:38644,chiffre,provenir,Func1
+ls:fr:node:30552,ls:fr:node:37264,déception,provoquer,Oper2
+ls:fr:node:27791,ls:fr:node:37264,haine,provoquer,Oper3
+ls:fr:node:38386,ls:fr:node:38898,visage,présenter,Oper1
+ls:fr:node:45176,ls:fr:node:38898,analogie,présenter,Oper1
+ls:fr:node:30875,ls:fr:node:56400,excuses,présenter,Oper1
+ls:fr:node:26850,ls:fr:node:56400,compliment,présenter,Oper1
+ls:fr:node:42642,ls:fr:node:38898,ressemblance,présenter,Oper1
+ls:fr:node:38503,ls:fr:node:38827,veste,ramasser,Oper1
+ls:fr:node:41766,ls:fr:node:29104,au placard,ranger,Labor12
+ls:fr:node:42642,ls:fr:node:46097,ressemblance,rappeler,Oper1
+ls:fr:node:28834,ls:fr:node:44723,pluie,raviner,Func2
+ls:fr:node:55988,ls:fr:node:41629,coup de couteau,recevoir,Oper2
+ls:fr:node:30718,ls:fr:node:29130,félicitations,recevoir,Oper2
+ls:fr:node:35109,ls:fr:node:41629,visite,recevoir,Oper2
+ls:fr:node:54539,ls:fr:node:45214,bilan,recevoir,Labor13
+ls:fr:node:45790,ls:fr:node:41629,carton rouge,recevoir,Oper2
+ls:fr:node:43711,ls:fr:node:41629,coup de coude,recevoir,Oper2
+ls:fr:node:51397,ls:fr:node:35138,honneurs de la presse,recevoir,Oper1
+ls:fr:node:28834,ls:fr:node:41629,pluie,recevoir,Oper2
+ls:fr:node:38365,ls:fr:node:41629,savon,recevoir,Oper2
+ls:fr:node:53727,ls:fr:node:41629,coup de pied,recevoir,Oper2
+ls:fr:node:26709,ls:fr:node:39280,chantage,recourir,Oper1
+ls:fr:node:38342,ls:fr:node:35079,vêtement,recouvrir,Func2
+ls:fr:node:27342,ls:fr:node:35080,enveloppe,recouvrir,Func2
+ls:fr:node:38614,ls:fr:node:35079,manteau,recouvrir,Func2
+ls:fr:node:39297,ls:fr:node:35079,habit,recouvrir,Func2
+ls:fr:node:38288,ls:fr:node:43767,corps,relever,Oper1
+ls:fr:node:41766,ls:fr:node:41774,au placard,reléguer,Labor12
+ls:fr:node:41766,ls:fr:node:43495,au placard,remiser,Labor12
+ls:fr:node:39532,ls:fr:node:34801,oreille,rencontrer,Oper2
+ls:fr:node:55785,ls:fr:node:47775,honneur,rendre,Oper1
+ls:fr:node:35109,ls:fr:node:47775,visite,rendre,Oper1
+ls:fr:node:50785,ls:fr:node:47775,service,rendre,Oper1
+ls:fr:node:26553,ls:fr:node:42754,bouteille,renfermer,Func2
+ls:fr:node:26599,ls:fr:node:48162,cadavre,reposer,Func0
+ls:fr:node:33931,ls:fr:node:38028,corps,reposer,Func0
+ls:fr:node:53375,ls:fr:node:29223,ravissement,ressentir,Oper1
+ls:fr:node:52874,ls:fr:node:29223,satisfaction,ressentir,Oper1
+ls:fr:node:53774,ls:fr:node:29223,nausée,ressentir,Oper1
+ls:fr:node:53542,ls:fr:node:29223,mélancolie,ressentir,Oper1
+ls:fr:node:50566,ls:fr:node:29223,humiliation,ressentir,Oper1
+ls:fr:node:51127,ls:fr:node:29223,compassion,ressentir,Oper1
+ls:fr:node:53262,ls:fr:node:29223,mépris,ressentir,Oper1
+ls:fr:node:52009,ls:fr:node:29223,plaisir,ressentir,Oper1
+ls:fr:node:52530,ls:fr:node:29223,frayeur,ressentir,Oper1
+ls:fr:node:52799,ls:fr:node:29223,déprime,ressentir,Oper1
+ls:fr:node:52873,ls:fr:node:29223,contentement,ressentir,Oper1
+ls:fr:node:53524,ls:fr:node:29223,cafard,ressentir,Oper1
+ls:fr:node:47651,ls:fr:node:29223,sommeil,ressentir,Oper1
+ls:fr:node:54272,ls:fr:node:29223,curiosité,ressentir,Oper1
+ls:fr:node:56702,ls:fr:node:29223,étonnement,ressentir,Oper1
+ls:fr:node:54481,ls:fr:node:29223,reconnaissance,ressentir,Oper1
+ls:fr:node:29721,ls:fr:node:29223,tristesse,ressentir,Oper1
+ls:fr:node:29968,ls:fr:node:29223,bien,ressentir,Oper1
+ls:fr:node:30514,ls:fr:node:29223,effroi,ressentir,Oper1
+ls:fr:node:56476,ls:fr:node:29223,apitoiement,ressentir,Oper1
+ls:fr:node:30533,ls:fr:node:29223,admiration,ressentir,Oper1
+ls:fr:node:30552,ls:fr:node:29223,déception,ressentir,Oper1
+ls:fr:node:30553,ls:fr:node:29223,dégoût,ressentir,Oper1
+ls:fr:node:28764,ls:fr:node:29223,peur,ressentir,Oper1
+ls:fr:node:30565,ls:fr:node:29223,désir,ressentir,Oper1
+ls:fr:node:30612,ls:fr:node:29223,aversion,ressentir,Oper1
+ls:fr:node:30684,ls:fr:node:29223,mécontentement,ressentir,Oper1
+ls:fr:node:30720,ls:fr:node:29223,fierté,ressentir,Oper1
+ls:fr:node:30913,ls:fr:node:29223,gratitude,ressentir,Oper1
+ls:fr:node:30950,ls:fr:node:29223,répugnance,ressentir,Oper1
+ls:fr:node:30959,ls:fr:node:29223,répulsion,ressentir,Oper1
+ls:fr:node:37496,ls:fr:node:29223,orgueil,ressentir,Oper1
+ls:fr:node:42133,ls:fr:node:29223,mal du pays,ressentir,Oper1
+ls:fr:node:55144,ls:fr:node:29223,nostalgie,ressentir,Oper1
+ls:fr:node:56472,ls:fr:node:29223,empathie,ressentir,Oper1
+ls:fr:node:28009,ls:fr:node:29223,jalousie,ressentir,Oper1
+ls:fr:node:30596,ls:fr:node:29223,émoi,ressentir,Oper1
+ls:fr:node:27791,ls:fr:node:29223,haine,ressentir,Oper1
+ls:fr:node:27837,ls:fr:node:29223,horreur,ressentir,Oper1
+ls:fr:node:26292,ls:fr:node:29223,amour,ressentir,Oper1
+ls:fr:node:27640,ls:fr:node:29223,frustration,ressentir,Oper1
+ls:fr:node:26526,ls:fr:node:29223,bonheur,ressentir,Oper1
+ls:fr:node:27502,ls:fr:node:29223,fatigue,ressentir,Oper1
+ls:fr:node:26698,ls:fr:node:29223,chagrin,ressentir,Oper1
+ls:fr:node:26814,ls:fr:node:29223,colère,ressentir,Oper1
+ls:fr:node:55218,ls:fr:node:29223,manque,ressentir,Oper1
+ls:fr:node:30732,ls:fr:node:33600,klaxon,retentir,Func0
+ls:fr:node:43718,ls:fr:node:33600,coup,retentir,Func0
+ls:fr:node:42593,ls:fr:node:39316,pluie,retomber,Oper1
+ls:fr:node:29655,ls:fr:node:31329,tonnerre,rouler,Func0
+ls:fr:node:55521,ls:fr:node:55483,réactant,réagir,Func0
+ls:fr:node:55490,ls:fr:node:55483,réactif,réagir,Func0
+ls:fr:node:27825,ls:fr:node:40869,hold-up,réaliser,Oper1
+ls:fr:node:54539,ls:fr:node:40869,bilan,réaliser,Oper1
+ls:fr:node:29645,ls:fr:node:40869,toilette,réaliser,Oper1
+ls:fr:node:30552,ls:fr:node:37266,déception,réserver,Oper2
+ls:fr:node:29568,ls:fr:node:36771,tambour,résonner,Func0
+ls:fr:node:39326,ls:fr:node:56466,menace,rôder,Func0
+ls:fr:node:49048,ls:fr:node:31627,bagarreuse,se bagarrer,Oper1
+ls:fr:node:49047,ls:fr:node:31627,bagarreur,se bagarrer,Oper1
+ls:fr:node:26327,ls:fr:node:32420,appartement,se composer,Func2
+ls:fr:node:40823,ls:fr:node:32420,marche,se composer,Oper1
+ls:fr:node:26824,ls:fr:node:34194,colline,se dresser,Func1
+ls:fr:node:29658,ls:fr:node:43508,tornade,se déchaîner,Func0
+ls:fr:node:29600,ls:fr:node:43508,tempête,se déchaîner,Func0
+ls:fr:node:47729,ls:fr:node:33482,visite médicale,se dérouler,Func2
+ls:fr:node:47759,ls:fr:node:33482,visite,se dérouler,Func0
+ls:fr:node:32898,ls:fr:node:33482,course,se dérouler,Func0
+ls:fr:node:31028,ls:fr:node:41991,rivière,se déverser,Func2
+ls:fr:node:44153,ls:fr:node:41991,fleuve,se déverser,Func2
+ls:fr:node:39563,ls:fr:node:38625,volley-ball,se faire,Oper1
+ls:fr:node:39568,ls:fr:node:38625,basket,se faire,Oper1
+ls:fr:node:39272,ls:fr:node:38625,football,se faire,Oper1
+ls:fr:node:39564,ls:fr:node:38625,rugby,se faire,Oper1
+ls:fr:node:41433,ls:fr:node:38625,gymnastique,se faire,Oper1
+ls:fr:node:39788,ls:fr:node:38625,jogging,se faire,Oper1
+ls:fr:node:48870,ls:fr:node:38625,ciné,se faire,Oper1
+ls:fr:node:45101,ls:fr:node:45269,couleur,se faire,Oper2
+ls:fr:node:49002,ls:fr:node:38625,badminton,se faire,Oper1
+ls:fr:node:39109,ls:fr:node:38625,ping-pong,se faire,Oper1
+ls:fr:node:39570,ls:fr:node:38625,tennis,se faire,Oper1
+ls:fr:node:30732,ls:fr:node:33599,klaxon,se faire entendre,Func0
+ls:fr:node:53917,ls:fr:node:36320,excentricité,se livrer,Oper1
+ls:fr:node:26709,ls:fr:node:36320,chantage,se livrer,Oper1
+ls:fr:node:29645,ls:fr:node:36320,toilette,se livrer,Oper1
+ls:fr:node:38782,ls:fr:node:38854,veste,se manger,Oper1
+ls:fr:node:55301,ls:fr:node:37194,nom,se nommer,Oper2
+ls:fr:node:54926,ls:fr:node:37194,nom de famille,se nommer,Oper2
+ls:fr:node:28938,ls:fr:node:37194,prénom,se nommer,Oper2
+ls:fr:node:38365,ls:fr:node:38973,savon,se prendre,Oper2
+ls:fr:node:45790,ls:fr:node:38973,carton rouge,se prendre,Oper2
+ls:fr:node:42697,ls:fr:node:38973,vent,se prendre,Oper2
+ls:fr:node:38503,ls:fr:node:38973,veste,se prendre,Oper1
+ls:fr:node:27215,ls:fr:node:37166,éclair,se produire,Func0
+ls:fr:node:26863,ls:fr:node:45573,concert,se produire,Oper1
+ls:fr:node:49491,ls:fr:node:37166,avalanche,se produire,Func0
+ls:fr:node:45007,ls:fr:node:44764,bruit,se propager,Func2
+ls:fr:node:28938,ls:fr:node:41866,prénom,se prénommer,Oper2
+ls:fr:node:38503,ls:fr:node:38848,veste,se ramasser,Oper1
+ls:fr:node:45007,ls:fr:node:44259,bruit,se répandre,Func2
+ls:fr:node:39868,ls:fr:node:41992,lac,se répandre,Func0
+ls:fr:node:47729,ls:fr:node:48249,visite médicale,se soumettre,Oper1
+ls:fr:node:43198,ls:fr:node:44106,tempête,secouer,Func2
+ls:fr:node:48680,ls:fr:node:55861,bouc émissaire,servir,Oper1
+ls:fr:node:27215,ls:fr:node:44437,éclair,sillonner,Func1
+ls:fr:node:54318,ls:fr:node:45856,vacherie,sortir,Oper1
+ls:fr:node:48070,ls:fr:node:44367,bise,souffler,Func0
+ls:fr:node:29600,ls:fr:node:44367,tempête,souffler,Func0
+ls:fr:node:29798,ls:fr:node:44367,vent,souffler,Func0
+ls:fr:node:45770,ls:fr:node:50447,angine,souffrir,Oper1
+ls:fr:node:35856,ls:fr:node:50447,goutte,souffrir,Oper1
+ls:fr:node:40449,ls:fr:node:50447,coup de froid,souffrir,Oper1
+ls:fr:node:44377,ls:fr:node:50447,angine de poitrine,souffrir,Oper1
+ls:fr:node:29251,ls:fr:node:50447,rhumatisme,souffrir,Oper1
+ls:fr:node:43910,ls:fr:node:50447,mal,souffrir,Oper1
+ls:fr:node:55919,ls:fr:node:50447,cancer du sein,souffrir,Oper1
+ls:fr:node:29079,ls:fr:node:50447,rage,souffrir,Oper1
+ls:fr:node:54719,ls:fr:node:50447,gale,souffrir,Oper1
+ls:fr:node:42503,ls:fr:node:50447,maladie de la vache folle,souffrir,Oper1
+ls:fr:node:55144,ls:fr:node:50447,nostalgie,souffrir,Oper1
+ls:fr:node:55922,ls:fr:node:50447,carcinome mammaire,souffrir,Oper1
+ls:fr:node:28219,ls:fr:node:50447,maladie,souffrir,Oper1
+ls:fr:node:55920,ls:fr:node:50447,carcinome,souffrir,Oper1
+ls:fr:node:27754,ls:fr:node:50447,grippe,souffrir,Oper1
+ls:fr:node:29252,ls:fr:node:50447,rhume,souffrir,Oper1
+ls:fr:node:56694,ls:fr:node:50447,maladie mentale,souffrir,Oper1
+ls:fr:node:49268,ls:fr:node:50447,maladie honteuse,souffrir,Oper1
+ls:fr:node:56701,ls:fr:node:50447,ictère,souffrir,Oper1
+ls:fr:node:53541,ls:fr:node:50447,mélancolie,souffrir,Oper1
+ls:fr:node:56697,ls:fr:node:50447,maladie vénérienne,souffrir,Oper1
+ls:fr:node:50642,ls:fr:node:50447,tuberculose,souffrir,Oper1
+ls:fr:node:53806,ls:fr:node:50447,bronchite,souffrir,Oper1
+ls:fr:node:56700,ls:fr:node:50447,jaunisse,souffrir,Oper1
+ls:fr:node:41461,ls:fr:node:50447,syndrome des jambes sans repos,souffrir,Oper1
+ls:fr:node:53956,ls:fr:node:50447,pneumonie,souffrir,Oper1
+ls:fr:node:26269,ls:fr:node:50447,allergie,souffrir,Oper1
+ls:fr:node:26625,ls:fr:node:50447,cancer,souffrir,Oper1
+ls:fr:node:47729,ls:fr:node:29510,visite médicale,subir,Oper1
+ls:fr:node:29600,ls:fr:node:29510,tempête,subir,Oper1
+ls:fr:node:53909,ls:fr:node:29510,violence,subir,Oper2
+ls:fr:node:53502,ls:fr:node:48689,coup de feu,subir,Oper2
+ls:fr:node:38503,ls:fr:node:29510,veste,subir,Oper1
+ls:fr:node:42586,ls:fr:node:29510,averse,subir,Oper2
+ls:fr:node:26709,ls:fr:node:29510,chantage,subir,Oper2
+ls:fr:node:29658,ls:fr:node:29510,tornade,subir,Oper1
+ls:fr:node:40551,ls:fr:node:40738,route,suivre,Oper1
+ls:fr:node:55776,ls:fr:node:51515,quarantaine,suivre,Oper1
+ls:fr:node:29600,ls:fr:node:44789,tempête,surpris,Oper1
+ls:fr:node:27791,ls:fr:node:44107,haine,susciter,Oper2
+ls:fr:node:53543,ls:fr:node:44107,mélancolie,susciter,Oper1
+ls:fr:node:29600,ls:fr:node:44524,tempête,sévir,Func0
+ls:fr:node:28834,ls:fr:node:42791,pluie,s’abattre,Func2
+ls:fr:node:28572,ls:fr:node:42791,orage,s’abattre,Func2
+ls:fr:node:43198,ls:fr:node:44105,tempête,s’abattre,Func2
+ls:fr:node:29658,ls:fr:node:42791,tornade,s’abattre,Func1
+ls:fr:node:43591,ls:fr:node:41377,désert,s’enfoncer,Oper1
+ls:fr:node:28542,ls:fr:node:37381,occupation,s’occuper,Oper2
+ls:fr:node:42694,ls:fr:node:44384,vent,s’échapper,Func1
+ls:fr:node:31028,ls:fr:node:42060,rivière,s’écouler,Func2
+ls:fr:node:44153,ls:fr:node:42060,fleuve,s’écouler,Func2
+ls:fr:node:53976,ls:fr:node:53977,déficit,s’élever,Func2
+ls:fr:node:28970,ls:fr:node:53977,prix,s’élever,Func2
+ls:fr:node:26824,ls:fr:node:34385,colline,s’élever,Func1
+ls:fr:node:28069,ls:fr:node:43024,lac,s’étaler,Func0
+ls:fr:node:28069,ls:fr:node:40484,lac,s’étendre,Func0
+ls:fr:node:40891,ls:fr:node:40484,rivière,s’étendre,Func0
+ls:fr:node:43591,ls:fr:node:40484,désert,s’étendre,Func0
+ls:fr:node:32975,ls:fr:node:42598,pompier,tailler,Oper1
+ls:fr:node:30555,ls:fr:node:42598,pipe,tailler,Oper1
+ls:fr:node:45140,ls:fr:node:44952,tempête,tempêter,Oper2
+ls:fr:node:45316,ls:fr:node:41608,table ouverte,tenir,Oper1
+ls:fr:node:28921,ls:fr:node:41608,pouvoir,tenir,Oper1
+ls:fr:node:55369,ls:fr:node:45514,journal intime,tenir,Oper1
+ls:fr:node:50107,ls:fr:node:47679,coup de feu,tirer,Oper1
+ls:fr:node:55317,ls:fr:node:47679,feu d’artifice,tirer,Oper1
+ls:fr:node:28476,ls:fr:node:42717,neige,tomber,Func1
+ls:fr:node:55857,ls:fr:node:42717,cordes,tomber,Func1
+ls:fr:node:28834,ls:fr:node:42717,pluie,tomber,Func0
+ls:fr:node:26427,ls:fr:node:42717,averse,tomber,Func0
+ls:fr:node:28572,ls:fr:node:43538,orage,toucher,Func2
+ls:fr:node:29658,ls:fr:node:47181,tornade,toucher,Func1
+ls:fr:node:28219,ls:fr:node:48561,maladie,toucher,Func1
+ls:fr:node:38912,ls:fr:node:48738,lessive,tourner,Func0
+ls:fr:node:26297,ls:fr:node:44594,analogie,tracer,Oper1
+ls:fr:node:33318,ls:fr:node:29702,transports,transporter,Func1
+ls:fr:node:27561,ls:fr:node:47880,fleuve,traverser,Func1
+ls:fr:node:43272,ls:fr:node:29704,désert,traverser,Oper1
+ls:fr:node:42925,ls:fr:node:44253,éclair,traverser,Func1
+ls:fr:node:29265,ls:fr:node:47880,rivière,traverser,Func1
+ls:fr:node:28519,ls:fr:node:43547,nuage,traverser,Func1
+ls:fr:node:39532,ls:fr:node:38516,oreille,trouver,Oper2
+ls:fr:node:26709,ls:fr:node:39282,chantage,user,Oper1
+ls:fr:node:47910,ls:fr:node:29761,manche,utiliser,Oper1
+ls:fr:node:45790,ls:fr:node:34767,carton rouge,valoir,Oper3
+ls:fr:node:30718,ls:fr:node:34767,félicitations,valoir,Oper3
+ls:fr:node:29291,ls:fr:node:40640,route,venir,Func2
+ls:fr:node:29568,ls:fr:node:43559,tambour,vibrer,Func0
+ls:fr:node:29286,ls:fr:node:46178,rouge,virer,Oper1
+ls:fr:node:41198,ls:fr:node:34713,tragédie,vivre,Oper2
+ls:fr:node:43272,ls:fr:node:34713,désert,vivre,Oper1
+ls:fr:node:56510,ls:fr:node:34713,conte de fées,vivre,Oper2
+ls:fr:node:38197,ls:fr:node:56422,rêve,voir,Labor12
+ls:fr:node:44192,ls:fr:node:30417,nuage,voler,Oper1
+ls:fr:node:56703,ls:fr:node:41807,souci,y avoir,Func0
+ls:fr:node:54105,ls:fr:node:41807,problème,y avoir,Func0
+ls:fr:node:27215,ls:fr:node:44558,éclair,zébrer,Func1
+ls:fr:node:45790,ls:fr:node:54535,carton rouge,écoper,Oper2
+ls:fr:node:38107,ls:fr:node:37957,ronflements,émettre,Oper1
+ls:fr:node:30953,ls:fr:node:37957,cri,émettre,Oper1
+ls:fr:node:55144,ls:fr:node:27370,nostalgie,éprouver,Oper1
+ls:fr:node:53542,ls:fr:node:27370,mélancolie,éprouver,Oper1
+ls:fr:node:53524,ls:fr:node:27370,cafard,éprouver,Oper1
+ls:fr:node:30553,ls:fr:node:27370,dégoût,éprouver,Oper1
+ls:fr:node:53375,ls:fr:node:27370,ravissement,éprouver,Oper1
+ls:fr:node:42133,ls:fr:node:27370,mal du pays,éprouver,Oper1
+ls:fr:node:50566,ls:fr:node:27370,humiliation,éprouver,Oper1
+ls:fr:node:51127,ls:fr:node:27370,compassion,éprouver,Oper1
+ls:fr:node:53262,ls:fr:node:27370,mépris,éprouver,Oper1
+ls:fr:node:52874,ls:fr:node:27370,satisfaction,éprouver,Oper1
+ls:fr:node:47651,ls:fr:node:27370,sommeil,éprouver,Oper1
+ls:fr:node:52873,ls:fr:node:27370,contentement,éprouver,Oper1
+ls:fr:node:52799,ls:fr:node:27370,déprime,éprouver,Oper1
+ls:fr:node:52530,ls:fr:node:27370,frayeur,éprouver,Oper1
+ls:fr:node:52009,ls:fr:node:27370,plaisir,éprouver,Oper1
+ls:fr:node:54272,ls:fr:node:27370,curiosité,éprouver,Oper1
+ls:fr:node:54481,ls:fr:node:27370,reconnaissance,éprouver,Oper1
+ls:fr:node:30552,ls:fr:node:27370,déception,éprouver,Oper1
+ls:fr:node:55218,ls:fr:node:27370,manque,éprouver,Oper1
+ls:fr:node:28764,ls:fr:node:27370,peur,éprouver,Oper1
+ls:fr:node:30950,ls:fr:node:27370,répugnance,éprouver,Oper1
+ls:fr:node:30913,ls:fr:node:27370,gratitude,éprouver,Oper1
+ls:fr:node:29383,ls:fr:node:27370,sentiment,éprouver,Oper1
+ls:fr:node:56702,ls:fr:node:27370,étonnement,éprouver,Oper1
+ls:fr:node:30720,ls:fr:node:27370,fierté,éprouver,Oper1
+ls:fr:node:30684,ls:fr:node:27370,mécontentement,éprouver,Oper1
+ls:fr:node:30612,ls:fr:node:27370,aversion,éprouver,Oper1
+ls:fr:node:30959,ls:fr:node:27370,répulsion,éprouver,Oper1
+ls:fr:node:30601,ls:fr:node:27370,animosité,éprouver,Oper1
+ls:fr:node:30596,ls:fr:node:27370,émoi,éprouver,Oper1
+ls:fr:node:30565,ls:fr:node:27370,désir,éprouver,Oper1
+ls:fr:node:29721,ls:fr:node:27370,tristesse,éprouver,Oper1
+ls:fr:node:29968,ls:fr:node:27370,bien,éprouver,Oper1
+ls:fr:node:30514,ls:fr:node:27370,effroi,éprouver,Oper1
+ls:fr:node:30533,ls:fr:node:27370,admiration,éprouver,Oper1
+ls:fr:node:56476,ls:fr:node:27370,apitoiement,éprouver,Oper1
+ls:fr:node:56472,ls:fr:node:27370,empathie,éprouver,Oper1
+ls:fr:node:28009,ls:fr:node:27370,jalousie,éprouver,Oper1
+ls:fr:node:53774,ls:fr:node:27370,nausée,éprouver,Oper1
+ls:fr:node:27791,ls:fr:node:27370,haine,éprouver,Oper1
+ls:fr:node:27837,ls:fr:node:27370,horreur,éprouver,Oper1
+ls:fr:node:27640,ls:fr:node:27370,frustration,éprouver,Oper1
+ls:fr:node:37496,ls:fr:node:27370,orgueil,éprouver,Oper1
+ls:fr:node:26814,ls:fr:node:27370,colère,éprouver,Oper1
+ls:fr:node:26698,ls:fr:node:27370,chagrin,éprouver,Oper1
+ls:fr:node:26526,ls:fr:node:27370,bonheur,éprouver,Oper1
+ls:fr:node:27502,ls:fr:node:27370,fatigue,éprouver,Oper1
+ls:fr:node:26292,ls:fr:node:27370,amour,éprouver,Oper1
+ls:fr:node:26297,ls:fr:node:38548,analogie,établir,Oper1
+ls:fr:node:54539,ls:fr:node:46405,bilan,établir,Oper1
+ls:fr:node:50540,ls:fr:node:46405,rapport,établir,Oper1
+ls:fr:node:56702,ls:fr:node:27423,étonnement,étonner,Oper2
+ls:fr:node:27309,ls:fr:node:34765,ennemi,être,Oper1
+ls:fr:node:29645,ls:fr:node:41447,toilette,être,Oper1
+ls:fr:node:33471,ls:fr:node:41447,antenne,être,Oper2
+ls:fr:node:41453,ls:fr:node:41447,placard,être,Oper1
+ls:fr:node:27185,ls:fr:node:38679,douche,être,Oper1
+ls:fr:node:27430,ls:fr:node:27429,être,être,Func0
+ls:fr:node:28834,ls:fr:node:38679,pluie,être,Oper2
+ls:fr:node:43898,ls:fr:node:34765,mal,être,Oper1
+ls:fr:node:29600,ls:fr:node:41447,tempête,être,Oper1
+ls:fr:node:39595,ls:fr:node:34765,sport,être,Oper2
+ls:fr:node:30770,ls:fr:node:41447,poissons,être,Oper1
+ls:fr:node:48719,ls:fr:node:27429,cadavre,être,Oper1
+ls:fr:node:48680,ls:fr:node:34765,bouc émissaire,être,Oper1
+ls:fr:node:31266,ls:fr:node:41447,taureau,être,Oper1
+ls:fr:node:26291,ls:fr:node:34765,ami,être,Oper1
+ls:fr:node:28737,ls:fr:node:34765,père,être,Oper1
+ls:fr:node:31685,ls:fr:node:34765,cause,être,Oper1
+ls:fr:node:28327,ls:fr:node:34765,mère,être,Oper1
+ls:fr:node:55776,ls:fr:node:41447,quarantaine,être,Oper1
+ls:fr:node:45647,ls:fr:node:38679,tête,être,Oper1
+ls:fr:node:42147,ls:fr:node:38679,bocal,être,Oper2
+ls:fr:node:39246,ls:fr:node:34765,famille,être,Oper2
+ls:fr:node:40569,ls:fr:node:34765,oreilles,être,Oper1

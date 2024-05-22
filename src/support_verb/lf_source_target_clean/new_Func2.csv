@@ -1,0 +1,72 @@
+source,target,source_lexname,target_lexname
+ls:fr:node:28219,ls:fr:node:48560,maladie,affecter
+ls:fr:node:28834,ls:fr:node:39993,pluie,alimenter
+ls:fr:node:28834,ls:fr:node:31292,pluie,arroser
+ls:fr:node:28219,ls:fr:node:45106,maladie,attaquer
+ls:fr:node:28219,ls:fr:node:44104,maladie,atteindre
+ls:fr:node:42567,ls:fr:node:44104,tornade,atteindre
+ls:fr:node:26327,ls:fr:node:38681,appartement,avoir
+ls:fr:node:47729,ls:fr:node:39429,visite médicale,avoir lieu
+ls:fr:node:42566,ls:fr:node:44099,tornade,balayer
+ls:fr:node:28834,ls:fr:node:44531,pluie,battre
+ls:fr:node:28834,ls:fr:node:44940,pluie,cingler
+ls:fr:node:45007,ls:fr:node:31847,bruit,circuler
+ls:fr:node:26327,ls:fr:node:32403,appartement,comporter
+ls:fr:node:26327,ls:fr:node:45407,appartement,comprendre
+ls:fr:node:26327,ls:fr:node:31269,appartement,compter
+ls:fr:node:56616,ls:fr:node:52494,voie,conduire
+ls:fr:node:41556,ls:fr:node:41768,politique,consister
+ls:fr:node:47398,ls:fr:node:47944,boîte aux lettres,contenir
+ls:fr:node:26553,ls:fr:node:26891,bouteille,contenir
+ls:fr:node:44153,ls:fr:node:26928,fleuve,couler
+ls:fr:node:31028,ls:fr:node:26928,rivière,couler
+ls:fr:node:45007,ls:fr:node:31137,bruit,courir
+ls:fr:node:45089,ls:fr:node:31137,buzz,courir
+ls:fr:node:29254,ls:fr:node:55743,ride,creuser
+ls:fr:node:29005,ls:fr:node:52573,proverbe,dire
+ls:fr:node:56616,ls:fr:node:48388,voie,déboucher
+ls:fr:node:38615,ls:fr:node:31065,nuage,flotter
+ls:fr:node:42534,ls:fr:node:31074,nuages,flotter
+ls:fr:node:28834,ls:fr:node:42683,pluie,fouetter
+ls:fr:node:43198,ls:fr:node:44100,tempête,frapper
+ls:fr:node:42568,ls:fr:node:44100,tornade,frapper
+ls:fr:node:28834,ls:fr:node:44455,pluie,frapper
+ls:fr:node:43198,ls:fr:node:44925,tempête,gronder
+ls:fr:node:42534,ls:fr:node:43581,nuages,menacer
+ls:fr:node:56616,ls:fr:node:40613,voie,mener
+ls:fr:node:28834,ls:fr:node:28435,pluie,mouiller
+ls:fr:node:29798,ls:fr:node:56633,vent,passer
+ls:fr:node:43198,ls:fr:node:44370,tempête,passer
+ls:fr:node:40798,ls:fr:node:41385,peuple,peupler
+ls:fr:node:42534,ls:fr:node:41346,nuages,planer
+ls:fr:node:39326,ls:fr:node:41346,menace,planer
+ls:fr:node:28834,ls:fr:node:44723,pluie,raviner
+ls:fr:node:38614,ls:fr:node:35079,manteau,recouvrir
+ls:fr:node:39297,ls:fr:node:35079,habit,recouvrir
+ls:fr:node:27342,ls:fr:node:35080,enveloppe,recouvrir
+ls:fr:node:38342,ls:fr:node:35079,vêtement,recouvrir
+ls:fr:node:26553,ls:fr:node:42754,bouteille,renfermer
+ls:fr:node:26327,ls:fr:node:32420,appartement,se composer
+ls:fr:node:42568,ls:fr:node:43509,tornade,se déchaîner
+ls:fr:node:47729,ls:fr:node:33482,visite médicale,se dérouler
+ls:fr:node:31028,ls:fr:node:41991,rivière,se déverser
+ls:fr:node:44153,ls:fr:node:41991,fleuve,se déverser
+ls:fr:node:45007,ls:fr:node:44764,bruit,se propager
+ls:fr:node:45007,ls:fr:node:44259,bruit,se répandre
+ls:fr:node:43198,ls:fr:node:44106,tempête,secouer
+ls:fr:node:29798,ls:fr:node:44367,vent,souffler
+ls:fr:node:43198,ls:fr:node:44369,tempête,souffler
+ls:fr:node:28572,ls:fr:node:42791,orage,s’abattre
+ls:fr:node:42567,ls:fr:node:44105,tornade,s’abattre
+ls:fr:node:28834,ls:fr:node:42791,pluie,s’abattre
+ls:fr:node:43198,ls:fr:node:44105,tempête,s’abattre
+ls:fr:node:31028,ls:fr:node:42060,rivière,s’écouler
+ls:fr:node:44153,ls:fr:node:42060,fleuve,s’écouler
+ls:fr:node:53976,ls:fr:node:53977,déficit,s’élever
+ls:fr:node:28970,ls:fr:node:53977,prix,s’élever
+ls:fr:node:42586,ls:fr:node:42717,averse,tomber
+ls:fr:node:28834,ls:fr:node:42717,pluie,tomber
+ls:fr:node:28219,ls:fr:node:48561,maladie,toucher
+ls:fr:node:28572,ls:fr:node:43538,orage,toucher
+ls:fr:node:42917,ls:fr:node:29704,éclair,traverser
+ls:fr:node:29291,ls:fr:node:40640,route,venir
