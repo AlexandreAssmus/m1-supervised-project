@@ -18,8 +18,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-### IMPACT DU POSITIONAL ENCODING ##################################################################################################################
-
 ### TOKENIZATION AND UNTOKENIZATION ################################################################################################################
 
 def tokenize(corpus,tokenizer):
@@ -123,7 +121,7 @@ def averageAttention(corpus, tokenizer, model):
     layer_average = np.mean(array)
     return layer_average
 
-### RELATIVE ATTENTION AVERAGE COMPARISON ########################################################################################################
+### RELATIVE ATTENTION AND AVERAGE COMPARISON ########################################################################################################
 
 def relativeAttentionCenteredPlot(corpus,pos1,pos2, tokenizer, model):
     nb_layers = model.config.num_hidden_layers
@@ -166,13 +164,13 @@ def headCentering(corpus,layer,head,tokenizer,model):
     head_attention_matrix = headAttentionMatrix(corpus, layer, head, tokenizer,model)
     head_average_attention = headAverageAttention(corpus,layer,head,tokenizer,model)
     centered_matrix = head_attention_matrix-head_average_attention
-    return centered_matrix
+    return centered_matrix # torch.tensor([10,10])
 
 def layerCentering(corpus,layer,tokenizer,model):
     layer_attention_matrix = layerAttentionMatrices(corpus,layer,tokenizer,model)
     layer_average_attention = layerAverageAttention(corpus,layer,tokenizer,model)
     centered_matrices = layer_attention_matrix-layer_average_attention
-    return centered_matrices[0]
+    return centered_matrices[0] # torch.tensor([12,10,10])
 
 def centering(corpus, tokenizer, model):
     nb_layers = model.config.num_hidden_layers
@@ -190,6 +188,19 @@ def centering(corpus, tokenizer, model):
 
 ### PLOTTING CENTERING #############################################################################################################################
 
+def centeringPlot(corpus, tokenizer,model):
+    nb_layers = model.config.num_hidden_layers
+    centered_matrix = centering(corpus, tokenizer,model)
+    plt.figure(figsize=(15, 10))
+    for layer in range(nb_layers):
+        plt.subplot(4,3,layer+1)
+        plt.plot(centered_matrix[layer])
+        plt.title(f"Layer {layer}")
+        plt.xticks(range(12))
+    plt.tight_layout()
+    plt.show() 
+
+
 
 ### MAIN - EXPERIMENT ##############################################################################################################################
 
@@ -201,7 +212,10 @@ def main():
     model = CamembertModel.from_pretrained(model_name,output_attentions=True)
 
     # corpus definition
-    corpus = ["Aujourd'hui est une belle journée."]
+    # SYN
+    corpus_syn = ["La femme est jolie. Cette robe est belle."]
+    # OPPOS
+    corpus_oppos = ["Les animaux nocturnes sortent la nuit et dorment durant le jour."]
 
     # lexical function selection
     path = "../../lexical-system-fr/ls-fr-V3/15-lslf-rel.csv"
@@ -209,10 +223,20 @@ def main():
     lexfn_count = df["lf"].value_counts()
     print(lexfn_count.head())   
 
-    # experiment
-    relativeAttentionCenteredPlot(corpus,0,1,tokenizer,model)
-    layerRelativeAttentionCenteredPlot(corpus,0,0,1,tokenizer,model)
-    relativeAttentionCenteredSubplot(corpus,0,1,tokenizer,model)
+    # token index identification
+    tokens_syn = tokenize(corpus_syn, tokenizer)
+    print(untokenize(tokens_syn,tokenizer))
+    pos1_syn = 4
+    pos2_syn = 9
+
+    tokens_oppos = tokenize(corpus_oppos, tokenizer)
+    print(untokenize(tokens_oppos,tokenizer))
+    pos1_oppos = 7
+    pos2_oppos = 12
+
+    # plot and analysis
+    relativeAttentionCenteredSubplot(corpus_syn,pos1_syn,pos2_syn,tokenizer,model)
+    relativeAttentionCenteredSubplot(corpus_oppos,pos1_oppos,pos2_oppos,tokenizer,model)
 
 
 
