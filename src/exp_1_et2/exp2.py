@@ -55,7 +55,7 @@ def computeEmbeddings(tokens,model):
     ####### INPUT EMBEDDINGS ###### 
     embedding_layer = model.embeddings
     output_embeddings.append(embedding_layer(tokens))
-    for i in range(10):
+    for i in range(11):
         encoder_layer = model.encoder.layer[i]
         encoder_embeddings = encoder_layer(hidden_states=output_embeddings[i])[0]
         output_embeddings.append(encoder_embeddings)
@@ -78,7 +78,7 @@ def pairCosineSimilarity(embeddings,layer,pos1,pos2):
 
 def storeCosineSimilarity(embeddings,pos1,pos2):
     cosine_similarities = []
-    for layer in range(12):
+    for layer in range(13):
         cosine_similarities.append(pairCosineSimilarity(embeddings,layer,pos1,pos2))
     return cosine_similarities
 
@@ -90,7 +90,7 @@ def cosineSimilarityPlot(embeddings,pos1,pos2):
     plt.ylabel('Cosine Similarity')
     plt.title('Cosine Similarity between Embeddings per layer')
     plt.plot(cosine_similarities)
-    plt.xticks(range(12))
+    plt.xticks(range(13))
     plt.grid(axis='y', linestyle='--', alpha=0.7)
     plt.show()
 
