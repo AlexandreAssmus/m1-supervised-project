@@ -11,7 +11,7 @@
 # prender en compte la repr dans l'espace ----> gare au hors sujets
 
 
-### IMPORTS ###################################################
+### IMPORTS ########################################################################################################################################
 import torch
 from transformers import CamembertTokenizer, CamembertModel
 import pandas as pd
@@ -19,27 +19,17 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-### IMPACT DU POSITIONAL ENCODING ############################
+### IMPACT DU POSITIONAL ENCODING ##################################################################################################################
 
 
-### CHOIX DE LA FONCTION LEXICALE ############################
+### LEXICAL FUNCTION SELECTION #####################################################################################################################
 
 path = "../../lexical-system-fr/ls-fr-V3/15-lslf-rel.csv"
 df = pd.read_csv(path, delimiter='\t')
 lexfn_count = df["lf"].value_counts()
 print(lexfn_count.head())
 
-
-### RECUPERATION DES MATRICES D'ATTENTION #####################
-
-modelName="camembert-base"
-tokenizer = CamembertTokenizer.from_pretrained(modelName)
-model=CamembertModel.from_pretrained(modelName, output_attentions=True)
-
-nb_layers = model.config.num_hidden_layers
-nb_heads = model.config.num_attention_heads
-
-
+### TOKENIZATION AND UNTOKENIZATION ################################################################################################################
 
 def tokenize(corpus,tokenizer):
     """ returns the tokens of the sentences passed sentences as computed by the model """
@@ -52,46 +42,43 @@ def untokenize(input_ids,tokenizer):
         output.append(tokenizer.convert_ids_to_tokens(input))
     return output
 
+### EXTRACTION OF ATTENTION MATRICES ###############################################################################################################
 
 def attentionMatrices(corpus,tokenizer,model):
     encoded_input = tokenizer(corpus, return_tensors='pt')
     outputs = model(**encoded_input)
     return outputs.attentions
 
+def layerAttentionMatrices(corpus, layer, tokenizer, model):
+    attention_matrices = attentionMatrices(corpus, tokenizer, model)
+    return attention_matrices[layer]
 
-def layerAttentionMatrices(corpus,layer,tokenizer,model):
-    encoded_input = tokenizer(corpus, return_tensors='pt')
-    outputs = model(**encoded_input)
-    output = outputs.attentions
-    return output[layer]
+def headAttentionMatrix(corpus, layer, head, tokenizer, model):
+    layer_attention_matrix = layerAttentionMatrices(corpus, layer, tokenizer, model)
+    return layer_attention_matrix[0][head]
 
-def headAttentionMatrix(corpus,layer,head,tokenizer,model):
-    encoded_input = tokenizer(corpus, return_tensors='pt')
-    outputs = model(**encoded_input)
-    output = outputs.attentions
-    return output[layer][0][head]
+### EXTRACTION OF RELATIVE ATTENTION BETWEEN TWO GIVEN WORDS #######################################################################################
 
-
-### RECUPERATION DE L'ATTENTION RELATIVE ENTRE DEUX MOTS DONNÉS ###
-
+def headRelativeAttention(corpus, layer, head, pos1, pos2, tokenizer, model):
+    head_attention_matrix = headAttentionMatrix(corpus, layer, head, tokenizer, model)
+    return head_attention_matrix[pos1,pos2].item()
 
 def layerRelativeAttention(corpus, layer,  pos1, pos2, tokenizer, model):
-    layer_attention_matrix = layerAttentionMatrices(corpus, tokenizer, model, layer)
+    nb_heads = model.config.num_attention_heads
+    layer_attention_matrix = layerAttentionMatrices(corpus, layer, tokenizer, model)
     layer_relative_attention = []
     for head in range(nb_heads):
         layer_relative_attention.append(layer_attention_matrix[0][head][pos1][pos2])
     return [tensor.item() for tensor in layer_relative_attention]
 
 def relativeAttention(corpus, pos1, pos2, tokenizer, model):
+    nb_layers = model.config.num_hidden_layers
     relative_attention = []
     for layer in range(nb_layers):
         relative_attention.append(layerRelativeAttention(corpus, layer, pos1,pos2,tokenizer,model))
     return relative_attention
 
-
-
-### PREMIERS TRACÉS ##################################################
-
+### PREMIERS TRACÉS ################################################################################################################################
 
 def layerPairPlot(corpus,pos1,pos2, tokenizer, model):
     colors = ['red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'black', 'orange', 'purple', 'brown', 'pink', 'grey']
@@ -101,23 +88,24 @@ def layerPairPlot(corpus,pos1,pos2, tokenizer, model):
     plt.legend()
     plt.show()
 
-### CALCUL MOYENNE GLOBALE ########################################
+### COMPUTATION OF AVERAGE ATTENION RATES ###########################################################################################################
 
 def headAverageAttention(corpus, layer, head, tokenizer, model):
     attention_matrices = attentionMatrices(corpus,tokenizer,model)
     average_attention = torch.mean(attention_matrices[layer][0][head])
     return(average_attention.item())
 
-
 def layerAverageAttention(corpus, layer, tokenizer, model):
+    nb_heads = model.config.num_attention_heads
     head_averages = []
     for head in range(nb_heads):
-        head_averages.append(headAverageAttention(corpus,layer,head, tokenizer,model))
+        head_averages.append(headAverageAttention(corpus,layer,head,tokenizer,model))
     array = np.array(head_averages)
     layer_average = np.mean(array)
     return layer_average
 
 def averageAttention(corpus, tokenizer, model):
+    nb_layers = model.config.num_hidden_layers
     layer_averages = []
     for layer in range(nb_layers):
         layer_averages.append(layerAverageAttention(corpus,layer,tokenizer,model))
@@ -125,9 +113,7 @@ def averageAttention(corpus, tokenizer, model):
     layer_average = np.mean(array)
     return layer_average
 
-
-### CENTRAGE #####################################################
-
+### CENTERING #####################################################################################################################################
 
 def headCentering(corpus,layer,head,tokenizer,model):
     head_attention_matrix = headAttentionMatrix(corpus, layer, head, tokenizer,model)
@@ -141,73 +127,46 @@ def layerCentering(corpus,layer,tokenizer,model):
     centered_matrix = layer_attention_matrix-layer_average_attention
     return centered_matrix[0]
 
+def centering(corpus, tokenizer, model):
+    pass
+
+### GESTION DES UNITÉS LEXICALES À PLUSIEURS TOKENS ################################################################################################
 
 
-### POSITIONNEMENT PAR RAPPORT AUX MOYENNES DE L'ATTENTION #########
-
-
-### ETUDE STATISTIQUE DE L'ATTENTION ##############################
-
-
-### GESTION DES UNITÉS LEXICALES À PLUSIEURS TOKENS ###############
-
-
-### MAIN #########################################################
+### MAIN - EXPERIMENT ##############################################################################################################################
 
 def main():
 
+    # model definition
     model_name = "camembert-base"
     tokenizer = CamembertTokenizer.from_pretrained(model_name)
     model = CamembertModel.from_pretrained(model_name,output_attentions=True)
 
-
+    # corpus definition
     corpus = ["Aujourd'hui est une belle journée."]
 
+    # experiment
+    matrices = attentionMatrices(corpus,tokenizer,model)
+    print(type(matrices))
 
-    # tokens = tokenize(corpus, tokenizer)
-    # layer0 = layerAttentionMatrices(corpus,tokenizer,model,0)
-    # attention_matrices = attentionMatrices(corpus,tokenizer,model)
-    # # print(untokenize(tokens,tokenizer))
-    # # print("nb of tokens:", len(tokens[0]))
-    # # print(layer0.shape)
-    # # print(len(attention_matrices))
-    # # print(attention_matrices[0].shape)
+    lam = layerAttentionMatrices(corpus,0,tokenizer,model)
+    print(type(lam))
+    print(lam)
 
-    # relative_attentions = relativeAttention(corpus, 0, 1, tokenizer, model)
-    # #print(relative_attentions)
+    hra = headRelativeAttention(corpus, 0, 0, 0, 1, tokenizer, model)
+    print(type(hra))
 
-    # layerPairPlot(corpus,0,1,tokenizer,model)
+    lra = layerRelativeAttention(corpus,0,0,1,tokenizer,model)
+    print(type(lra))
 
-    # matrices = attentionMatrices(corpus,tokenizer,model)
-    # print(type(matrices))
-
-    # #globalAverageAttention(corpus,tokenizer,model)
+    ra = relativeAttention(corpus,0,1,tokenizer,model)
+    print(type(ra))
 
 
-    # attention_matrices = attentionMatrices(corpus,tokenizer,model)
-    # print(type(attention_matrices)) # tuple
-    # print(len(attention_matrices)) #12
-    # print(len(attention_matrices[0])) #1
-    # print(len(attention_matrices[0][0])) #12
-    # print(attention_matrices[0][0])
-    # print(len(attention_matrices[0][0][0])) #10
-    # print(len(attention_matrices[0][0][0][0])) #10
 
-    # print(attention_matrices[0][0][0])
-    # average_attention = torch.mean(attention_matrices[0][0][0])
-    # print(average_attention.item())
-    # print(headAverageAttention(corpus,0,0,tokenizer,model))
 
-    # print(layerAverageAttention(corpus,0,tokenizer,model))
-    # print(averageAttention(corpus,tokenizer,model))
 
-    hc = headCentering(corpus, 0,0,tokenizer,model)
-    print(type(hc))
-    print(hc.size())
 
-    lc = layerCentering(corpus,0,tokenizer,model)
-    print(type(lc))
-    print(lc.size())
 
 
 if __name__ == "__main__":
