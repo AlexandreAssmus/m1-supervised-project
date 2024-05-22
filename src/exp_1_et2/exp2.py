@@ -37,9 +37,9 @@ for filename in os.listdir(xmlFolderPath):
 
 ### TOKENIZARION AND UNTOKENIZATION ############################################################################################
 
-def tokenize(sentences,tokenizer):
+def tokenize(corpus,tokenizer):
     """ returns the tokens of the sentences passed sentences as computed by the model """
-    tokens=tokenizer(sentences,return_tensors='pt',padding=True)
+    tokens=tokenizer(corpus,return_tensors='pt',padding=True)
     return tokens['input_ids']
 
 def untokenize(input_ids,tokenizer):
@@ -84,7 +84,7 @@ def storeCosineSimilarity(embeddings,pos1,pos2):
 
 ### PLOTTING ####################################################################################################################
 
-def cosineSimilarityPlot(embeddings,pos1,pos2,model):
+def cosineSimilarityPlot(embeddings,pos1,pos2):
     cosine_similarities = storeCosineSimilarity(embeddings,pos1,pos2)
     plt.figure(figsize=(6, 4))
     plt.ylabel('Cosine Similarity')
@@ -93,8 +93,6 @@ def cosineSimilarityPlot(embeddings,pos1,pos2,model):
     plt.xticks(range(12))
     plt.grid(axis='y', linestyle='--', alpha=0.7)
     plt.show()
-
-
 
 ### MAIN ###########################################################################################################################
 
@@ -106,15 +104,31 @@ def main():
     model = CamembertModel.from_pretrained(model_name)
 
     # corpus definition
-    corpus = ["Il a mangé une énorme glace."]
-    corpus2 = ["Il se regarde dans la glace."]
+    corpus1 = ["Il mangeait une glace à la fraise en se contemplant dans la glace."]
+    corpus2 = ["Elle mange une glace à la fraise et lui une glace au chocolat."]
+
+    # position
+    tokens1 = tokenize(corpus1,tokenizer)
+    untokenized1 = untokenize(tokens1,tokenizer)
+    print(untokenized1)
+    pos11 = 5
+    pos12 = 16
+    print(untokenized1[0][pos11],untokenized1[0][pos12])
+
+    tokens2 = tokenize(corpus2,tokenizer)
+    untokenized2 = untokenize(tokens2,tokenizer)
+    print(untokenized2)
+    pos21 = 4
+    pos22 = 12
+    print(untokenized2[0][pos21],untokenized2[0][pos22])
 
     # experiment
-    tokens = tokenize(corpus,tokenizer)
-    e = computeEmbeddings(tokens,model)
-    st = storeCosineSimilarity(e,3,5)
-    print(type(st))
-    cosineSimilarityPlot(e,3,5,model)
+    embeddings1 = computeEmbeddings(tokens1,model)
+    cosineSimilarityPlot(embeddings1,pos11,pos12)
+
+    embeddings2 = computeEmbeddings(tokens1,model)
+    cosineSimilarityPlot(embeddings2,pos21,pos22)
+    
 
 
 if __name__ == "__main__":
