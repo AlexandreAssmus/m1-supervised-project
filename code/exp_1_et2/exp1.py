@@ -103,7 +103,7 @@ def relativeAttentionSubplot(corpus,pos1,pos2,tokenizer,model):
 def headAverageAttention(corpus, layer, head, tokenizer, model):
     attention_matrices = attentionMatrices(corpus,tokenizer,model)
     average_attention = torch.mean(attention_matrices[layer][0][head])
-    return(average_attention.item())
+    return(average_attention.item()) #float
 
 def layerAverageAttention(corpus, layer, tokenizer, model):
     nb_heads = model.config.num_attention_heads
@@ -124,6 +124,41 @@ def averageAttention(corpus, tokenizer, model):
     return layer_average
 
 ### RELATIVE ATTENTION AVERAGE COMPARISON ########################################################################################################
+
+def relativeAttentionCenteredPlot(corpus,pos1,pos2, tokenizer, model):
+    nb_layers = model.config.num_hidden_layers
+    colors = ['red', 'green', 'blue', 'cyan', 'magenta', 'yellow', 'black', 'orange', 'purple', 'brown', 'pink', 'grey']
+    relative_attention = relativeAttention(corpus,pos1,pos2, tokenizer, model)
+    average_attention = averageAttention(corpus,tokenizer,model)
+    for layer in range(nb_layers):
+        plt.plot(relative_attention[layer]-average_attention, marker='o',linestyle='-',color=colors[layer],label=f'Layer{layer}')
+    plt.legend()
+    plt.show()
+
+def layerRelativeAttentionCenteredPlot(corpus,layer,pos1,pos2,tokenizer,model):
+    layer_relative_attention = layerRelativeAttention(corpus,layer,pos1,pos2,tokenizer,model)
+    layer_average_attention = layerAverageAttention(corpus,layer,tokenizer,model)
+    plt.plot(layer_relative_attention-layer_average_attention, marker='o',linestyle='-',color='black')
+    plt.legend()
+    plt.show()
+
+def relativeAttentionCenteredSubplot(corpus,pos1,pos2,tokenizer,model):
+    plt.figure(figsize=(15, 10))
+    nb_layers = model.config.num_hidden_layers
+    nb_heads = model.config.num_attention_heads
+    relative_attention = relativeAttention(corpus,pos1,pos2,tokenizer,model)
+    for layer in range(nb_layers):
+        head_averages = []
+        for head in range(nb_heads):
+            head_averages.append(headAverageAttention(corpus, layer, head, tokenizer,model))
+        plt.subplot(4,3,layer+1)
+        to_plot = [x - y for x, y in zip(relative_attention[layer], head_averages)]
+        #plt.plot(relative_attention[layer]-head_averages)
+        plt.plot(to_plot)
+        plt.title(f"Layer {layer}")
+        plt.xticks(range(12))
+    plt.tight_layout()
+    plt.show() 
 
 ### CENTERING #####################################################################################################################################
 
@@ -153,7 +188,8 @@ def centering(corpus, tokenizer, model):
         centered_matrices.append(layer_centered_matrices)
     return centered_matrices # list of lists, 12x12
 
-### PLUSIEURS TOKENS?
+### PLOTTING CENTERING #############################################################################################################################
+
 
 ### MAIN - EXPERIMENT ##############################################################################################################################
 
@@ -174,7 +210,9 @@ def main():
     print(lexfn_count.head())   
 
     # experiment
-    relativeAttentionSubplot(corpus, 0, 1, tokenizer, model)
+    relativeAttentionCenteredPlot(corpus,0,1,tokenizer,model)
+    layerRelativeAttentionCenteredPlot(corpus,0,0,1,tokenizer,model)
+    relativeAttentionCenteredSubplot(corpus,0,1,tokenizer,model)
 
 
 
